@@ -1,11 +1,12 @@
-- title: Getting Started
+- title: О курсе
   docs:
   - home
-  - themes
-  - customization
 
-- title: Examples
+- title: Семинары
   docs:
-  - cheatsheet
-  - font-awesome
-  - bootstrap
+  - "01"
+
+- title: Как улучшить этот сайт
+  docs:
+  - edit_page
+  - add_page
