@@ -2,7 +2,7 @@
 title: Питон и КИЛИ
 
 baseurl: ""
-url: https://pykili.github.io/ # the base hostname & protocol for your site
+url: https://pykili.github.io # the base hostname & protocol for your site
 git_address: https://github.com/pykili/pykili.github.io
 git_edit_address: https://github.com/pykili/pykili.github.io/blob/master
 
