@@ -21,6 +21,8 @@ gems:
 
 exclude:
   - README.md
+  - docker-compose.yml
+
 timezone: Europe/Moscow
 defaults:
 - scope:
