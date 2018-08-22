@@ -17,7 +17,6 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 exclude:
   - README.md

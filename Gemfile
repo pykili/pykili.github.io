@@ -9,7 +9,6 @@ gem "jekyll", "3.4.3"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed"
-   gem "jekyll-sitemap"
    gem "jekyll-redirect-from"
    gem "jekyll-seo-tag"
 end
