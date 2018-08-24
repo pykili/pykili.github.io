@@ -10,7 +10,7 @@ redirect_from: /
 
 **Программа курса** — <https://www.hse.ru/edu/courses/214343330>
 
-**Преподаватели**: Борис Валерьевич Орехов (<nevmenandr@gmail.com>),  Константин Маланчев (<kmalanchev@hse.ru>), Никита Сапунов (??)
+**Преподаватели**: Борис Валерьевич Орехов (<nevmenandr@gmail.com>),  Константин Маланчев (<kmalanchev@hse.ru>), Никита Сапунов (<kiton1994@gmail.com>)
 
 
 ## Оценки
