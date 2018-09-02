@@ -16,6 +16,9 @@ redirect_from: /
 
 
 
+**Ассистенты**: Мария Маслова <mashamaslova85@gmail.com> (1 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, Елизавета Ершова <eoershova@edu.hse.ru>
+
+
 ## Расписание
 
 |Занятие|Тема|2 группа|3 группа|4 группа|
