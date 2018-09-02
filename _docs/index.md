@@ -13,6 +13,9 @@ redirect_from: /
 **Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа)
 
 
+**Ассистенты**: Мария Маслова <mashamaslova85@gmail.com> (1 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, Елизавета Ершова <eoershova@edu.hse.ru>
+
+
 ## Расписание
 
 |Занятие|Тема|2 группа|3 группа|4 группа|
