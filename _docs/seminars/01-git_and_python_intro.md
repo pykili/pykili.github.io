@@ -37,6 +37,9 @@ permalink: /01/
 ### iOS
 [Pythonista](https://itunes.apple.com/ru/app/pythonista-3/id1085978097) — платное приложение (749₽) с полнофункциональным Python 3, но с ограниченной поддержкой сторонних модулей
 
+### Android
+[PyDroid 3](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) — приложение с полнофункциональным Python 3 (но с рекламой). Требует Android 4.4
+
 
 ## Основы языка Python
 
