@@ -19,6 +19,6 @@ permalink: /before_start/
 
 Notepad++ (https://notepad-plus-plus.org/download/v7.5.8.html) для Windows
 
-Sublime Text (https://www.sublimetext.com/3) для Mac OS, Linux и Windows
+Sublime Text (https://www.sublimetext.com/3) для macOS, Linux и Windows
 
-Atom (https://atom.io) для Mac OS
+Atom (https://atom.io) для macOS, Linux и Windows
