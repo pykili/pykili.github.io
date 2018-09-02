@@ -17,3 +17,11 @@ permalink: /before_start/
 
 # Текстовые редакторы
 
+Notepad++ (https://notepad-plus-plus.org/download/v7.5.8.html) для Windows
+
+Sublime Text (https://www.sublimetext.com/3) для Mac OS, Linux и Windows
+
+Atom (https://atom.io) для Mac OS
+
+Qpython (https://www.qpython.com) для Android
+
