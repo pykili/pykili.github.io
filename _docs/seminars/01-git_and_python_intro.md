@@ -38,7 +38,7 @@ permalink: /01/
 [Pythonista](https://itunes.apple.com/ru/app/pythonista-3/id1085978097) — платное приложение (749₽) с полнофункциональным Python 3, но с ограниченной поддержкой сторонних модулей
 
 ### Android
-[PyDroid 3](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) — приложение с полнофункциональным Python 3 (но с рекламой). Требует Android 4.4
+[Pydroid 3](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3) — приложение с полнофункциональным Python 3 (но с рекламой). Требует Android 4.4
 
 
 ## Основы языка Python
@@ -47,7 +47,7 @@ permalink: /01/
 
 Все действия этого раздела выполняйте прямо в интерпретаторе Python, используя idle или набрав `python3` в терминале (выйти можно командой `exit()`).
 
-![idle console screenshot](/fig/01/idle_console.png)
+![IDLE console screenshot](/img/01/idle_console.png)
 
 Базовые математические операции в Python делаются очень просто. Сложение и вычитание:
 
@@ -110,7 +110,7 @@ permalink: /01/
 print(3 + 2)  # напечатает «5»
 ```
 
-![idle editor screenshot](/fig/01/idle_editor.png)
+![IDLE editor screenshot](/img/01/idle_editor.png)
 
 В IDLE создайте новый файл File -> New File. Этот файл можно запустить с помощью пункта меню Run -> Run Module или нажатием клавиши F5. Попутно вам предложат куда-нибудь сохранить ваш новый скрипт.
 
