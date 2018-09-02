@@ -12,6 +12,9 @@ redirect_from: /
 
 **Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа)
 
+**Ассистенты**: Мария Маслова <mashamaslova85@gmail.com>, [VK](https://vk.com/hesitantshade),  [Telegram](https://t.me/arstotrix) (1 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, [VK](https://vk.com/id85845315),  [Telegram](https://t.me/Kamenshchik) (2 группа), Елизавета Ершова <eoershova@edu.hse.ru>, [VK](https://vk.com/42whereismytea42) (3 группа)
+
+
 
 ## Расписание
 
