@@ -4,26 +4,24 @@ permalink: /home/
 redirect_from: /
 ---
 
-# Программирование и компьютерные инструменты лингвистических исследований
+# Программирование и компьютерные методы лингвистического исследования
 
 ## 1 курс бакалавриата факультета гуманитарных наук НИУ ВШЭ (Москва)
 
 **Программа курса** — <https://www.hse.ru/edu/courses/214343330>
 
-**Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа)
+**Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа), Ольга Николаевна Ляшевская <olesar@yandex.ru>, [Telegram group](https://t.me/joinchat/GOaNBw-9-ud_qH8zgWmBVA)
 
-**Ассистенты**: Мария Маслова <mashamaslova85@gmail.com>, [VK](https://vk.com/hesitantshade),  [Telegram](https://t.me/arstotrix) (1 группа), Елизавета Ершова <eoershova@edu.hse.ru>, [VK](https://vk.com/42whereismytea42) (2 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, [VK](https://vk.com/id85845315),  [Telegram](https://t.me/Kamenshchik) (3 группа)
+**Ассистенты**: Мария Маслова <mashamaslova85@gmail.com>, [VK](https://vk.com/hesitantshade),  [Telegram](https://t.me/arstotrix) (1 группа), Елизавета Ершова <eoershova@edu.hse.ru>, [VK](https://vk.com/42whereismytea42) (2 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, [VK](https://vk.com/id85845315), [Telegram](https://t.me/Kamenshchik) (3 группа)
 
-
-
-## Расписание
+## Расписание занятий по программированию
 
 |Занятие|Тема|2 группа|3 группа|4 группа|
 |-------|----|--------|--------|--------|
 |1|[Git и введение в Python](/01/)|03.09.2017|03.09.2017|08.09.2017|
 
 
-## Домашние работы
+## Домашние работы по программированию
 
 ### GitHub
 
