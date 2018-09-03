@@ -10,7 +10,7 @@ redirect_from: /
 
 **Программа курса** — <https://www.hse.ru/edu/courses/214343330>
 
-**Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа), Ольга Николаевна Ляшевская <olesar@yandex.ru>, [Telegram group](https://t.me/joinchat/GOaNBw-9-ud_qH8zgWmBVA)
+**Преподаватели**: Борис Валерьевич Орехов <nevmenandr@gmail.com> (1 группа),  Константин Маланчев <kmalanchev@hse.ru> (2 и 3 группы), Никита Сапунов <kiton1994@gmail.com> (4 группа), Ольга Николаевна Ляшевская <olesar@yandex.ru>, [Telegram group](https://t.me/joinchat/GOaNBw-9-ud_qH8zgWmBVA) (Компьютерные методы)
 
 **Ассистенты**: Мария Маслова <mashamaslova85@gmail.com>, [VK](https://vk.com/hesitantshade),  [Telegram](https://t.me/arstotrix) (1 группа), Елизавета Ершова <eoershova@edu.hse.ru>, [VK](https://vk.com/42whereismytea42) (2 группа), Алина Смирнова <alinasmirnovaalina71@gmail.com>, [VK](https://vk.com/id85845315), [Telegram](https://t.me/Kamenshchik) (3 группа)
 
