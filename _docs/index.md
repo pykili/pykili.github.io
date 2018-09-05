@@ -20,6 +20,7 @@ redirect_from: /
 * Мария Маслова <mashamaslova85@gmail.com>, [VK](https://vk.com/hesitantshade),  [Telegram](https://t.me/arstotrix) `(1 группа)`
 * Елизавета Ершова <eoershova@edu.hse.ru>, [VK](https://vk.com/42whereismytea42) `(2 группа)`
 * Алина Смирнова <alinasmirnovaalina71@gmail.com>, [VK](https://vk.com/id85845315), [Telegram](https://t.me/Kamenshchik) `(3 группа)`
+* Арсений Аверин <arseniiaverin@gmail.com>, [VK](https://vk.com/arsenitheunicorn), [Telegram](https://t.me/arsenitheunicorn) `(4 группа)`
 * Ольга Пичужкина <olga-p-98@mail.ru> `(Лингв. данные)`
 
 ## Расписание занятий по программированию
