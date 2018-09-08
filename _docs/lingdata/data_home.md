@@ -16,7 +16,10 @@ permalink: /data_home/
 Д/з: Поиск в НКРЯ (дедлайн 9 сентября)  
 К следующему семинару вспомнить / познакомиться с основами HTML (<a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Introduction">здесь</a>). 
 
-### 3-4. <a href="/https://github.com/olesar/hseinstruments/blob/master/practicum-html_xml.md">Электронное представление текста</a>. Форматы HTML, XML, Markdown. Кодировки файлов. Поиск с помощью регулярных выражений  
+### 3-4. Электронное представление текста. Форматы HTML, XML, Markdown. Кодировки файлов. Поиск с помощью регулярных выражений     
+<a href="https://github.com/olesar/hseinstruments/blob/master/lecture-text-formats.md">Конспект лекции: форматы и кодировки</a>   
+<a href="https://github.com/olesar/hseinstruments/blob/master/practicum-regex1.md">Регулярные выражения</a>   
+
 <a href="https://github.com/olesar/hseinstruments/blob/master/homework_html.md">Д/з</a>: Личная страничка в HTML (дедлайн 16 сентября). 
 
 ### 5-6. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-spreadsheets-1.md">Анализ корпусных данных</a>. Работа с таблицами. Сортировки, фильтры, сводные таблицы  
