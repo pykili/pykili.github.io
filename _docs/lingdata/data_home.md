@@ -6,7 +6,7 @@ permalink: /data_home/
 
 # Страница блока "Лингвистические данные"
 
-<a href="https://olesar.github.io/KOMI/">Страница курса</a> :blush: <a href="https://docs.google.com/spreadsheets/d/1iWU1g6ITpjFMm3mgNr0qcKSUe5WgAkC19wWDpk8mxdk/edit?usp=sharing">Оценки за курс</a> :yum: <a href="https://github.com/olesar/hseinstruments/blob/master/Info/Как-выставляется-оценка-по-курсу%3F.md">Как выставляются оценки за курс</a> :sunglasses: <a href="https://github.com/olesar/hseinstruments/blob/master/Info/FAQ.md">FAQ</a>
+<a href="https://pykili.github.io/data_home/">Страница курса</a> &#129303; <a href="https://docs.google.com/spreadsheets/d/1iWU1g6ITpjFMm3mgNr0qcKSUe5WgAkC19wWDpk8mxdk/edit?usp=sharing">Оценки за курс</a> &#128523; <a href="https://pykili.github.io/home/">Как выставляются оценки за курс</a> &#128526; <a href="https://github.com/olesar/hseinstruments/blob/master/Info/FAQ.md">FAQ</a>
 
 ## Содержание курса
 ### 1. Вводная лекция. <a href="https://github.com/olesar/hseinstruments/raw/master/Data/1_%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%9B%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B.pdf">Обзор ресурсов для лингвистических исследований</a>    
