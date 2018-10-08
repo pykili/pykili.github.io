@@ -29,6 +29,7 @@ permalink: /01/
 
 ### macOS
 <https://www.python.org/downloads/> — простой путь
+
 <https://brew.sh/> — установка через менеджер пакетов Homebrew, требует использования командной строки. После установки самого Homebrew выполните `brew install python`
 
 ### Linux
