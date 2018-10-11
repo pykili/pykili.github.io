@@ -9,6 +9,7 @@ permalink: /before_start/
 
 - [Блоковое программирование](https://www.google.com/doodles/celebrating-50-years-of-kids-coding) в дудле Гугла, посвящённом 50-летию детского программирования (я долго искал кратчайшее решение последнего уровня, так что для взрослых тоже годится, прим. Константина Маланчева)
 - [Ещё одна игра с блоковым программированием](https://www.madewithcode.com/projects/wonderwoman) от Гугла
+- [Платная игра с блоковым программированием](https://tomorrowcorporation.com/humanresourcemachine) на ассемблер-подобном языке. [Steam](https://store.steampowered.com/app/375820/Human_Resource_Machine/), [App Store](https://itunes.apple.com/ru/app/human-resource-machine/id1005098334), [Google Play](https://play.google.com/store/apps/details?id=com.tomorrowcorporation.humanresourcemachine)
 
 
 # Программирование на Python
