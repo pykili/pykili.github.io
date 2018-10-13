@@ -308,7 +308,7 @@ else:
 
 Выполните задание пройдя по ссылке в GitHub Classroom:
 
-- 1 группа: ...
+- 1 группа: дедлайн 19.10.2018 23:59 <https://classroom.github.com/a/UBN-r5R3>
 - 2 группа: дедлайн 14.10.2018 23:55 <https://classroom.github.com/a/Xy9aD9Kv>
 - 3 группа: дедлайн 14.10.2018 23:55 <https://classroom.github.com/a/C7bvbOG2>
 - 4 группа: дедлайн 16.10.2018 23:55 <https://classroom.github.com/a/jEtSOjIU>
