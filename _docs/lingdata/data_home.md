@@ -27,7 +27,7 @@ permalink: /data_home/
 
 Д/з: Создание учебного корпуса - 1 (запись видео) (дедлайн во втором модуле)  
 
-### 7. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-web-corpora.md">Веб-корпуса (SketchEngine, Arraneum)</a>. Коллокации. Совместная встречаемость  
+### 7. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-web-corpora.md">Веб-корпуса (SketchEngine и Skell, Arraneum)</a>. Коллокации. Совместная встречаемость  
 Д/з: Выбор группового экзаменационного <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">проекта</a>.
 
 ### 8. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-RNC-2.md">Национальный корпус русского языка - 2</a>
