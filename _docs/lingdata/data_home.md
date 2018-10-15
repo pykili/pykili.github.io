@@ -25,10 +25,10 @@ permalink: /data_home/
 ### 5-6. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-spreadsheets-1.md">Анализ корпусных данных</a>. Работа с таблицами. Сортировки, фильтры, сводные таблицы  
 Д/з: Корпусное мини-исследование: https://github.com/avdavidenko/hseinstruments/blob/master/homework-data-analysis-1.md (дедлайн 23 сентября)   
 
-Д/з: Создание учебного корпуса - 1 (запись видео) (дедлайн 7 октября)  
+Д/з: Создание учебного корпуса - 1 (запись видео) (дедлайн во втором модуле)  
 
 ### 7. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-web-corpora.md">Веб-корпуса (SketchEngine, Arraneum)</a>. Коллокации. Совместная встречаемость  
-Д/з: Выбор группового экзаменационного <a href="https://github.com/olesar/hseinstruments/blob/master/Projects.md">проекта</a>.
+Д/з: Выбор группового экзаменационного <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">проекта</a>.
 
 ### 8. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-RNC-2.md">Национальный корпус русского языка - 2</a>
 Д/з: Практикум по поиску.
