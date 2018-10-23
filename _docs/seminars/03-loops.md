@@ -182,7 +182,7 @@ while True:  # выполняется всегда
 
 Выполните задание пройдя по ссылке в GitHub Classroom:
 
-- 1 группа: ...
+- 1 группа: дедлайн 03.11.2018 23:55 <https://classroom.github.com/a/fGtOZndS>
 - 2 группа: дедлайн 28.10.2018 23:55 <https://classroom.github.com/a/16zsn-xf>
 - 3 группа: дедлайн 28.10.2018 23:55 <https://classroom.github.com/a/0t2KErjW>
 - 4 группа: дедлайн 30.10.2018 23:55 <https://classroom.github.com/a/xJah7Wad>
