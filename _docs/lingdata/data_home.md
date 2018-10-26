@@ -23,15 +23,13 @@ permalink: /data_home/
 <a href="https://github.com/olesar/hseinstruments/blob/master/homework_html.md">Д/з</a>: Личная страничка в HTML (дедлайн 16 сентября). 
 
 #### 5-6. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-spreadsheets-1.md">Анализ корпусных данных</a>. Работа с таблицами. Сортировки, фильтры, сводные таблицы  
-Д/з: Корпусное мини-исследование: https://github.com/avdavidenko/hseinstruments/blob/master/homework-data-analysis-1.md (дедлайн 23 сентября)   
-
-Д/з: Создание учебного корпуса - 1 (запись видео) (дедлайн во втором модуле)  
+[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-data-analysis-1.md): Корпусное мини-исследование (дедлайн 23 сентября)   
 
 #### 7. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-web-corpora.md">Веб-корпуса (SketchEngine и Skell, Arraneum)</a>. Коллокации. Совместная встречаемость  
 Д/з: Выбор группового экзаменационного <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">проекта</a> (вкладка "Проекты").
 
 #### 8. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-RNC-2.md">Национальный корпус русского языка - 2</a>
-Д/з: Практикум по поиску.
+[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_record.md): Создание учебного корпуса - 1 (запись видео) (дедлайн 5 ноября 23:59)  
 
 #### <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">Экзамен</a>. Защита группового проекта по лингвистическим ресурсам (в конце 1 модуля)
 
