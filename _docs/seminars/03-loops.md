@@ -26,26 +26,34 @@ permalink: /03/
 С помощью квадратных скобок вы можете выбрать любой символ из строки:
 
 ```python
-hello = 'hello'
-print(hello[0])  # напечатает "h"
-print(hello[1])  # напечатает "e"
-print(hello[2])  # напечатает "l"
-print(hello[3])  # напечатает "l"
-print(hello[4])  # напечатает "0"
+>>> hello = 'hello'
+>>> print(hello[0])
+h
+>>> print(hello[1])
+e
+>>> print(hello[2])
+l
+>>> print(hello[3])
+l
+>>> print(hello[4])
+o
 ```
 
 Обратите внимание, что любой элемент строки — это тоже маленькая строка, состоящая из одного символа
 
 ```python
-hello = 'hello'
-h = hello[0]
-print(type(h))  # напечатает "<class 'str'>"
+>>> hello = 'hello'
+>>> h = hello[0]
+>>> print(type(h))
+<class 'str'>
 
-if hello[0] == h:
-    print('The first symbol of', hello, 'is', h)
-
-if hello[0] == hello[0][0][0][0][0][0]:
-    print('Что тут произошло?')
+>>> if hello[0] == h:
+...     print('The first symbol of', hello, 'is', h)
+...
+'The first symbol of', 'hello', 'is', 'h'
+>>> if hello[0] == hello[0][0][0][0][0][0]:
+...     print('Что тут произошло?')
+...
 ```
 
 # Циклы
@@ -55,8 +63,8 @@ if hello[0] == hello[0][0][0][0][0][0]:
 Для выполнения ряда однотипных действий используют циклы. Самый простой — это цикл `for`:
 
 ```python
-for letter in 'hello':
-    print(letter)
+>>> for letter in 'hello':
+...     print(letter)
 ```
 
 Обратите внимание на отступы, они должны быть в блоке `for`, как и в блоке `if`.
@@ -66,17 +74,31 @@ for letter in 'hello':
 С помощью `range()` можно перебрать целые числа в цикле `for`:
 
 ```python
-for number in range(5):  # числа от нуля до 5 не включительно
-    print(number)
-    print('Последняя строка итерации цикла for')
+>>> for number in range(5):  # числа от нуля до 5 не включительно
+...     print(number)
+...     print('Последняя строка итерации цикла for')
+...
+0
+Последняя строка итерации цикла for
+1
+Последняя строка итерации цикла for
+2
+Последняя строка итерации цикла for
+3
+Последняя строка итерации цикла for
+4
+Последняя строка итерации цикла for
 ```
 
 Если подставить в цикл `range(x, y)`, то будут выданы числа от `x` до `y-1`:
 
 ```python
-for number in range(4, 8):
-    print(number)
-# Напечатает 4, 5, 6, 7 на новых строках
+>>> for number in range(4, 8):
+...     print(number)
+4
+5
+6
+7
 ```
 
 Можно указать шаг перебора в качестве третьего аргумента, например `range(0, 6, 2)` выдаст числа «0», «2», «4». То есть `range(x, y, step)` выдаёт все целые числа начиная с `x` с шагом `step`, но не включая `y`.
@@ -84,8 +106,14 @@ for number in range(4, 8):
 Точно так же можно выдавать числа от большего к меньшему:
 
 ```python
-for number in range(5, -1, -1):
-    print(number)
+>>> for number in range(5, -1, -1):
+...     print(number)
+5
+4
+3
+2
+1
+0
 ```
 
 ## `len()`
@@ -93,11 +121,24 @@ for number in range(5, -1, -1):
 С помощью функции `len(s)` можно найти длину строки. Таким образом можно перебрать все индексы строки:
 
 ```python
-hello = 'hello'
-print(len(hello))  # напечатает 5
-for i in range(len(hello)):  # i - общепринятое обозначение для индекса
-    print(i)
-    print(hello[i])
+>>> hello = 'hello'
+>>> print(len(hello))
+5
+>>>
+>>> for i in range(len(hello)):  # i - общепринятое обозначение для индекса
+...     print(i)
+...     print(hello[i])
+...
+0
+h
+1
+e
+2
+l
+3
+l
+4
+o
 ```
 
 > *Более красивый способ получить одновременно и индекс и значение — это [`enumerate()`](https://docs.python.org/3/library/functions.html#enumerate)*
@@ -107,11 +148,18 @@ for i in range(len(hello)):  # i - общепринятое обозначени
 Цикл `while` позволяет выполнять однотипные действия, пока выполняется условие:
 
 ```python
-i=9
-while i >= 5:
-    print(i)
-    i -= 1  # это то же самое, что i = i-1
-print('Finally, i =', i)
+>>> i = 9
+>>> while i >= 5:
+...     print(i)
+...     i -= 1  # это то же самое, что i = i-1
+...
+9
+8
+7
+6
+5
+>>> print('Finally, i =', i)
+Finnaly, i = 4
 ```
 
 ## Прерывание итерации цикла
@@ -119,37 +167,62 @@ print('Finally, i =', i)
 Выполнение цикла можно остановить по команде `break`:
 
 ```python
-for i in range(3, 30, 3):  # от 3 до 30 с шагом 3
-    print(i)
-    if i > 11:
-        print('i превысило 11')
-        break
-print('End.')
+>>> for i in range(3, 30, 3):  # от 3 до 30 с шагом 3
+...     print(i)
+...     if i > 11:
+...         print('i превысило 11')
+...         break
+...
+3
+6
+9
+12
+i превысило 11
 ```
 
 Или можно досрочно перейти к следующей итерации:
 
 ```python
-for i in range(3, 30, 3):
-    print(i)
-    if i == 12:
-        print('Сейчас i равно 12')
-        continue
-    else:
-        print('А теперь i =', i)
-print('End.')
+>>> for i in range(3, 30, 3):
+...     print(i)
+...     if i == 12:
+...         print('Сейчас i равно 12')
+...         continue
+...     else:
+...         print('А теперь i =', i)
+...
+3
+А теперь i = 3
+6
+А теперь i = 6
+9
+А теперь i = 9
+12
+Сейчас i равно 12
+15
+А теперь i = 15
+18
+А теперь i = 18
+21
+А теперь i = 21
+24
+А теперь i = 24
+27
+А теперь i = 27
 ```
 
 Те же команды можно применять и в цикле `while`, например можно сделать «бесконечный» цикл:
 
 ```python
-while True:  # выполняется всегда
-    answer = input('Сколько будет 5 x 6? ')
-    if answer == 36:
-        print('И это правильный ответ!')
-        break  # выходим из цикла
-    else:
-        print('Попробуем ещё раз')
+>>> while True:  # выполняется всегда
+...     answer = input('Сколько будет 5 x 6? ')
+...     if answer == 36:
+...         print('И это правильный ответ!')
+...         break  # выходим из цикла
+...     else:
+...         print('Попробуем ещё раз')
+...
+Сколько будет 5 x 6? 
 ```
 
 > *Если ваша программа «зависла», то нажмите `ctrl`+`c` в оболочке, после чего программа остановится с ошибкой `KeyboardInterrupt`.*
