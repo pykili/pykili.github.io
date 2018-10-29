@@ -133,4 +133,10 @@
 
 ## Полезное
 
-Есть вот такой частотный словарь: http://dict.ruslang.ru/freq.php 
+* частотный словарь НКРЯ (современный русский язык): http://dict.ruslang.ru/freq.php 
+
+* видовые пары глаголов по Грамматическому словарю А.А.Зализняка: [таблица](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/AspectualPairZalizniak.xls) 
+
+* база данных синонимов русского языка: http://web-corpora.net/synonyms
+
+* другие ресурсы школы лингвистики: http://web-corpora.net/ и https://linghub.ru/
