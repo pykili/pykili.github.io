@@ -33,11 +33,14 @@ permalink: /data_home/
 
 #### <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">Экзамен</a>. Защита группового проекта по лингвистическим ресурсам (в конце 1 модуля)
 
-#### 9. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day09-Spreadsheets-2.md">Совмещение информации из нескольких таблиц</a>
-Д/з: Добавление информации из электронных словарей и баз данных. [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций (LiveCorpus).
+#### 9. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum_spreadsheets-2.md">Совмещение информации из нескольких таблиц</a>
+[Задание для самоподготовки](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-data-analysis-2.md): Добавление информации из электронных словарей и баз данных. Регулярные выражния.
 
 #### 10. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
-Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
+
+Д/з: [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций (LiveCorpus).
+
+<!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
 #### 11. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc.md">Анализ пользовательских корпусов в AntConc. Форматы представления корпусной разметки. Валидация XML</a>  
 Д/з: [Расшифровка видео](https://github.com/olesar/hseinstruments/blob/master/Day03-hw-Transcript.md) (полная).  <a href="https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc-hw.md">Частотный словарь</a> (файлы LiveCorpus и др.).
@@ -49,6 +52,7 @@ permalink: /data_home/
 Д/з: <a href="/https://github.com/olesar/hseinstruments/blob/master/Day11-ELAN-hw.md">Разметка файла LiveCorpus в ELAN</a>
 
 #### 14. Контрольная работа. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day12-LiveCorpus-data.md">Итоговая сдача материалов LiveCorpus. Оценка качества разметки корпуса</a>  
+-->
 
 
 В разработке программы и материалов курса принимали участие О. Н. Ляшевская, С. Ю. Толдова, Т. А. Архангельский, Б. В. Орехов, Е. Кузьменко, Э. Мустакимова, Е. Грамматчикова, а также учебные ассистенты разных лет.  
