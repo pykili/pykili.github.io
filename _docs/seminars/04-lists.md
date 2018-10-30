@@ -344,4 +344,4 @@ IndexError: list index out of range
 - 1 группа: дедлайн
 - 2 группа: дедлайн 5 ноября 23:55 <https://classroom.github.com/a/SPGlFwOL>
 - 3 группа: дедлайн 5 ноября 23:55 <https://classroom.github.com/a/uyj8nebk>
-- 4 группа: дедлайн
+- 4 группа: дедлайн 6 ноября 23:55 <https://classroom.github.com/a/vl2xn0Ib>
