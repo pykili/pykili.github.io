@@ -12,6 +12,7 @@ permalink: /extra/
 - [Курс на Codeacademy](https://www.codecademy.com/learn/learn-python)
 - [Официальный туториал по языку](https://docs.python.org/3/tutorial/index.html) — очень хороший материал для последовательного изучения языка
 - `ru` [Изучите Python за Y минут](https://learnxinyminutes.com/docs/ru-ru/python3-ru/) — хороший туториал для быстрого погружения в язык, требуется уверенное владение другим языком программирования
+- `ru` [Книга «Укус питона»](https://wombat.org.ua/AByteOfPython/toc.html) — подробное вводное пособие, в HTML и PDF
 - [Игра для тех, кто уже освоил азы Python](https://py.checkio.org)
 
 
