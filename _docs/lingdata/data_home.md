@@ -31,14 +31,21 @@ permalink: /data_home/
 #### 8. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-RNC-2.md">Национальный корпус русского языка - 2</a>
 [Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_record.md): Создание учебного корпуса - 1 (запись видео) (дедлайн 5 ноября 23:59)  
 
+\_ 
+
 #### <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/exam_projects.md">Экзамен</a>. Защита группового проекта по лингвистическим ресурсам (в конце 1 модуля)
+
+\_
 
 #### 9. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum_spreadsheets-2.md">Совмещение информации из нескольких таблиц</a>
 [Задание для самоподготовки](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-data-analysis-2.md): Добавление информации из электронных словарей и баз данных. Регулярные выражния.
 
-#### 10. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
+#### 10. Лекция. Работа с собственным корпусом. Частотные списки, коллокации, ключевые слова (конкордансер AntConc)  
+<a href="https://github.com/olesar/hseinstruments/blob/master/lecture-antconc.pdf">Конспект лекции</a>
 
-Д/з: [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций (LiveCorpus).
+#### 11. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
+
+Д/з: Создание учебного корпуса - 2. Расшифровка записи. [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций.
 
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
