@@ -341,7 +341,7 @@ IndexError: list index out of range
 
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
-- 1 группа: дедлайн
+- 1 группа: дедлайн 9 ноября 23:55 <https://classroom.github.com/a/t5BdFP3Y>
 - 2 группа: дедлайн 5 ноября 23:55 <https://classroom.github.com/a/SPGlFwOL>
 - 3 группа: дедлайн 5 ноября 23:55 <https://classroom.github.com/a/uyj8nebk>
 - 4 группа: дедлайн 6 ноября 23:55 <https://classroom.github.com/a/vl2xn0Ib>
