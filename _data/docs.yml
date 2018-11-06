@@ -4,9 +4,13 @@
   - before_start
   - extra
 
-- title: Семинары
+- title: Лингвистические данные
   docs:
   - data_home
+
+
+- title: Семинары
+  docs:
   - "01"
   - "02"
   - "03"
