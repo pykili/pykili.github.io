@@ -9,7 +9,7 @@ permalink: /data_home/
 <a href="https://pykili.github.io/data_home/">Страница курса</a> &#129303; <a href="https://docs.google.com/spreadsheets/d/1iWU1g6ITpjFMm3mgNr0qcKSUe5WgAkC19wWDpk8mxdk/edit?usp=sharing">Оценки за курс</a> &#128523; <a href="https://pykili.github.io/home/">Как выставляются оценки за курс</a> &#128526; <a href="https://github.com/olesar/hseinstruments/blob/master/Info/FAQ.md">FAQ</a>
 
 ### Содержание курса
-#### 1. Вводная лекция. <a href="https://github.com/olesar/hseinstruments/raw/master/1_%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%9B%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B.pdf">Обзор ресурсов для лингвистических исследований</a>    
+#### 1. Вводная лекция. <a href="https://github.com/pykili/pykili.github.io/raw/master/_docs/lingdata/1_%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%9B%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B.pdf">Обзор ресурсов для лингвистических исследований</a>    
 Материалы: Плунгян В. А. Зачем нужен Национальный корпус русского языка? // Национальный корпус русского языка: 2003—2005. М.: Индрик, 2005, 6—20 (<a href="http://ruscorpora.ru/sbornik2005/02plu.pdf">читать</a>).  
 
 #### 2. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum-rnc-1.md">Национальный корпус русского языка - 1</a>
@@ -41,7 +41,7 @@ permalink: /data_home/
 [Задание для самоподготовки](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-data-analysis-2.md): Добавление информации из электронных словарей и баз данных. Регулярные выражния.
 
 #### 10. Лекция. Работа с собственным корпусом. Частотные списки, коллокации, ключевые слова (конкордансер AntConc)  
-<a href="https://github.com/olesar/hseinstruments/blob/master/lecture-antconc.pdf">Конспект лекции</a>
+<a href="https://github.com/pykili/pykili.github.io/raw/master/lecture-antconc.pdf">Конспект лекции</a>
 
 #### 11. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
 
