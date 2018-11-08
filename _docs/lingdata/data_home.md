@@ -41,11 +41,11 @@ permalink: /data_home/
 [Задание для самоподготовки](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-data-analysis-2.md): Добавление информации из электронных словарей и баз данных. Регулярные выражния.
 
 #### 10. Лекция. Работа с собственным корпусом. Частотные списки, коллокации, ключевые слова (конкордансер AntConc)  
-<a href="https://github.com/pykili/pykili.github.io/raw/master/lecture-antconc.pdf">Конспект лекции</a>
+<a href="https://github.com/pykili/pykili.github.io/raw/master/_docs/lingdata/lecture-antconc.pdf">Конспект лекции</a>
 
 #### 11. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
 
-Д/з: Создание учебного корпуса - 2. Расшифровка записи. [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций.
+[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Расшифровка записи. [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций.
 
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
