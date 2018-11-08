@@ -45,7 +45,7 @@ permalink: /data_home/
 
 #### 11. Контрольная работа. <a href="https://github.com/olesar/hseinstruments/blob/master/Day10_RegExp.md">Работа с таблицами и регулярными выражениями</a>  
 
-[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Расшифровка записи. [Разметка ударений](https://github.com/olesar/hseinstruments/blob/master/Day09-hw-acc.md) и хезитаций.
+[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Метаразметка. Расшифровка записи. Разметка ударений и хезитаций. (дедлайн 18 ноября)
 
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
