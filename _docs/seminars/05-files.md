@@ -183,7 +183,7 @@ print(text)
 
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
-- 1 группа: дедлайн <>
+- 1 группа: дедлайн 16 ноября 23:55 <https://classroom.github.com/a/vw-hrwuE>
 - 2 группа: дедлайн 18 ноября 23:55 <https://classroom.github.com/a/OIpihPbA>
 - 3 группа: дедлайн 18 ноября 23:55 <https://classroom.github.com/a/n-0jRQpH>
 - 4 группа: дедлайн 13 ноября 23:55 <https://classroom.github.com/a/djMk-gla>
