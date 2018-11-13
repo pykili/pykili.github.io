@@ -47,6 +47,9 @@ permalink: /data_home/
 
 [Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Метаразметка. Расшифровка записи. Разметка ударений и хезитаций. (дедлайн 18 ноября)
 
+#### 12. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum_elan.md">Разметка мультимедийных данных в системе ELAN</a>  
+Д/з: Создание учебного корпуса - 2. Разметка реплик в ELAN (дедлайн 25 ноября)
+
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
 #### 11. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc.md">Анализ пользовательских корпусов в AntConc. Форматы представления корпусной разметки. Валидация XML</a>  
@@ -54,9 +57,6 @@ permalink: /data_home/
 
 #### 12. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-Disambiguation.md">Морфологическая разметка и дизамбигуация</a>  
 Д/з: Практикум по снятию омонимии.
-
-#### 13. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day11-ELAN.md">Разметка мультимедийных корпусов в системе ELAN</a>  
-Д/з: <a href="/https://github.com/olesar/hseinstruments/blob/master/Day11-ELAN-hw.md">Разметка файла LiveCorpus в ELAN</a>
 
 #### 14. Контрольная работа. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day12-LiveCorpus-data.md">Итоговая сдача материалов LiveCorpus. Оценка качества разметки корпуса</a>  
 -->
