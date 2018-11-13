@@ -47,7 +47,7 @@ permalink: /data_home/
 
 [Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Метаразметка. Расшифровка записи. Разметка ударений и хезитаций. (дедлайн 18 ноября)
 
-#### 12. <a href="https://github.com/olesar/hseinstruments/blob/master/practicum_elan.md">Разметка мультимедийных данных в системе ELAN</a>  
+#### 12. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-elan.md">Разметка мультимедийных данных в системе ELAN</a>  
 Д/з: Создание учебного корпуса - 2. Разметка реплик в ELAN (дедлайн 25 ноября)
 
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
