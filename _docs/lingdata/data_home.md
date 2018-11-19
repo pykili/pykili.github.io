@@ -48,18 +48,24 @@ permalink: /data_home/
 [Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework_transcript.md): Создание учебного корпуса - 2. Метаразметка. Расшифровка записи. Разметка ударений и хезитаций. (дедлайн 18 ноября)
 
 #### 12. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-elan.md">Разметка мультимедийных данных в системе ELAN</a>  
-Д/з: Создание учебного корпуса - 2. Разметка реплик в ELAN (дедлайн 25 ноября)
+[Д/з](https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/homework-elan.md): Создание учебного корпуса - 3. Разметка реплик в ELAN (дедлайн 25 ноября)
+
+#### 13. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-antconc.md">Анализ пользовательских корпусов в AntConc. Лемматизация и грамматическая аннотация файлов. </a>  
 
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
-#### 11. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc.md">Анализ пользовательских корпусов в AntConc. Форматы представления корпусной разметки. Валидация XML</a>  
 Д/з: [Расшифровка видео](https://github.com/olesar/hseinstruments/blob/master/Day03-hw-Transcript.md) (полная).  <a href="https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc-hw.md">Частотный словарь</a> (файлы LiveCorpus и др.).
 
 #### 12. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day08-Disambiguation.md">Морфологическая разметка и дизамбигуация</a>  
-Д/з: Практикум по снятию омонимии.
+[Д/з](): Практикум по снятию омонимии.
+
 
 #### 14. Контрольная работа. <a href="/https://github.com/olesar/hseinstruments/blob/master/Day12-LiveCorpus-data.md">Итоговая сдача материалов LiveCorpus. Оценка качества разметки корпуса</a>  
 -->
+
+\_   
+\_   
+\_   
 
 
 В разработке программы и материалов курса принимали участие О. Н. Ляшевская, С. Ю. Толдова, Т. А. Архангельский, Б. В. Орехов, Е. Кузьменко, Э. Мустакимова, Е. Грамматчикова, а также учебные ассистенты разных лет.  
