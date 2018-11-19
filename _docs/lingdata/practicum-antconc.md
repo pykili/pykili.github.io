@@ -25,7 +25,7 @@ __AntConc__ -- корпусный менеджер
 * Построить частотный список, игнорируя теги xml (см. xml-файл) 
 
 #### Лемматизация словоформ 
-* Разметьте фрагмент файла "Анны Карениной" с помощью разметчика [UDPipe](http://lindat.mff.cuni.cz/services/udpipe/) (модель Russian-SynTagRus, версия UD 2.0, tokenize and tag) 
+* Разметьте фрагмент файла "Анны Карениной" с помощью разметчика [UDPipe](http://lindat.mff.cuni.cz/services/udpipe/) (модель Russian-SynTagRus, версия UD 2.0, tokenize and tag, загрузите файл и нажмите "Process input").
 
 <img src="https://raw.githubusercontent.com/pykili/pykili.github.io/master/img/data_udpipe/udpipe_rus.png" width = "800"></img>
 
