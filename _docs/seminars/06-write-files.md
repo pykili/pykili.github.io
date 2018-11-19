@@ -109,6 +109,6 @@ permalink: /06/
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
 - 1 группа: дедлайн 23 ноября 23:55 <https://classroom.github.com/a/abNn6lBR>
-- 2 группа: дедлайн - <>
-- 3 группа: дедлайн - <>
+- 2 группа: дедлайн 25 ноября 23:55 <https://classroom.github.com/a/thmZ5TkM>
+- 3 группа: дедлайн 25 ноября 23:55 <https://classroom.github.com/a/v0rEz8FF>
 - 4 группа: дедлайн 20 ноября 23:55 <https://classroom.github.com/a/aBQ2JKZv>
