@@ -1,6 +1,6 @@
 ---
 title: Бонусные задачи
-permalink: /https://pykili.github.io/00.yml/
+permalink: /bonus/
 ---
 
 # Это страница для бонусных заданий.
