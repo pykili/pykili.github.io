@@ -142,15 +142,13 @@ def main():
     print(a, op, b, '=', end=' ')
     if op == '+':
         print(a + b)
-        return
-    if op == '-':
+    elif op == '-':
         print(a - b)
-        return
-    if op == '*':
+    elif op == '*':
         print(a * b)
-        return
-    # op == '/'
-    print(a / b)
+    else:
+        # op == '/'
+        print(a / b)
 
 
 if __name__ == '__main__':
