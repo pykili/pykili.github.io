@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-gem "jekyll", "3.4.3"
+gem "jekyll", ">= 3.6.3"
+gem "ffi", ">= 1.9.24"  # Security
 
 # to use GitHub Pages
 # gem "github-pages", group: :jekyll_plugins
