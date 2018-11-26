@@ -185,6 +185,6 @@ if __name__ == '__main__':
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
 - 1 группа: дедлайн 29 ноября 23:55 <https://classroom.github.com/a/LUeC-uEs>
-- 2 группа: — <>
-- 3 группа: — <>
-- 4 группа: дедлайн 27 ноября 23:55 — <https://classroom.github.com/a/XtqCrglV>
+- 2 группа: дедлайн 2 декабря 23:55 <https://classroom.github.com/a/d8eM3bRv>
+- 3 группа: дедлайн 2 декабря 23:55 <https://classroom.github.com/a/Tj8s2dwN>
+- 4 группа: дедлайн 27 ноября 23:55 <https://classroom.github.com/a/XtqCrglV>
