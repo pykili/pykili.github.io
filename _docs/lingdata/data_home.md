@@ -52,6 +52,10 @@ permalink: /data_home/
 
 #### 13. <a href="https://github.com/pykili/pykili.github.io/blob/master/_docs/lingdata/practicum-antconc.md">Анализ пользовательских корпусов в AntConc. Лемматизация и грамматическая аннотация файлов. </a>  
 
+[Д/з]() Создание учебного корпуса - 4. Расшифровка диалога (запись № 3, 1 минута "убыстренного" диалога, скорее в конце записи). Разметка ударений (дедлайн 9 декабря)
+
+Бонусные задания (для тех, кто хочет поднять оценку за домашние работы) будут выложены 4 декабря.
+
 <!-- Д/з: <a href="https://github.com/olesar/hseinstruments/blob/master/Day10-Spreadsheets-3.md">Корпусное мини-исследование - 2</a>.
 
 Д/з: [Расшифровка видео](https://github.com/olesar/hseinstruments/blob/master/Day03-hw-Transcript.md) (полная).  <a href="https://github.com/olesar/hseinstruments/blob/master/Day07-AntConc-hw.md">Частотный словарь</a> (файлы LiveCorpus и др.).
