@@ -5,6 +5,9 @@ permalink: /str/
 
 # `str`
 
+В нашем курсе мы постоянно работаем с типом `str` — строками.
+На этой странице представлен обзор всего того, что мы уже знаем о них.
+
 
 ### Создание строк
 
@@ -20,6 +23,21 @@ permalink: /str/
 ### Поиск в строке
 
 #### Оператор `in`
+
+`in` позволяет узнать является ли одна строка частью другой.
+
+```python
+>>> long = 'Hello, dear Mary'
+>>> short = 'dear'
+>>> if short in long:
+...     print(short, 'is a part of', long)
+...
+dear is a part of Hello, dear Mary
+>>> short in long
+True
+>>> long in short
+False
+```
 
 #### Поиск положения: `str.find()`, `str.rfind()`
 
