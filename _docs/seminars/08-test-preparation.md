@@ -1,9 +1,9 @@
 ---
-title: 7 &mdash; Подготовка к контрольной работе №1
-permalink: /07/
+title: 8 &mdash; Тестовый вариант контрольной №1
+permalink: /08/
 ---
 
-# Подготовка к контрольной работе №1
+# Тестовый вариант контрольной №1
 
 Для работы нужно использовать <http://web-corpora.net/Test1_2016/quotes.txt>. В файле на каждой строчке записана цитата, затем тире "—", а затем источник цитаты.
 
@@ -14,7 +14,7 @@ def clear_text(text):
     '''Функция очищает текст от 'мусорных' символов слева и справа от text
     '''
     trash_symbols = '!"#$%&\'-()*+,./:;<=>?@[\\]^_`{|}~«»—'
-    
+
     return text.strip(trash_symbols)
 ```
 
@@ -23,15 +23,15 @@ def get_words(string_of_text):
     '''Преобразует текст в набор токенов.
         Токеном является слово, очищенное от любых символов, кроме букв.
     '''
-    
+
     good_words = []
-    
+
     for word in string_of_text.split():
         candidate = clear_text(word)
         if candidate != '':
             candidate = candidate.lower()
             good_words.append(candidate)
-    
+
     return good_words
 ```
 
@@ -71,7 +71,7 @@ with open(FILENAME, encoding='utf-8') as fid:
     for line in fid:
         quote, author = line.split(DASH, maxsplit=1)
         quote_words = get_words(quote)
-        
+
         if MIND_WORD in quote_words:
             mind_authors.append(author.strip())
 
@@ -95,13 +95,13 @@ FILENAME = 'quotes.txt'
 DASH = '—'
 
 def find_quotes(input_word, quotes, quotes_words):
-    
+
     results = []
-    
+
     for i, quote_words in enumerate(quotes_words):
         if input_word in quote_words:
             results.append(quotes[i])
-    
+
     return results
 
 quotes = [] # список цитат из файла
@@ -114,7 +114,7 @@ with open(FILENAME, encoding='utf-8') as fid:
         line = line.strip()
         quote, author = line.split(DASH, maxsplit=1)
         quote_words = get_words(quote)
-        
+
         quotes.append(line) # добавим всю цитату с автором
         quotes_words.append(quote_words)
 
@@ -127,7 +127,7 @@ while True:
 
     word = word.strip().lower()
     found_quotes = find_quotes(word, quotes, quotes_words)
-    
+
     if len(found_quotes) == 0:
         print('Цитат не нашлось')
     else:
