@@ -27,7 +27,7 @@ permalink: /10/
 Повторим тот же самый код, но с кортежем
 
 ```python
->>> tuple_of_digits = (1, 2, 3)
+>>> tuple_of_digits = (1, 2, 3,)
 >>> tuple_of_digits[0] = 45
 TypeError: 'tuple' object does not support item assignment
 ```
@@ -40,12 +40,24 @@ TypeError: 'tuple' object does not support item assignment
 >>> empty_tuple = () # Создание кортежа с помощью литерала
 >>> yet_another_empty_tuple = tuple() # Создание кортежа с помощью встроенной функции
 >>>
->>> some_tuple = (1, 2, ['a', 'b'], 4, 5) # Инициализация кортежа
+>>> some_tuple = (1, 2, ['a', 'b'], 4, 5,) # Инициализация кортежа
 >>>
 >>> hello_tuple = tuple('hello world') # Создание кортежа из итерируемого объекта, коим является строка
 >>> print(hello_tuple)
 ('h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd')
 ```
+
+При инициализации кортежа лучше завести привычку писать запятую после последнего элемента, иначе есть шанс ошибиться в случае кортежа, состоящего из одного элемента
+
+```python
+>>> int_not_tuple = (7) # Это математические скобки, не кортеж
+>>> print(type(int_not_tuple))
+<class 'int'>
+>>> one_element_tuple = (7,) # Кортеж с одним элементом
+>>> print(type(one_element_tuple))
+<class 'tuple'>
+```
+
 
 Когда использовать кортежи? Когда нужно что-то неизменяемое. Рассмотрим пример
 
@@ -96,7 +108,7 @@ def process_line(line):
 	word, morph, ipm = line.split('|')
 	morphs = morph.split()
 	ipm = float(ipm)
-	return (word, morphs, ipm)
+	return word, morphs, ipm
 ```
 
 И потом пользоваться этой функцией при обработки каждой строки вообще не заботясь о том, какие она операции выполняет.
@@ -106,6 +118,8 @@ def process_line(line):
 >>> process_line(line)
 ('абориген', ['сущ', 'одуш', 'ед', 'муж', 'им'], 10.53)
 ```
+
+> Обратите внимание, что можно не ставить скобки в последней строке, питон и так знает, что если перечислено несколько значений через запятую после `return`, то нужно вернуть кортеж.
 
 
 # Именованные аргументы функции
