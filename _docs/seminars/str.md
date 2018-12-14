@@ -86,7 +86,7 @@ False
 False
 ```
 
-#### Приведение к другому регистру: `str.lower()`, `str.upper()`, `str.title()`
+#### Приведение к другому регистру: `str.lower()`, `str.upper()`, `str.capitalize()`, `str.title()`
 —
 
 
