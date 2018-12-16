@@ -279,4 +279,4 @@ if __name__ == "__main__":
 - 1 группа: дедлайн - <>
 - 2 группа: дедлайн - дедлайн 23 декабря 23:55 <https://classroom.github.com/a/g4ckuhij>
 - 3 группа: дедлайн - дедлайн 23 декабря 23:55 <https://classroom.github.com/a/WX0fc-TO>
-- 4 группа: дедлайн - <>
+- 4 группа: дедлайн - дедлайн 20 декабря 23:55  <https://classroom.github.com/a/j_XB3g9m>
