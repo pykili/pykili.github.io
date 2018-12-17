@@ -21,7 +21,8 @@ permalink: /11/
 #!/usr/bin/env python3
 
 
-PUNCT_CHARS = list(""",.:;"'`()""") + [' -', '- ']
+PUNCT_CHARS = """,.:;"'`()-"""
+PUNCT_CHARS_WITH_SPACES = (' -', '- ',)
 SEASONS = (
     tuple(range(1, 11)),
     (1, 2, 3, 4, 6, 8, 10,),
@@ -31,9 +32,11 @@ SEASONS = (
 
 def get_words(text):
     text = text.lower()
-    for char in PUNCT_CHARS:
+    for char in PUNCT_CHARS_WITH_SPACES:
         text = text.replace(char, '')
     words = text.split()
+    for i, w in enumerate(words):
+        words[i] = w.strip(PUNCT_CHARS)
     return words
 
 
@@ -54,6 +57,17 @@ def get_episode_list(seasons):
     return files
 
 
+def remove_remarks(text):
+    while True:
+        idx_left = text.find('(')
+        idx_right = text.find(')')
+        if idx_left == -1 or idx_right == -1:
+            break
+        text = text[:idx_left] + text[idx_right + 1:]
+    print(text)
+    return text
+
+
 def parse_episode(episode, character=None):
     cues = []
     name = ''
@@ -69,6 +83,7 @@ def parse_episode(episode, character=None):
         if len(splitted_line) == 2:
             name = splitted_line[0]
         text = splitted_line[-1]
+        text = remove_remarks(text)
         if character is None or character in name:
             cues.append(text)
     return cues
@@ -102,6 +117,7 @@ def print_result(name, word, count):
 def main():
     episodes = get_episode_list(SEASONS)
     char = character = ask_user('Input character name, "all" for everyone: ')
+    print('Working...')
     if character.lower() == 'all':
         char = None
     cues = []
