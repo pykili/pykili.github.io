@@ -64,7 +64,6 @@ def remove_remarks(text):
         if idx_left == -1 or idx_right == -1:
             break
         text = text[:idx_left] + text[idx_right + 1:]
-    print(text)
     return text
 
 
