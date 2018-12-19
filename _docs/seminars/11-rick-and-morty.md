@@ -176,4 +176,4 @@ x = random.choice(array)
 - 1 группа: дедлайн - <>
 - 2 группа: дедлайн - январь 2019, будет уточнено <https://classroom.github.com/a/ZzPT5P09>
 - 3 группа: дедлайн - январь 2019, будет уточнено <https://classroom.github.com/a/x5WOG9za>
-- 4 группа: дедлайн - <>
+- 4 группа: дедлайн - январь 2019, будет уточнено <https://classroom.github.com/a/3TXLSuld>
