@@ -283,7 +283,7 @@ if __name__ == "__main__":
 
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
-- 1 группа: дедлайн - <>
+- 1 группа: дедлайн - дедлайн 21 декабря 23:55 <https://classroom.github.com/a/1qhXm4PH>
 - 2 группа: дедлайн - дедлайн 23 декабря 23:55 <https://classroom.github.com/a/g4ckuhij>
 - 3 группа: дедлайн - дедлайн 23 декабря 23:55 <https://classroom.github.com/a/WX0fc-TO>
-- 4 группа: дедлайн - дедлайн 20 декабря 23:55  <https://classroom.github.com/a/j_XB3g9m>
+- 4 группа: дедлайн - дедлайн 20 декабря 23:55 <https://classroom.github.com/a/j_XB3g9m>
