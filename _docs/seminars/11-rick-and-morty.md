@@ -174,6 +174,6 @@ x = random.choice(array)
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
 - 1 группа: дедлайн - 25 января 2019 23:55 <https://classroom.github.com/a/MQ_QKjjs> 
-- 2 группа: дедлайн - 20 января 2019 23:55, будет уточнено <https://classroom.github.com/a/ZzPT5P09>
-- 3 группа: дедлайн - 20 января 2019 23:55, будет уточнено <https://classroom.github.com/a/x5WOG9za>
+- 2 группа: дедлайн - 20 января 2019 23:55 <https://classroom.github.com/a/ZzPT5P09>
+- 3 группа: дедлайн - 20 января 2019 23:55 <https://classroom.github.com/a/x5WOG9za>
 - 4 группа: дедлайн - январь 2019, будет уточнено <https://classroom.github.com/a/3TXLSuld>
