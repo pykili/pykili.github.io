@@ -90,8 +90,8 @@ Bi
 
 ```python
 >>> for ru_name in mendeleev_table:
->>> 	print(ru_name)  # напечатает ключ, в нашем случае название элемента на русском
->>> 	print(mendeleev_table[ru_name])  # напечатает значение, в нашем случае символ элемента
+... 	print(ru_name)  # напечатает ключ, в нашем случае название элемента на русском
+... 	print(mendeleev_table[ru_name])  # напечатает значение, в нашем случае символ элемента
 кислород
 O
 гелий
@@ -141,7 +141,7 @@ TypeError: 'dict_keys' object does not support indexing
 
 ```python
 >>> for symbol in mendeleev_table.values():
->>> 	print(symbol)  # напечатает значение, в нашем случае символ элемента
+... 	print(symbol)  # напечатает значение, в нашем случае символ элемента
 O
 He
 Db
@@ -161,7 +161,7 @@ La
 ```python
 >>> # Еще один пример, для нашего словаря с химическими элементами:
 >>> for ru_name, symbol in mendeleev_table.items():
->>> 	print(symbol, "—", ru_name)
+... 	print(symbol, "—", ru_name)
 O — кислород
 He — гелий
 Db — дубний
@@ -187,7 +187,7 @@ La — лантан
 >>> # Перебор по отсортированным ключам
 >>> dictionary = {5: 'пять', 2: 'два', 1: 'один', 3: 'три', 4: 'четыре'}
 >>> for key in sorted(dictionary):
->>> 	print(key, dictionary[key])  # печатает пару ключ-значение, ключи упорядочены
+... 	print(key, dictionary[key])  # печатает пару ключ-значение, ключи упорядочены
 1 один
 2 два
 3 три
@@ -198,7 +198,7 @@ La — лантан
 ```python
 >>> # Перебор отсортированных значений
 >>> for value in sorted(dictionary.values()):
->>> 	print(value)  # ключи мы не знаем, печатаем только значения (в алфавитном порядке)
+... 	print(value)  # ключи мы не знаем, печатаем только значения (в алфавитном порядке)
 два
 один
 пять
@@ -210,7 +210,7 @@ La — лантан
 
 ```python
 >>> for key in sorted(dictionary, key=dictionary.get):
->>> 	print(key, dictionary[key])
+... 	print(key, dictionary[key])
 2 два
 1 один
 5 пять
