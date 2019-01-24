@@ -273,4 +273,4 @@ counter = collections.Counter(words)
 - 1 группа: дедлайн 00 января 23:55 <>
 - 2 группа: дедлайн 27 января 23:55 <https://classroom.github.com/a/fglFuAtl>
 - 3 группа: дедлайн 27 января 23:55 <https://classroom.github.com/a/jk1hg7UM>
-- 4 группа: дедлайн 00 января 23:55 <>
+- 4 группа: дедлайн 29 января 23:55 <https://classroom.github.com/a/dxoCv1Zv>
