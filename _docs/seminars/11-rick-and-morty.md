@@ -70,21 +70,22 @@ def remove_remarks(text):
 def parse_episode(episode, character=None):
     cues = []
     name = ''
-    for line in open(episode, encoding='utf-8'):
-        line = line.strip()
-        # if not line:
-        if line == '':
-            continue
-        if ((line.startswith('[') or line.startswith('('))
-                and (line.endswith(']') or line.endswith(')'))):
-            continue
-        splitted_line = line.split(': ', maxsplit=1)
-        if len(splitted_line) == 2:
-            name = splitted_line[0]
-        text = splitted_line[-1]
-        text = remove_remarks(text)
-        if character is None or character in name:
-            cues.append(text)
+    with open(episode, encoding='utf-8') as fh:
+        for line in f:
+            line = line.strip()
+            # if not line:
+            if line == '':
+                continue
+            if ((line.startswith('[') or line.startswith('('))
+                    and (line.endswith(']') or line.endswith(')'))):
+                continue
+            splitted_line = line.split(': ', maxsplit=1)
+            if len(splitted_line) == 2:
+                name = splitted_line[0]
+            text = splitted_line[-1]
+            text = remove_remarks(text)
+            if character is None or character in name:
+                cues.append(text)
     return cues
 
 
