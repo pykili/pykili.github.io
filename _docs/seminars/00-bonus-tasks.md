@@ -44,7 +44,7 @@ permalink: /bonus/
     
 </table>
   
-### Дедлайн: 10 февраля в 23:59
+### Дедлайн: 28 февраля в 23:59
 ### Сдавать:
 - 1 группе сюда: <https://classroom.github.com/a/3qFJPlbA>
 - 2 группе сюда: <https://classroom.github.com/a/OIsHe8ov>
