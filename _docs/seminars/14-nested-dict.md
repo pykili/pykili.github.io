@@ -125,7 +125,7 @@ def add_item3(d, student, item):
 
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
-- 1 группа: дедлайн ... 23:55 <>
+- 1 группа: дедлайн 8 февраля 23:55 <https://classroom.github.com/a/v_4-LD-1>
 - 2 группа: дедлайн 10 февраля 23:55 <https://classroom.github.com/a/3PD8jm9N>
 - 3 группа: дедлайн 10 февраля 23:55 <https://classroom.github.com/a/0F8qinDL>
 - 4 группа: дедлайн 19 февраля 23:55 <https://classroom.github.com/a/hL-jSzBq>
