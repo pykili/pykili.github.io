@@ -105,6 +105,6 @@ digits_str = ''.join(digits)    # '301930'
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
 - 1 группа: дедлайн 15 февраля 23:55 <https://classroom.github.com/a/ADozABgw>
-- 2 группа: дедлайн 4 марта 23:55 <https://classroom.github.com/a/o5D28zYi>
-- 3 группа: дедлайн 4 марта 23:55 <https://classroom.github.com/a/6oLbtUGK>
+- 2 группа: дедлайн 3 марта 23:55 <https://classroom.github.com/a/o5D28zYi>
+- 3 группа: дедлайн 3 марта 23:55 <https://classroom.github.com/a/6oLbtUGK>
 - 4 группа: дедлайн ? февраля 23:55 <>
