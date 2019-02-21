@@ -62,7 +62,7 @@ if first_match:
 else:
     print('Nothing found.')
 ```
-    
+
 Ещё одна полезная функция `re.findall(pattern, string)` находит все вхождения подходящих строк:
 
 ```python
@@ -107,4 +107,4 @@ digits_str = ''.join(digits)    # '301930'
 - 1 группа: дедлайн 15 февраля 23:55 <https://classroom.github.com/a/ADozABgw>
 - 2 группа: дедлайн 3 марта 23:55 <https://classroom.github.com/a/o5D28zYi>
 - 3 группа: дедлайн 3 марта 23:55 <https://classroom.github.com/a/6oLbtUGK>
-- 4 группа: дедлайн ? февраля 23:55 <>
+- 4 группа: дедлайн 26 февраля 23:55 <https://classroom.github.com/a/x1I7vsLb>
