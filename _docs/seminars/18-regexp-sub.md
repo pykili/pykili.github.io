@@ -48,7 +48,7 @@ permalink: /18/
 
 ```python
 >>> # Задача: заменить все числа на слово NUM
->>> # 
+>>> #
 >>> import re
 >>> string = 'Мой дядя родился в 48 году и в 2000 ему было 52'
 >>> pattern = '[0-9]+'
@@ -67,10 +67,10 @@ permalink: /18/
 
 ```python
 def convert_dates(text):
-    
+
     pattern = '([0-9]{2})/([0-9]{2})/([0-9]{4})'
     result = re.search(pattern, text)
-    
+
     if result:
         mm = result.group(1)
         dd = result.group(2)
@@ -78,7 +78,7 @@ def convert_dates(text):
         new_date = dd + '/' + mm + '/' + yyyy
         start, stop = result.span()
         text = text[:start] + new_date + text[stop:]
-    
+
     return text
 ```
 
@@ -95,10 +95,10 @@ def convert_dates(text):
 
 ```python
 def convert_dates(text):
-    
+
     pattern = '([0-9]{2})/([0-9]{2})/([0-9]{4})'
     repl = r'\2/\1/\3'
-    
+
     return re.sub(pattern, repl, text)
 ```
 
@@ -122,10 +122,10 @@ def convert_dates(text):
 
 ```python
 def convert_dates(text):
-    
+
     pattern = '(?P<m>[0-9]{2})/(?P<d>[0-9]{2})/(?P<y>[0-9]{4}) (?P<hm>[0-9]{2}:[0-9]{2})'
     repl = r'\g<d>/\g<m>/\g<y> в \g<hm>'
-    
+
     return re.sub(pattern, repl, text)
 ```
 
@@ -142,13 +142,13 @@ def convert_dates(text):
 
 ```python
 def get_mail_provider(email):
-    
+
     pattern = '(?P<login>[a-zA-Z0-9_]+)@(?P<provider>(?P<name>[a-zA-Z0-9_]+)\.(?P<domain>[a-zA-Z]+))'
     result = re.search(pattern, email)
-    
+
     if result:
         return result.group('provider')
-    
+
     return None
 ```
 
@@ -175,4 +175,4 @@ def get_mail_provider(email):
 - 1 группа: дедлайн - 23:55 <>
 - 2 группа: дедлайн - 23:55 <>
 - 3 группа: дедлайн - 23:55 <>
-- 4 группа: дедлайн 12 марта 23:55 <>
+- 4 группа: дедлайн 12 марта 23:55 <https://classroom.github.com/a/Kcl_RhaB>
