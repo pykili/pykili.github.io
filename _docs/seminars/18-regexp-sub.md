@@ -173,6 +173,6 @@ def get_mail_provider(email):
 **Выполните задание пройдя по ссылке в GitHub Classroom:**
 
 - 1 группа: дедлайн - 23:55 <>
-- 2 группа: дедлайн - 23:55 <>
-- 3 группа: дедлайн - 23:55 <>
+- 2 группа: дедлайн 31 марта 23:55 <https://classroom.github.com/a/FOEv3SHT>
+- 3 группа: дедлайн 31 марта 23:55 <https://classroom.github.com/a/wxeS59Iw>
 - 4 группа: дедлайн 12 марта 23:55 <https://classroom.github.com/a/Kcl_RhaB>
