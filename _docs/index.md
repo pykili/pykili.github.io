@@ -45,7 +45,7 @@ redirect_from: /
 |16|[Поиск с регулярными выражениями](/16/)|09.02.2019|18.02.2019|18.02.2019|20.02.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_16.pdf)|
 |17|[Нахождение строк, соответствующих шаблону](/17/)||04.03.2019|04.03.2019|27.02.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_17.pdf)|
 |18|[Замены с помощью регулярных выражений](/18/)|-|11.03.2019|11.03.2019|06.03.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_18.pdf)|
-|18|[Разбиения с регулярными выражениями](/19/)||1.04.2019|1.04.2019||
+|19|[Разбиения с регулярными выражениями](/19/)||1.04.2019|1.04.2019||
 
 
 ## Домашние работы по программированию
