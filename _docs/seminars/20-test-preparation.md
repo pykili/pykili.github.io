@@ -12,6 +12,9 @@ permalink: /20/
 
 **Возможное решение**
 
+<details>
+<summary>Показать</summary>
+
 ```python
 import re
 
@@ -23,17 +26,26 @@ def count_lines_in_se(xml):
 
 
 def problem1():
-    with open('mystem.xml') as fh:
+    with open('mystem.xml', encoding='utf-8') as fh:
         xml = fh.read()
+    answer = count_lines_in_se(xml)
     with open('number_of_lines_inside_se.txt', 'w') as fh:
-        fh.write(count_lines_in_se(xml))
+        fh.write(str(answer))
+
+problem1()
 ```
+
+</details>
 
 # Задача №2
 
 Создать словарь, в котором ключами являются строка с результатом морфологического разбора слова (то есть значения атрибута `gr` для строк, в которых имеется `<w>`), а значениями — количество их вхождений в файле. Распечатать пары ключ-значение из словаря в открытый для записи файл таким образом, чтобы каждая пара располагалась на одной строке и была разделена символом табуляции.
 
 **Возможное решение**
+
+<details>
+<summary>Показать</summary>
+
 
 ```python
 import re
@@ -45,7 +57,7 @@ def gr_counter(xml):
     return Counter(gr)
 
 def problem2():
-    with open('mystem.xml', 'r') as fh:
+    with open('mystem.xml', 'r', encoding='utf-8') as fh:
         xml = fh.read()
     counter = gr_counter(xml)
     with open('morphology_counter.tsv', 'w') as fh:
@@ -56,6 +68,8 @@ def problem2():
             fh.write('\n')
 ```
 
+</details>
+
 # Задача №3
 
 С помощью регулярных выражений найти все вхождения прилагательных женского года (то есть таких, для которых в `gr=...` входит запись «A», а также указан род «жен»). Соответствующие этим характеристикам словоформы распечатать в новый файл в одну строку через запятую. 
@@ -63,6 +77,9 @@ def problem2():
 Преобразуйте содержимое корпуса в формат csv. Возьмите строки внутри тега <body> и с помощью re.sub очистите их от тегов. Запишите результат в новый файл следующим образом: на одной строке должны находиться лемма, разбор, словоформа, разделённые точкой с запятой. Пунктуацию и служебную информацию можно удалить.
 
 **Возможное решение**
+
+<details>
+<summary>Показать</summary>
 
 ```python
 import re
@@ -106,8 +123,10 @@ def problem3_part2(xml):
 
 
 def problem3()
-    with open('mystem.xml', 'r') as fh:
+    with open('mystem.xml', 'r', encoding='utf-8') as fh:
         xml = fh.read()
     problem3_part1(xml)
     problem3_part2(xml)
 ```
+
+</details>
