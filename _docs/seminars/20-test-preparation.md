@@ -29,6 +29,7 @@ def problem1():
     with open('number_of_lines_inside_se.txt', 'w') as fh:
         fh.write(str(answer))
 
+
 problem1()
 ```
 
@@ -74,7 +75,7 @@ import re
 
 def feminine_adj(xml):
     words = re.findall(
-        r'^.+gr="[^,"]*A[^"]*жен[^"]*" />(\w+)</w>$',
+        r'^.+gr="A=[^"]*жен[^"]*" />(\w+)</w>$',
         xml,
         flags=re.MULTILINE
     )
