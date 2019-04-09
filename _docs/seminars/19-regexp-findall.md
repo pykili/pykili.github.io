@@ -91,4 +91,4 @@ True
 - 1 группа: дедлайн - 23:55 <>
 - 2 группа: дедлайн 7 апреля 23:55 <https://classroom.github.com/a/GX0eh1Uz>
 - 3 группа: дедлайн 7 апреля 23:55 <https://classroom.github.com/a/svmjlypk>
-- 4 группа: дедлайн - 23:55 <>
+- 4 группа: дедлайн 17 апреля 23:55 <https://classroom.github.com/a/17RNPk6X>
