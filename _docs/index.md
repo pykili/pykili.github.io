@@ -41,13 +41,13 @@ redirect_from: /
 |11|[Разбор диалогов «Рика и Морти»](/11/)|12.01.2019|17.12.2018|17.12.2018|19.12.2018|
 |12|[Импорт и функции](/12/)|19.01.2019|14.01.2019|14.01.2019|16.01.2019|
 |13|[Словари](/13/)|26.01.2019|21.01.2019|21.01.2019|23.01.2019|
-|14|[Вложенные словари](/14/)|02.02.2019|28.01.2019|28.01.2019|30.01.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_14.pdf)|
-|16|[Поиск с регулярными выражениями](/16/)|09.02.2019|18.02.2019|18.02.2019|20.02.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_16.pdf)|
-|17|[Нахождение строк, соответствующих шаблону](/17/)||04.03.2019|04.03.2019|27.02.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_17.pdf)|
-|18|[Замены с помощью регулярных выражений](/18/)|-|11.03.2019|11.03.2019|06.03.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_18.pdf)|
-|19|[Разбиения с регулярными выражениями](/19/)||1.04.2019|1.04.2019|3.04.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_19.pdf)|
-|20|[Тестовый вариант контрольной №2](/20/)||08.04.2019|08.04.2019|10.04.2019 [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_20.pdf)|
-|21|КР №2||15.04.2019 [assignment](https://classroom.github.com/a/y0HOZHdb)|15.04.2019 [assignment](https://classroom.github.com/a/jQfT6-Q7)|17.04.2019 [Задание с ответами](https://gist.github.com/Sapunov/ebb0114c7443d2ec71610a193405ccd5)|
+|14|[Вложенные словари](/14/)|02.02.2019|28.01.2019|28.01.2019|30.01.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_14.pdf)|
+|16|[Поиск с регулярными выражениями](/16/)|09.02.2019|18.02.2019|18.02.2019|20.02.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_16.pdf)|
+|17|[Нахождение строк, соответствующих шаблону](/17/)||04.03.2019|04.03.2019|27.02.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_17.pdf)|
+|18|[Замены с помощью регулярных выражений](/18/)|-|11.03.2019|11.03.2019|06.03.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_18.pdf)|
+|19|[Разбиения с регулярными выражениями](/19/)||1.04.2019|1.04.2019|3.04.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_19.pdf)|
+|20|[Тестовый вариант контрольной №2](/20/)||08.04.2019|08.04.2019|10.04.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_20.pdf)|
+|21|КР №2||15.04.2019 [assignment](https://classroom.github.com/a/y0HOZHdb)|15.04.2019 [assignment](https://classroom.github.com/a/jQfT6-Q7)|17.04.2019 <br> [Задание с ответами](https://gist.github.com/Sapunov/ebb0114c7443d2ec71610a193405ccd5)|
 
 
 ## Домашние работы по программированию
