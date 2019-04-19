@@ -48,6 +48,7 @@ redirect_from: /
 |19|[Разбиения с регулярными выражениями](/19/)||1.04.2019|1.04.2019|3.04.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_19.pdf)|
 |20|[Тестовый вариант контрольной №2](/20/)||08.04.2019|08.04.2019|10.04.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_20.pdf)|
 |21|КР №2||15.04.2019 [assignment](https://classroom.github.com/a/y0HOZHdb)|15.04.2019 [assignment](https://classroom.github.com/a/jQfT6-Q7)|17.04.2019 <br> [Задание с ответами](https://gist.github.com/Sapunov/ebb0114c7443d2ec71610a193405ccd5)|
+|22|[Работа с файлами и папками](/22/)||19.04.2019|19.04.2019|
 
 
 ## Домашние работы по программированию
