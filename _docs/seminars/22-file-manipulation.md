@@ -70,6 +70,18 @@ final.txt
 version8
 ```
 
+### Извлечение расширения
+
+Кроме того, может пригодиться функция `os.path.splitext`, котоая отрезает расширение файла:
+```python
+>>> import os
+>>> path = './work/project/version12/final.txt'
+>>> base, ext = os.path.splitext(path)
+>>> print(base, ext, sep='\n')
+./work/project/version12/final
+.txt
+```
+
 ## Проверка типа файла
  Кроме прочего, модуль `os.path` содержит функции для проверки существования файла и для определения его типа:
 
