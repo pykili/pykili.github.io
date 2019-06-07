@@ -170,4 +170,4 @@ poem.txt
 - 1 группа: дедлайн - 10 мая 23:55 <https://classroom.github.com/a/i8fVF032>
 - 2 группа: дедлайн - 28 апреля 23:55 <https://classroom.github.com/a/k_HpB_z5>
 - 3 группа: дедлайн - 28 апреля 23:55 <https://classroom.github.com/a/23sAzyQd>
-- 4 группа: дедлайн уточняется <https://classroom.github.com/a/Ir-NGzev>
+- 4 группа: дедлайн - 13 июня 23:55 <https://classroom.github.com/a/Ir-NGzev>
