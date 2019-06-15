@@ -51,6 +51,7 @@ redirect_from: /
 |22|[Работа с файлами и папками](/22/)||19.04.2019|19.04.2019|24.04.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_22.pdf)|
 |23|[Файловое дерево и форматирование строк](/23/)||22.04.2019|22.04.2019|29.05.2019 <br> [слайды](https://github.com/pykili/pykili.github.io/blob/master/content/slides/groups/4/seminar_23.pdf)|
 |24|[Тренировочное задание](/24/)|8.06.2019|00.06.2019|00.06.2019|07.06.2019|
+||Досрочный экзамен|15.06.2019 [assignment](https://classroom.github.com/a/sfgtdgke)|15.06.2019 [assignment](https://classroom.github.com/a/GEZ2H3Qf)|15.06.2019 [assignment](https://classroom.github.com/a/yB42pol2)|15.06.2019 [assignment](https://classroom.github.com/a/IpXDadU4)|
 
 
 ## Домашние работы по программированию
