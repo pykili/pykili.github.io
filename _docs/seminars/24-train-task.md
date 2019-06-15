@@ -80,7 +80,7 @@ def write_small_file(fpath, lines):
     """Записывает список строк lines в fpath, создавая необходимые папки"""
     fdir = os.path.dirname(fpath)
     os.makedirs(fdir, exist_ok=True)
-    with open(fpath, 'w') as fh:
+    with open(fpath, 'w', encoding='utf-8') as fh:
         fh.writelines(lines)
 
 
@@ -99,7 +99,7 @@ def split_file(large_fpath):
     не забыть записать найденное содержимое после конца чтения файла
     """
     small_fpath = None
-    with open(large_fpath) as fh:
+    with open(large_fpath, encoding='utf-8') as fh:
         for line in fh:
             if line.startswith('# newdoc id = '):
                 if small_fpath is not None:
@@ -160,7 +160,7 @@ def split_file(large_fpath):
     # Лучше импортировать новые модули в начале файла, но можно и так
     import re
 
-    with open(large_fpath) as fh:
+    with open(large_fpath, 'encoding='utf-8') as fh:
         large_text = fh.read()
     # Список из найденных пар (кортежей из двух элементов): пути маленького
     # файла и его содержимого
