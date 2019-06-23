@@ -72,7 +72,7 @@ permalink: /bonus/
     
 </table>
 
-### Дедлайн: to be announced
+### Дедлайн: 24 Июня 23:59
 ### Сдавать:
 - 1 группе сюда: <https://classroom.github.com/a/L2SFvIfT> 
 - 2 группе сюда: <https://classroom.github.com/a/1kUSrL95> 
