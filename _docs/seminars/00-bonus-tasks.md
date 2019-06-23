@@ -74,10 +74,10 @@ permalink: /bonus/
 
 ### Дедлайн: to be announced
 ### Сдавать:
-- 1 группе сюда: https://classroom.github.com/a/L2SFvIfT 
-- 2 группе сюда: https://classroom.github.com/a/1kUSrL95 
-- 3 группе сюда: https://classroom.github.com/a/D4IAnz-D
-- 4 группе сюда: https://classroom.github.com/a/Bmoj4Oxz
+- 1 группе сюда: <https://classroom.github.com/a/L2SFvIfT> 
+- 2 группе сюда: <https://classroom.github.com/a/1kUSrL95> 
+- 3 группе сюда: <https://classroom.github.com/a/D4IAnz-D>
+- 4 группе сюда: <https://classroom.github.com/a/Bmoj4Oxz>
 
 
 
