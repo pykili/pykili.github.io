@@ -53,6 +53,7 @@ redirect_from: /
 |24|[Тренировочное задание](/24/)|8.06.2019|00.06.2019|00.06.2019|07.06.2019|
 ||Досрочный экзамен|15.06.2019 [assignment](https://classroom.github.com/a/sfgtdgke)|15.06.2019 [assignment](https://classroom.github.com/a/GEZ2H3Qf)|15.06.2019 [assignment](https://classroom.github.com/a/yB42pol2)|15.06.2019 [assignment](https://classroom.github.com/a/IpXDadU4)|
 ||Контрольные для пропустивших|24.06.2019 [assigment КР 1](https://classroom.github.com/a/ZJDGgr56)|24.06.2019  [assigment КР 2](https://classroom.github.com/a/B2aYLOw0)|24.06.2019 [assigment КР 1](https://classroom.github.com/a/TSJg9c00) [assigment КР 2](https://classroom.github.com/a/-WwnTAkG)|24.06.2019
+||Экзамен|25.06.2019|25.06.2019 [assigment](https://classroom.github.com/a/sn7ZLYBk)|25.06.2019 [assigment](https://classroom.github.com/a/de0xutg2)|25.06.2019
 
 
 ## Домашние работы по программированию
