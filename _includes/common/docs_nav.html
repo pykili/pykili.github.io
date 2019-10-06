@@ -1,0 +1,12 @@
+<div role="tablist" aria-multiselectable="true">
+  <ul class="list-group left-nav">
+    {% for lesson in site.data.prog-lessons %}
+    {% if lesson.show %}
+    <a
+      href="{{ lesson.link }}"
+      class="list-group-item {% if page.url contains lesson.link %}active{% endif %}">
+      {{ forloop.index }}. {{ lesson.name }}</a>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

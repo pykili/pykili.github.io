@@ -1,0 +1,122 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/variables",
+  {% endif %}
+
+  "bootstrap",
+
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
+  {% endif %}
+
+  "syntax-highlighting",
+  "typeahead"
+;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  padding-top: 60px;
+}
+
+.page-content {
+  padding-bottom: 50px;
+}
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+.navbar-form .has-feedback .form-control-feedback{
+  top:10px
+}
+
+#navbar > ul > li:nth-child(1) > a {
+  padding-left: 0 !important;
+}
+
+.toplink-active {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.top-landing-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.top-landing-title h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-colored-line {
+  background-color: #f8f8f8;
+}
+
+.landing-colored-line-bt {
+  border-top: 1px solid #f0f0f0;
+}
+
+.landing-colored-line-bb {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.landing-buttons {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.landing-buttons button {
+  margin: 5px;
+}
+
+.landing-buttons button:nth-child(1) {
+  margin-left: 0;
+}
+
+.landing-buttons a:hover {
+  text-decoration: none;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.human-photo {
+  width: 80px;
+  height: 80px;
+  max-width: 80px !important;
+  border-radius: 50px;
+}
+
+.icon-grey {
+  color: #a3a3a3;
+  font-size: 0.9em;
+}
+
+.media-body .glyphicon {
+  padding-right: 5px;
+}
+
+.left-nav {
+  margin-top: 19px;
+}

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
+{% include common/head.html %}
 <body>
-    <div class="page-content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
-    </div>
-    {% include js_files.html %}
+{% include common/topnav.html %}
+<div class="page-content">
+  <div class="wrapper">{{ content }}</div>
+</div>
+{% include common/js_files.html %}
 </body>
-
 </html>

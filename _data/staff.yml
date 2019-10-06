@@ -1,0 +1,54 @@
+teachers:
+  - name: Анна Клезович
+    email: belkannkl@gmail.com
+    photo: /img/staff/aklezovich.jpg
+    group: 191 группа
+    telegram: annaklezovich
+
+  - name: Никита Сапунов
+    email: kiton1994@gmail.com
+    group: 192 и 193 группы
+    telegram: sapunov
+    photo: /img/staff/sapunov.png
+
+  - name: Олег Сериков
+    email: srkvoa@gmail.com
+    photo: /img/staff/serikov.png
+    group: 194 группа
+    telegram: oserikov
+
+  - name: Ольга Николаевна Ляшевская
+    email: olesar@yandex.ru
+    photo: /img/staff/olesar.jpg
+    telegram: olesar
+    group: Лингвистические данные
+
+
+assistants:
+  - name: Екатерина Такташева
+    email: evtaktasheva@gmail.com
+    group: 191 группа
+    telegram: tak_ty
+    vk: vk.com/tak_ty
+    photo: /img/staff/tak_ty.jpg
+
+  - name: Ольга Пичужкина
+    email: olga-p-98@mail.ru
+    group: 192 группа
+    telegram: olgap981
+    vk: vk.com/janpona
+    photo: /img/staff/janpona.jpg
+
+  - name: Антон Бузанов
+    email: anton.buzanov.00@gmail.com
+    group: 193 группа
+    telegram: Vantral
+    vk: vk.com/vantral
+    photo: /img/staff/vantral.jpg
+
+  - name: Алина Рогулина
+    email: rogulina99alina@gmail.com
+    telegram: avrogulina
+    vk: vk.com/id65682706
+    group: 194 группа
+    photo: /img/staff/avrogulina.jpg

@@ -1,0 +1,92 @@
+program:
+  url: https://www.hse.ru/ba/ling/courses/298695936.html
+  text: Программа курса на сайте ВШЭ
+
+marks:
+  url: https://docs.google.com/spreadsheets/d/1JL_b47ePXj0OqnsA3A3QZ3gYapZoHqDDVtBqXT0HQzA/edit?usp=sharing
+
+contacts:
+  url: https://forms.gle/fvhghS7cNQ5LZqtj9
+
+extra:
+  - title: Игры про основы программирования
+    desc: "Эти игры подойдут тому, кто чувствует себя неуверенным в понимании базовых понятий программирования: переменная, цикл, условия."
+    items:
+      - text: Блоковое программирование
+        url: https://www.google.com/doodles/celebrating-50-years-of-kids-coding
+        desc: дудл Гугла, посвящённый 50-летию детского программирования
+      - text: Ещё одна игра от Google с блоковым программированием
+        url: https://www.madewithcode.com/projects/wonderwoman
+      - text: Платная игра с блоковым программированием
+        url: https://tomorrowcorporation.com/humanresourcemachine
+        desc: есть также на Steam, App Store и Google Play
+  - title: Python
+    items:
+      - url: https://snakify.org/ru
+        text: Интерактивный учебник по Python
+        lang: ru
+      - url: http://pythontutor.ru
+        text: Интерактивный задачник по Python
+        lang: ru
+        desc: не все примеры решения хороши, но много хороших задач
+      - url: https://www.coursera.org/learn/python-osnovy-programmirovaniya
+        text: Курс Вышки на Coursera
+        lang: ru
+      - url: https://wombat.org.ua/AByteOfPython/toc.html
+        text: Книга «Укус питона»
+        desc: подробное вводное пособие, в HTML и PDF
+        lang: ru
+      - url: http://codecombat.com
+        text: Игра, в которой герой управляется вашей программой
+        lang: en
+      - url: https://www.codecademy.com/learn/learn-python
+        text: Курс на Codeacademy
+        lang: en
+      - url: https://docs.python.org/3/tutorial/index.html
+        text: Официальный туториал по языку
+        desc: Очень хороший материал для последовательного изучения языка
+        lang: en
+      - url: https://py.checkio.org
+        text: Игра для тех, кто уже освоил азы Python
+        lang: en
+
+  - title: Git
+    items:
+      - url: https://githowto.com/ru
+        text: GitHowTo
+        lang: ru
+        desc: хороший курс по Git в командной строке
+      - url: https://git-scm.com/book/ru/v2
+        text: Git Book
+        lang: ru
+        desc: официальный учебник по Git, тоже про командную строку
+      - url: https://guides.github.com
+        text: GitHub Tutorials
+        lang: en
+        desc: официальные руководства по использованию [github](http://github.com)
+      - url: https://www.atlassian.com/git/tutorials
+        text: Bitbucket tutorials
+        lang: en
+        desc: руководства по использованию Git на сайте Bitbucket, сервиса-конкрента GitHub
+      - url: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668
+        text: A Quick Introduction to Version Control with Git and GitHub
+        lang: en
+        desc: короткое введение в git и github
+
+  - title: Текстовые редакторы
+    items:
+      - text: Visual Studio Code
+        url: https://code.visualstudio.com/
+        desc: отличный бесплатный редактор от Microsoft
+      - text: Notepad++
+        url: https://notepad-plus-plus.org/downloads/v7.7.1/
+        desc: удобный редактор для быстрых правок
+      - text: Sublime Text
+        url: https://www.sublimetext.com/3
+        desc: для macOS, Linux и Windows (платный)
+      - text: Qpython
+        url: https://www.qpython.com
+        desc: запуск Python на Android
+      - text: Pythonista
+        url: http://omz-software.com/pythonista/
+        desc: запуск Python на iOS (платная)
