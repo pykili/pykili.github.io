@@ -1,33 +1,8 @@
 - name: Git и введение в Python
-  link: prog/01-git_and_python_intro
+  link: /prog/01-git_and_python_intro
   when:
     group1:
     group2: 7 окт 2019
-    group3:
-    group4:
-  hw:
-    group1:
-      classroom:
-      deadline:
-    group2:
-      classroom:
-      deadline:
-    group3:
-      classroom:
-      deadline:
-    group4:
-      classroom:
-      deadline:
-  show: true
-  staff:
-
-# =========================================================================== #
-
-- name: Условия и операторы сравнения
-  link: prog/02-if-and-comparison-ops
-  when:
-    group1:
-    group2: 8 окт 2019
     group3: 8 окт 2019
     group4:
   hw:
@@ -48,8 +23,33 @@
 
 # =========================================================================== #
 
+- name: Условия и операторы сравнения
+  link: /prog/02-if-and-comparison-ops
+  when:
+    group1:
+    group2: 8 окт 2019
+    group3: 11 окт 2019
+    group4:
+  hw:
+    group1:
+      classroom:
+      deadline:
+    group2:
+      classroom:
+      deadline:
+    group3:
+      classroom:
+      deadline:
+    group4:
+      classroom:
+      deadline:
+  show: true
+  staff:
+
+# =========================================================================== #
+
 - name: Циклы и индексы
-  link: prog/03-loops
+  link: /prog/03-loops
   when:
     group1:
     group2:
@@ -74,7 +74,7 @@
 # =========================================================================== #
 
 - name: Списки
-  link: prog/04-lists
+  link: /prog/04-lists
   when:
     group1:
     group2:
@@ -99,7 +99,7 @@
 # =========================================================================== #
 
 - name: Файлы
-  link: prog/05-files
+  link: /prog/05-files
   when:
     group1:
     group2:
@@ -124,7 +124,7 @@
 # =========================================================================== #
 
 - name: Запись файлов
-  link: prog/06-write-files
+  link: /prog/06-write-files
   when:
     group1:
     group2:
@@ -149,7 +149,7 @@
 # =========================================================================== #
 
 - name: Функции. Часть 1
-  link: prog/07-functions
+  link: /prog/07-functions
   when:
     group1:
     group2:
@@ -174,7 +174,7 @@
 # =========================================================================== #
 
 - name: Функции. Часть 2
-  link: prog/10-functions-two
+  link: /prog/10-functions-two
   when:
     group1:
     group2:
@@ -199,7 +199,7 @@
 # =========================================================================== #
 
 - name: Импорт и функции
-  link: prog/12-functions-and-import
+  link: /prog/12-functions-and-import
   when:
     group1:
     group2:
@@ -224,7 +224,7 @@
 # =========================================================================== #
 
 - name: Словари
-  link: prog/13-dicts
+  link: /prog/13-dicts
   when:
     group1:
     group2:
@@ -249,7 +249,7 @@
 # =========================================================================== #
 
 - name: Вложенные словари
-  link: prog/14-nested-dict
+  link: /prog/14-nested-dict
   when:
     group1:
     group2:
@@ -274,7 +274,7 @@
 # =========================================================================== #
 
 - name: Поиск с регулярными выражениями
-  link: prog/16-regexp
+  link: /prog/16-regexp
   when:
     group1:
     group2:
@@ -299,7 +299,7 @@
 # =========================================================================== #
 
 - name: Нахождение строк, соответствующих шаблону
-  link: prog/17-regexp-group
+  link: /prog/17-regexp-group
   when:
     group1:
     group2:
@@ -324,7 +324,7 @@
 # =========================================================================== #
 
 - name: Замены с помощью регулярных выражений
-  link: prog/18-regexp-sub
+  link: /prog/18-regexp-sub
   when:
     group1:
     group2:
@@ -349,7 +349,7 @@
 # =========================================================================== #
 
 - name: Разбиения с регулярными выражениями
-  link: prog/19-regexp-findall
+  link: /prog/19-regexp-findall
   when:
     group1:
     group2:
@@ -374,7 +374,7 @@
 # =========================================================================== #
 
 - name: Работа с файлами и папками
-  link: prog/22-file-manipulation
+  link: /prog/22-file-manipulation
   when:
     group1:
     group2:
@@ -399,7 +399,7 @@
 # =========================================================================== #
 
 - name: Файловое дерево и форматирование строк
-  link: prog/23-tree-and-format
+  link: /prog/23-tree-and-format
   when:
     group1:
     group2:
