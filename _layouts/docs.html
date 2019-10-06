@@ -2,23 +2,20 @@
 layout: default
 ---
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-          {% include docs_nav.html %}
-        </div>
-
-        <div class="col-md-9">
-            <div id="markdown-content-container">{{ content }}</div>
-            <!-- <p class="text-center">
-              <br />
-              <a target="_blank" href="{{site.git_edit_address}}/{{ page.path }}" class="btn btn-default githubEditButton" role="button">
-                <i class="fa fa-pencil fa-lg"></i> Улучшить эту страницу
-              </a>
-            </p> -->
-            <!-- <hr>
-            {% include section_nav.html %} -->
-        </div>
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-2">
+      {% include common/docs_nav.html %}
     </div>
+    <div class="col-md-6">
+      <div id="markdown-content-container">
+        {{ content }}
+        <!-- // -->
+        {% capture hw %}
+        {% include prog/hwfooter.md %}
+        {% endcapture %}
+        {{ hw | markdownify }}
+      </div>
+    </div>
+  </div>
 </div>

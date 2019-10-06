@@ -1,0 +1,156 @@
+---
+title: Главная
+layout: landing
+permalink: /prog
+redirect_from: /
+---
+
+<div class="row top-landing-title">
+  <h1>Программирование и лингвистические данные</h1>
+  <h4>Факультет гуманитарных наук, 1 курс, 2019-2020</h4>
+</div>
+
+<div class="row landing-colored-line landing-buttons landing-colored-line-bt">
+  <div class="col-md-8 col-md-offset-2">
+    <a href="{{ site.data.links.marks.url }}" target="_blank">
+      <button type="button" class="btn btn-warning">
+        Таблица с оценками
+        <span class="glyphicon glyphicon-new-window" style="font-size: 0.9em"></span>
+      </button>
+    </a>
+    <a href="#schedule">
+      <button type="button" class="btn btn-primary">Расписание</button>
+    </a>
+    <a href="{{ site.data.links.program.url }}" target="_blank">
+      {{ site.data.links.program.text }}
+      <span class="glyphicon glyphicon-new-window" style="font-size: 0.9em"></span>
+    </a>
+  </div>
+</div>
+
+<div class="row landing-colored-line landing-colored-line-bb pb20">
+  <div class="col-md-4 col-md-offset-2">
+    <h4 class="pb10">Преподаватели</h4>
+    {% for human in site.data.staff.teachers %}
+    <div class="media pb10">
+      <div class="media-left media-top">
+        <img class="human-photo" src="{{ human.photo }}">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ human.name }}</h4>
+        {% if human.email %}
+        <div>
+          <span class="glyphicon glyphicon-envelope icon-grey" aria-hidden="true"></span>
+          <a href="mailto:{{ human.email }}" target="_blank">{{ human.email }}</a>
+        </div>
+        {% endif %}
+        {% if human.telegram %}
+        <div>
+          <span class="glyphicon glyphicon-send icon-grey" aria-hidden="true"></span>
+          <a href="https://t.me/{{ human.telegram }}" target="_blank">{{ human.telegram }}</a>
+        </div>
+        {% endif %}
+        {% if human.group %}
+        <div>
+          <span class="glyphicon glyphicon-user icon-grey" aria-hidden="true"></span>
+          <span>{{ human.group }}</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-md-4">
+    <h4 class="pb10">Ассистенты</h4>
+    {% for human in site.data.staff.assistants %}
+    <div class="media">
+      <div class="media-left media-top">
+        <img class="human-photo" src="{{ human.photo }}">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ human.name }}</h4>
+        {% if human.email %}
+        <div>
+          <span class="glyphicon glyphicon-envelope icon-grey" aria-hidden="true"></span>
+          <a href="mailto:{{ human.email }}" target="_blank">{{ human.email }}</a>
+        </div>
+        {% endif %}
+        {% if human.telegram %}
+        <div>
+          <span class="glyphicon glyphicon-send icon-grey" aria-hidden="true"></span>
+          <a href="https://t.me/{{ human.telegram }}" target="_blank">{{ human.telegram }}</a>
+        </div>
+        {% endif %}
+        {% if human.group %}
+        <div>
+          <span class="glyphicon glyphicon-user icon-grey" aria-hidden="true"></span>
+          <span>{{ human.group }}</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2" id="schedule">
+    <h3 class="text-center">Расписание занятий</h3>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th>Тема</th>
+          <th class="text-center">Группа 1</th>
+          <th class="text-center">Группа 2</th>
+          <th class="text-center">Группа 3</th>
+          <th class="text-center">Группа 4</th>
+          <th class="text-center">Материалы</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for lesson in site.data.prog-lessons %}
+        {% if lesson.show %}
+        <tr>
+          <th scope="row" class="text-center">{{ forloop.index }}</th>
+          <td><a href="{{ lesson.link }}">{{ lesson.name }}</a></td>
+          <td class="text-center">{{ lesson.when.group1 }}</td>
+          <td class="text-center">{{ lesson.when.group2 }}</td>
+          <td class="text-center">{{ lesson.when.group3 }}</td>
+          <td class="text-center">{{ lesson.when.group4 }}</td>
+          <td class="text-center">{{ lesson.staff }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row landing-colored-line landing-colored-line-bb pb20 landing-colored-line-bt">
+  <div class="col-md-8 col-md-offset-2">
+    <h3 class="text-center pb20">
+      Логистика курса
+    </h3>
+    <div>
+      {% capture logistics %}
+      {% include prog/landing/logistics.md %}
+      {% endcapture %}
+      {{ logistics | markdownify }}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h3 class="text-center pb20">
+      Дополнительные материалы и ссылки
+    </h3>
+    <div>
+      {% capture extra %}
+      {% include prog/landing/extra.md %}
+      {% endcapture %}
+      {{ extra | markdownify }}
+    </div>
+  </div>
+</div>
