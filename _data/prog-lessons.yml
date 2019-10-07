@@ -1,7 +1,7 @@
 - name: Git и введение в Python
   link: /prog/01-git_and_python_intro
   when:
-    group1:
+    group1: 8 окт 2019
     group2: 7 окт 2019
     group3: 8 окт 2019
     group4: 11 окт 2019
