@@ -45,6 +45,11 @@
       deadline:
   show: true
   staff:
+    common:
+    group1:
+    group2: '[слайды](/content/slides/groups/2/seminar_2.pdf)'
+    group3:
+    group4:
 
 # =========================================================================== #
 

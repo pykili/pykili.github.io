@@ -96,7 +96,7 @@ redirect_from: /
 <div class="row">
   <div class="col-md-8 col-md-offset-2" id="schedule">
     <h3 class="text-center">Расписание занятий</h3>
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover table-bordered schedule-table">
       <thead>
         <tr>
           <th class="text-center">#</th>
@@ -114,11 +114,37 @@ redirect_from: /
         <tr>
           <th scope="row" class="text-center">{{ forloop.index }}</th>
           <td><a href="{{ lesson.link }}">{{ lesson.name }}</a></td>
-          <td class="text-center">{{ lesson.when.group1 }}</td>
-          <td class="text-center">{{ lesson.when.group2 }}</td>
-          <td class="text-center">{{ lesson.when.group3 }}</td>
-          <td class="text-center">{{ lesson.when.group4 }}</td>
-          <td class="text-center">{{ lesson.staff }}</td>
+          <td class="text-center">
+            {{ lesson.when.group1 }}
+            {% if lesson.staff.group1 %}
+            <br>
+            {{ lesson.staff.group1 | markdownify }}
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {{ lesson.when.group2 }}
+            {% if lesson.staff.group2 %}
+            <br>
+            {{ lesson.staff.group2 | markdownify }}
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {{ lesson.when.group3 }}
+            {% if lesson.staff.group3 %}
+            <br>
+            {{ lesson.staff.group3 | markdownify }}
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {{ lesson.when.group4 }}
+            {% if lesson.staff.group4 %}
+            <br>
+            {{ lesson.staff.group4 | markdownify }}
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {{ lesson.staff.common | markdownify }}
+          </td>
         </tr>
         {% endif %}
         {% endfor %}
