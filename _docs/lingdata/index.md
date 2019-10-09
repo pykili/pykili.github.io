@@ -1,6 +1,5 @@
 ---
 title: Лингвистические данные
-permalink: /ling
 layout: docs_wide
 ---
 
