@@ -20,6 +20,11 @@
       deadline:
   show: true
   staff:
+    common:
+    group1:
+    group2:
+    group3:
+    group4: '[слайды](https://docs.google.com/presentation/d/1wWfdkFqNq84t3jldSSi6v_AwoI_1Zd3g6PDPjDF_F7c/view)'
 
 # =========================================================================== #
 
