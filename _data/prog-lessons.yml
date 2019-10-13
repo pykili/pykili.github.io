@@ -53,7 +53,7 @@
     common:
     group1:
     group2: '[слайды](/content/slides/groups/2/seminar_2.pdf)'
-    group3:
+    group3: '[слайды](/content/slides/groups/3/seminar_2.pdf)'
     group4:
 
 # =========================================================================== #
@@ -62,8 +62,8 @@
   link: /prog/03-loops
   when:
     group1:
-    group2:
-    group3:
+    group2: 14 окт 2019
+    group3: 15 окт 2019
     group4:
   hw:
     group1:
