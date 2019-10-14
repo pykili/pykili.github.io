@@ -20,7 +20,6 @@
       deadline:
   show: true
   staff:
-    common:
     group1:
     group2:
     group3:
@@ -50,7 +49,6 @@
       deadline:
   show: true
   staff:
-    common:
     group1:
     group2: '[слайды](/content/slides/groups/2/seminar_2.pdf)'
     group3: '[слайды](/content/slides/groups/3/seminar_2.pdf)'
@@ -70,8 +68,8 @@
       classroom:
       deadline:
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/mReK1ZpP
+      deadline: 21 окт 2019
     group3:
       classroom:
       deadline:
@@ -80,6 +78,7 @@
       deadline:
   show: true
   staff:
+    group2: '[слайды](/content/slides/groups/2/seminar_3.pdf)'
 
 # =========================================================================== #
 
