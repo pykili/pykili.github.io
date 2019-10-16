@@ -103,7 +103,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -128,7 +128,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -153,7 +153,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -178,7 +178,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -203,7 +203,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -228,7 +228,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -253,7 +253,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -278,7 +278,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -303,7 +303,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -328,7 +328,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -353,7 +353,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -378,7 +378,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -403,7 +403,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
@@ -428,5 +428,5 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
