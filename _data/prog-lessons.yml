@@ -88,19 +88,19 @@
   link: /prog/04-lists
   when:
     group1: 28 окт 2019
-    group2:
-    group3:
+    group2: 29 окт 2019
+    group3: 29 окт 2019
     group4:
   hw:
     group1:
       classroom:
       deadline:
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/mYwT9kdn
+      deadline: 5 ноя 2019
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/Hl_CETZp
+      deadline: 5 ноя 2019
     group4:
       classroom:
       deadline:
