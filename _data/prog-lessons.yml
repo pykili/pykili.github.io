@@ -80,7 +80,7 @@
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_3.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_3.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/1Rdwpe13o_sFNMc1wuddujgZSOfT_k17wdigpQXLmH9o/edit?usp=sharing)'
+    group4: '[слайды](https://docs.google.com/presentation/d/1Rdwpe13o_sFNMc1wuddujgZSOfT_k17wdigpQXLmH9o/view)'
 
 # =========================================================================== #
 
@@ -90,7 +90,7 @@
     group1: 28 окт 2019
     group2: 29 окт 2019
     group3: 29 окт 2019
-    group4:
+    group4: ?? ??? 2019
   hw:
     group1:
       classroom: https://classroom.github.com/a/z5cBF9Er
@@ -106,6 +106,7 @@
       deadline:
   show: true
   staff:
+    group 4: '[слайды](https://docs.google.com/presentation/d/1uQTeemw2DuS0KcT55cpn26Ppwp-DlYm_n2hyogS9q5Q/view)'
 
 # =========================================================================== #
 
