@@ -114,8 +114,8 @@
   link: /prog/05-files
   when:
     group1:
-    group2:
-    group3:
+    group2: 5 ноя 2019
+    group3: 5 ноя 2019
     group4:
   hw:
     group1:
@@ -130,7 +130,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
