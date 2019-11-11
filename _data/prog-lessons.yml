@@ -113,14 +113,14 @@
 - name: Файлы
   link: /prog/05-files
   when:
-    group1:
+    group1: 11 ноя 2019
     group2: 5 ноя 2019
     group3: 5 ноя 2019
     group4:
   hw:
     group1:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/M3xJUN8r
+      deadline: 16 ноя 2019
     group2:
       classroom: https://classroom.github.com/a/bsuz6n3H
       deadline: 11 ноя 2019
