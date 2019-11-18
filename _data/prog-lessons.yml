@@ -171,23 +171,23 @@
   link: /prog/07-functions
   when:
     group1:
-    group2:
-    group3:
+    group2: 19 ноя 2019
+    group3: 19 ноя 2019
     group4:
   hw:
     group1:
       classroom:
       deadline:
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/xXGh4-t6
+      deadline: 25 ноя 2019 23:55
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/shj_c3ob
+      deadline: 25 ноя 2019 23:55
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
