@@ -146,7 +146,7 @@
     group1: 18 ноя 2019
     group2: 12 ноя 2019
     group3: 12 ноя 2019
-    group4:
+    group4: 20 ноя 2019
   hw:
     group1:
       classroom: https://classroom.github.com/a/B2LlCFGP
@@ -164,6 +164,7 @@
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
+    group4: '[слайды](https://docs.google.com/presentation/d/12MHwoVQblFpuXqsPcWZAjAJWCeOSsm5dm4y7lFP-70k/view)'
 
 # =========================================================================== #
 
