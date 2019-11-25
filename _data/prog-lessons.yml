@@ -174,7 +174,7 @@
     group1:
     group2: 19 ноя 2019
     group3: 19 ноя 2019
-    group4:
+    group4: 25 ноя 2019
   hw:
     group1:
       classroom:
@@ -192,6 +192,7 @@
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_7.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_7.pdf)'
+    group4: '[слайды](https://colab.research.google.com/drive/1x8piPc13Ti9p6aaAoF9c_9jcNl4WT5SF)'
 
 # =========================================================================== #
 
