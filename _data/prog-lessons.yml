@@ -208,16 +208,18 @@
       classroom:
       deadline:
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/yqRJTzx5
+      deadline: 2 дек 2019 23:55
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/Q81kIPBT
+      deadline: 2 дек 2019 23:55
     group4:
       classroom:
       deadline:
   show: true
   staff:
+    group2: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
+    group3: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
 
 # =========================================================================== #
 
