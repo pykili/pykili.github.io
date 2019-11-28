@@ -171,14 +171,14 @@
 - name: Введение в функции
   link: /prog/07-functions
   when:
-    group1:
+    group1: 28 ноя 2019
     group2: 19 ноя 2019 (тест)
     group3: 19 ноя 2019 (тест)
     group4: 25 ноя 2019
   hw:
     group1:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/QzubYVDy
+      deadline: 3 дек 3019 23:59
     group2:
       classroom: https://classroom.github.com/a/xXGh4-t6
       deadline: 25 ноя 2019 23:55
