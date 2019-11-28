@@ -199,7 +199,7 @@
 - name: Продолжение функций, кортежи
   link: /prog/10-functions-two
   when:
-    group1:
+    group1: 2 дек 2019
     group2: 26 ноя 2019
     group3: 26 ноя 2019
     group4:
