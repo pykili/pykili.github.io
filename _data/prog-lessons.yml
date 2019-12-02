@@ -158,8 +158,8 @@
       classroom: https://classroom.github.com/a/TTqJE0XF
       deadline: 18 ноя 2019 23:55
     group4:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/MOv8aehm
+      deadline: 3 дек 2019 23:59
   show: true
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
@@ -186,8 +186,8 @@
       classroom: https://classroom.github.com/a/shj_c3ob
       deadline: 25 ноя 2019 23:55
     group4:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/EAwM2dFV
+      deadline: 3 дек 2019 23:59
   show: true
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_7.pdf)'
@@ -202,7 +202,7 @@
     group1: 2 дек 2019
     group2: 26 ноя 2019
     group3: 26 ноя 2019
-    group4:
+    group4: 29 ноя 2019
   hw:
     group1:
       classroom:
@@ -214,13 +214,38 @@
       classroom: https://classroom.github.com/a/Q81kIPBT
       deadline: 2 дек 2019 23:55
     group4:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/a6G45V6G
+      deadline: 7 дек 2019 23:59
   show: true
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
     group4: '[слайды](https://colab.research.google.com/drive/1WtNpvajNhG-PiBMP8tlr7hEXfLDmrOHA), [блокнот](https://etherpad.net/p/pykili194)'
+
+# =========================================================================== #
+
+- name: Подготовка к контрольной
+  link: https://www.google.com/
+  when:
+    group1:
+    group2:
+    group3:
+    group4: 4 дек 2019
+  hw:
+    group1:
+      classroom:
+      deadline:
+    group2:
+      classroom:
+      deadline:
+    group3:
+      classroom:
+      deadline:
+    group4:
+      classroom:
+      deadline: 10 дек 2019 23:59
+  show: true
+  staff:
 
 # =========================================================================== #
 
