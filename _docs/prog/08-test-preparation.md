@@ -1,136 +1,172 @@
 ---
-title: 8 &mdash; Тестовый вариант контрольной №1
+title: 8 &mdash; Задачи для подготовки к контрольной работе №1
 ---
 
-# Тестовый вариант контрольной №1
+# Задачи для подготовки к контрольной работе №1
 
-Для работы нужно использовать <http://web-corpora.net/Test1_2016/quotes.txt>. В файле на каждой строчке записана цитата, затем тире "—", а затем источник цитаты.
 
-Перед тем, как начать формулировать задачи и разрабатывать решения, определим 2 функции. Эти функции будут использоваться во всех задачах.
+## Задача №1
+
+Напишите функцию, которая принимает на вход список чисел и возвращает
+среднее этих чисел.
+
+**Рассуждения:**
+
+1. Среднее в математике - сумма чисел делить на количество
+2. Если список пустой, то количество чисел - 0, а на ноль делить нельзя.
+   Нужно это обработать.
+
+**Решение:**
 
 ```python
-def clear_text(text):
-    '''Функция очищает текст от 'мусорных' символов слева и справа от text
-    '''
-    trash_symbols = '!"#$%&\'-()*+,./:;<=>?@[\\]^_`{|}~«»—'
+def avg(numbers):
+	if not numbers:
+		return 0
+	return sum(numbers) / len(numbers)
+```
 
-    return text.strip(trash_symbols)
+
+## Задача №2
+
+Найдите среди всех слов из частотного словаря слово,
+которое имеет самую близкую к средней частоте частоту.
+
+Оформите решение в виде нескольких функций.
+
+Частотный словарь можно скачать по
+[ссылке](https://gist.githubusercontent.com/Sapunov/22d060fe952eca5a347e8f105ebe7a42/raw/9595d0cf0276d972775ce6ce899c2299c492468a/freq_dict.txt)
+
+**Рассуждения**
+
+1. Сперва нам нужно прочитать файл с частотным словарем. Так как в задаче просят работать только со словами и их частотами, преобразуем содержимое файла в 2 списка - список слов и список частот.
+2. Напишем функцию, которая по списку частот вычислит среднюю частоту.
+3. Напишем функцию, которая вычислит индекс слова, которое имеет наиболее близкую частоту к средней.
+
+**Решение:**
+
+```python
+def read_dict(filename):
+    words = []
+    freqs = []
+    with open(filename, encoding='utf-8') as file:
+        for line in file:
+            word, _, freq = line.split('|')
+            freq = float(freq)
+            words.append(word)
+            freqs.append(freq)
+    return words, freqs
+
+
+def avg(numbers):
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+
+
+def find_closest(freqs, avg_freq):
+    index = -1
+    min_dist = 1000000 # это больше, чем любое значение из списка freqs
+    for i in range(len(freqs)):
+        dist = abs(freqs[i] - avg_freq)
+        if dist < min_dist:
+            index = i
+            min_dist = dist
+    return index
+```
+
+А вот так можно воспользоваться написанными функциями:
+
+```python
+>>> words, freqs = read_dict('freq_dict.txt')
+>>> closest = find_closest(freqs, avg(freqs))
+>>> print('Word found:', words[closest], freqs[closest])
+Word found: велосипед 28.34
+```
+
+## Задача №3
+
+
+Вам дан частотный словарь слов русского языка.
+Частотный словарь можно скачать по
+[ссылке](https://gist.githubusercontent.com/Sapunov/22d060fe952eca5a347e8f105ebe7a42/raw/9595d0cf0276d972775ce6ce899c2299c492468a/freq_dict.txt)
+
+Реализуйте функцию `retrieve(filename, lte=None, gte=None, gender=None)`. 
+
+Функция должна проходить по всем строкам файла `filename` и отбирать те слова вместе с частотой и морфологической информацией, которые подпадают под критерии.
+
+- `lte` - частота слова должна быть меньше или равна значению `lte`. Если `lte` равен `None`, то этот параметр фильтрации учитывать не нужно.
+- `gte` - частота слова должна быть больше или равна значения `gte`. Если `gte` не указан (то есть равен `None`), то этот параметр фильтрации учитывать ну нужно.
+- `gender` - слово должно принадлежать указанному в `gender` роду. Если `gender` не указано (то есть равно `None`), то учитывать этот параметр при фильтрации не нужно.
+
+**Примеры**
+
+Если в файл содержит следующие строки:
+
+```
+абитуриент|сущ одуш ед муж им|1.47
+абонемент|сущ неод ед муж им|1.1
+абонент|сущ одуш ед муж им|3.43
+абориген|сущ одуш ед муж им|10.53
+аборт|сущ неод ед муж им|9.79
+абразив|сущ неод ед муж им|4.35
+абракадабра|сущ неод ед жен им|1.22
+абрек|сущ одуш ед муж им|3.86
+абрикос|сущ неод ед муж им|4.84
+абрикосовый|прл ед муж им|1.53
+абсолют|сущ неод ед муж им|1.35
+```
+
+То функция должна работать следующим образом:
+
+```python
+# Без аргументов
+
+retrieve(filename)
+[('абитуриент', 'сущ одуш ед муж им', 1.47),
+ ('абонемент', 'сущ неод ед муж им', 1.1),
+ ('абонент', 'сущ одуш ед муж им', 3.43),
+ ('абориген', 'сущ одуш ед муж им', 10.53),
+ ('аборт', 'сущ неод ед муж им', 9.79),
+ ('абразив', 'сущ неод ед муж им', 4.35),
+ ('абракадабра', 'сущ неод ед жен им', 1.22),
+ ('абрек', 'сущ одуш ед муж им', 3.86),
+ ('абрикос', 'сущ неод ед муж им', 4.84),
+ ('абрикосовый', 'прл ед муж им', 1.53),
+ ('абсолют', 'сущ неод ед муж им', 1.35)]
 ```
 
 ```python
-def get_words(string_of_text):
-    '''Преобразует текст в набор токенов.
-        Токеном является слово, очищенное от любых символов, кроме букв.
-    '''
+# Только женский род
 
-    good_words = []
-
-    for word in string_of_text.split():
-        candidate = clear_text(word)
-        if candidate != '':
-            candidate = candidate.lower()
-            good_words.append(candidate)
-
-    return good_words
+retrieve(filename, gender='жен')
+[('абракадабра', 'сущ неод ед жен им', 1.22)]
 ```
 
-# Задача №1
-
-Программа должна открыть файл с цитатами в кодировке UTF-8 и корректно вывести на экран цитаты, в которых менее 10 слов.
-
-**Возможное решение**
-
 ```python
-FILENAME = 'quotes.txt'
-DASH = '—'
+# Мужской рож с частотой больше 5
 
-with open(FILENAME, encoding='utf-8') as fid:
-    for line in fid:
-        quote, author = line.split(DASH, maxsplit=1)
-        quote_words = get_words(quote)
-
-        if len(quote_words) < 10:
-            print(quote)
+retrieve(s, gender='муж', gte=5)
+[('абориген', 'сущ одуш ед муж им', 10.53),
+ ('аборт', 'сущ неод ед муж им', 9.79)]
 ```
 
-# Задача №2
+Обратите внимание на то, что возвращает функция - это список кортежей, состоящих каждый из 3 элементов.
 
-Программа должна сказать, в скольких цитатах есть слово "разум", а затем распечатать источники этих цитат через запятую.
-
-**Возможное решение**
+**Решение:**
 
 ```python
-FILENAME = 'quotes.txt'
-DASH = '—'
-MIND_WORD = 'разум'
-
-mind_authors = []
-
-with open(FILENAME, encoding='utf-8') as fid:
-    for line in fid:
-        quote, author = line.split(DASH, maxsplit=1)
-        quote_words = get_words(quote)
-
-        if MIND_WORD in quote_words:
-            mind_authors.append(author.strip())
-
-print('Слово разум притствует в', len(mind_authors), 'цитате(ах)')
-print(', '.join(mind_authors))
-```
-
-# Задача №3
-
-Программа должна спрашивать у пользователя слова, пока тот не введёт пустое слово. После этого она должна для каждого слова распечатать
-
-- само это слово
-- все цитаты, в которых оно встречается.
-
-Если слово ни разу не встретилось, то вместо цитат нужно вывести сообщение о том, что цитат не нашлось.
-
-**Возможное решение**
-
-```python
-FILENAME = 'quotes.txt'
-DASH = '—'
-
-def find_quotes(input_word, quotes, quotes_words):
-
-    results = []
-
-    for i, quote_words in enumerate(quotes_words):
-        if input_word in quote_words:
-            results.append(quotes[i])
-
-    return results
-
-quotes = [] # список цитат из файла
-quotes_words = [] # список списков слов из каждой цитаты
-
-# Формируем "поисковый индекс" по которому будем искать
-#
-with open(FILENAME, encoding='utf-8') as fid:
-    for line in fid:
-        line = line.strip()
-        quote, author = line.split(DASH, maxsplit=1)
-        quote_words = get_words(quote)
-
-        quotes.append(line) # добавим всю цитату с автором
-        quotes_words.append(quote_words)
-
-# Запрашиваем у пользователя "поисковый запрос"
-#
-while True:
-    word = input('Введите слово: ')
-    if word == '':
-        break
-
-    word = word.strip().lower()
-    found_quotes = find_quotes(word, quotes, quotes_words)
-
-    if len(found_quotes) == 0:
-        print('Цитат не нашлось')
-    else:
-        print('Вы ввели:', word)
-        for quote in found_quotes:
-            print(quote)
+def retrieve(filename, lte=None, gte=None, gender=None):
+    output = []
+    with open(filename, encoding='utf-8') as file:
+        for line in file:
+            word, morph, freq = line.split('|')
+            freq = float(freq)
+            if lte is not None and freq > lte:
+                continue
+            if gte is not None and freq < gte:
+                continue
+            if gender is not None and gender not in morph:
+                continue
+            output.append((word, morph, freq))
+    return output
 ```

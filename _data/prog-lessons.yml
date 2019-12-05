@@ -225,11 +225,11 @@
 # =========================================================================== #
 
 - name: Подготовка к контрольной
-  link: https://www.google.com/
+  link: /prog/08-test-preparation
   when:
     group1:
-    group2:
-    group3:
+    group2: 3 дек 2019
+    group3: 3 дек 2019
     group4: 4 дек 2019
   hw:
     group1:
