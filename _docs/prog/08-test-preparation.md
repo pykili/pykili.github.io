@@ -20,9 +20,9 @@ title: 8 &mdash; Задачи для подготовки к контрольн�
 
 ```python
 def avg(numbers):
-	if not numbers:
-		return 0
-	return sum(numbers) / len(numbers)
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
 ```
 
 
