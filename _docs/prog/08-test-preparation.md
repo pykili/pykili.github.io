@@ -236,8 +236,8 @@ def contains_same_vowels(my_str):
 
     my_str_vowels = ''
     for letter in my_str:
-        if letter in vowels:
-            my_str_vowels += letter
+        if letter.lower() in vowels:
+            my_str_vowels += letter.lower()
     
     harmonic_subsequence_present = False
     for idx in range(1, len(my_str_vowels[1:])):
