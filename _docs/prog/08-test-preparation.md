@@ -171,14 +171,7 @@ def retrieve(filename, lte=None, gte=None, gender=None):
     return output
 ```
 
----
-
-# Почти контрольная работа №1
-
-## Недозадание
-Напишите функцию, которая принимает на вход два списка и находит максимум из пары `минимум в первом списке, среднее во втором списке`. Для пустых списков вместо минимума и среднего соответственно стоит использовать значения `9.31` .
-
-## Задание
+## Задача №4
 
 Напишите функцию, которая принимает два аргумента: 
 первый -- произвольная строка, 
@@ -194,7 +187,92 @@ def retrieve(filename, lte=None, gte=None, gender=None):
 
 Если значение второго аргумента -- пустая строка, то нужно выдать в ответ тройку -- результат для аргумента `"longest"`, результат для аргумента `"alphanumerically_last"`, результат для аргумента `"same_vowels"`.
 
-## Задание
+```python
+def longest(my_str):
+    if not my_str:
+        return ''
+
+    maximal_subseq_found = my_str[0]
+    
+    for letter_pos, letter in enumerate(my_str[:-1]):
+        subseq = ''
+        for subseq_letter in my_str[letter_pos]:
+            if subseq_letter == letter:
+                subseq += letter
+            else:
+                break
+        if len(subseq) > len(maximal_subseq_found):
+            maximal_subseq_found = subseq
+    
+    return maximal_subseq_found
+
+
+def alphanumerically_last(my_str):
+    if not my_str:
+        return ''
+
+    alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+
+    for letter in my_str:
+        if letter.isalpha() and letter.lower() not in alphabet:
+            print(f"ERROR! passed string {my_str} with unknown letter {letter}")
+            return ''
+
+    alnum_last_letter = my_str[0]
+    for letter in my_str:
+        if not letter.isalpha():
+            continue
+        if alphabet.index(letter.lower()) > alphabet.index(alnum_last_letter.lower()):
+            alnum_last_letter = letter
+    
+    return alnum_last_letter
+
+
+def contains_same_vowels(my_str):
+    if not my_str:
+        return False
+
+    vowels = "аеёиоуыэюя"
+
+    my_str_vowels = ''
+    for letter in my_str:
+        if letter in vowels:
+            my_str_vowels += letter
+    
+    harmonic_subsequence_present = False
+    for idx in range(1, len(my_str_vowels[1:])):
+        vowel = my_str_vowels[idx]
+        if my_str_vowels[idx - 1] == vowel:
+            harmonic_subsequence_present = True
+            break
+
+    return harmonic_subsequence_present
+
+
+
+def foo(my_str, my_param=''):
+    
+    if my_param == "longest":
+        return longest(my_str)
+    elif my_param == "alphanumerically_last":
+        return alphanumerically_last(my_str)
+    elif my_param == "same_vowels":
+        return contains_same_vowels(my_str)
+    elif my_param == "":
+        return longest(my_str), alphanumerically_last(my_str), contains_same_vowels(my_str)
+
+
+print(foo("парам пам пурум"))
+print(foo("парам пам пурум", "longest"))
+print(foo("парам пам пурум", "alphanumerically_last"))
+print(foo("парам пам пурум", "same_vowels"))
+
+print(foo("кот ехал ехал и уехал"))
+print(foo("ПЫТАЙТЕСБ ЧТОТ0 N3МЕНИТЬ!"))
+print(foo(""))
+```
+
+## Задача №5
 Реализовать функции `my_append`, `my_extend`, `my_remove`. 
 
 `my_append` принимает на вход список и элемент произволной природы, возвращает список, равный исходному, продолженному переданным элементом. (Короче, то, что бы сделал аппенд этого элемента к списку) Использовать метод `append` и `extend` нельзя 
@@ -203,10 +281,82 @@ def retrieve(filename, lte=None, gte=None, gender=None):
 
 `my_remove` принимает на вход список и число, *i* число может быть позицией любого элемента в списке. Возвращает копию исходного списка, из которой удалён *i*-тый элемент. Использовать стандартные методы удаления элементов из списка нельзя.
 
-## Задача
+```python
+def my_append(my_li, elem):
+    result_li = [elem] * (len(my_li) + 1)
+    
+    for my_elem_idx, my_elem in enumerate(my_li):
+        result_li[my_elem_idx] = my_elem
+    
+    return result_li
+
+def my_extend(my_li1, my_li2):
+    result_li = my_li1
+    
+    for elem in my_li2:
+        result_li = my_append(result_li, elem)
+    
+    return result_li
+
+def my_remove(my_li, my_idx):
+    result_li = my_extend(my_li[:my_idx], my_li[my_idx+1:])
+    return result_li
+
+print(my_append([2,3], True))
+print(my_append([2], True))
+print(my_append([], True))
+print(my_append([], []))
+
+print(my_extend([2,3], [4,5]))
+print(my_extend([2], [3, 4,5]))
+print(my_extend([], [2,3,4,5]))
+print(my_extend([2,3,4,5], []))
+print(my_extend([[]], [[4,5]]))
+print(my_extend([], []))
+
+print(my_remove([1,2,3,4], 0))
+print(my_remove([1,2,3,4], 1))
+print(my_remove([1,2,3,4], 3))
+print(my_remove([1,2,3,4], 6))
+print(my_remove([1,2,3,4], -8))
+print(my_remove([], 1))
+```
+
+## Задача №6
 
 Напишите функцию, принимающую на вход имя файла (это будет имя файла с субтитрами к Рику и МОрти, скачать для тренировки можно [тут](https://raw.githubusercontent.com/oserikov/python_13112019/master/data/series/lol_just_another_folder/rick_and_morty/all_subtitles.txt) ).
 Функция должна записать два файла -- один с репликами рика,  другой -- с репликами морти. имена созданных файлов с объяснением, какой про что, нужно вывести на экран.
 За удаление одного-двух ругательств из реплик добавляется дополнительный балл.
+
+```python
+def foo(src_filename, blacklist = ["fuck", "morning"]):
+    rick_fn = "rick.txt"
+    morty_fn = "morty.txt"
+    with open(src_filename, 'r', encoding="utf-8") as src_f:
+        rick_f = open(rick_fn, 'w', encoding="utf-8")
+        morty_f = open(morty_fn, 'w', encoding="utf-8")
+
+        for line in src_f:
+
+            line_masked = line
+            for blacklisted_word in blacklist:
+                line_masked = line_masked.replace(blacklisted_word, 
+                                                  "*" * len(blacklisted_word))
+
+            if line.startswith("rick:"):
+                rick_f.write(line_masked)
+            elif line.startswith("morty:"):
+                morty_f.write(line_masked)
+
+        rick_f.close()
+        morty_f.close()
+    
+    print(f"morty replics written to {morty_fn}")
+    print(f"rick replics written to {rick_fn}")
+
+# change the path to the one that fits for you
+foo("all_subtitles.txt")
+
+```
 
 
