@@ -196,7 +196,7 @@ def longest(my_str):
     
     for letter_pos, letter in enumerate(my_str[:-1]):
         subseq = ''
-        for subseq_letter in my_str[letter_pos]:
+        for subseq_letter in my_str[letter_pos:]:
             if subseq_letter == letter:
                 subseq += letter
             else:
