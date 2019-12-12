@@ -162,6 +162,7 @@
       deadline: 3 дек 2019 23:59
   show: true
   staff:
+    group1: '[задание1](https://gist.github.com/Pandaklez/16b0dbfc30dcdedf42ab23fa4b7d42b5), [задание2](https://gist.github.com/Pandaklez/0889ddc27101367dfc12539f08684db4), [доп_задание](https://gist.github.com/Pandaklez/afe42c9d9de05aa91f63a11de5ff9b35)'
     group2: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
     group4: '[слайды](https://docs.google.com/presentation/d/12MHwoVQblFpuXqsPcWZAjAJWCeOSsm5dm4y7lFP-70k/view)'
