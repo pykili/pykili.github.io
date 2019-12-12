@@ -227,7 +227,7 @@
 - name: Подготовка к контрольной
   link: /prog/08-test-preparation
   when:
-    group1:
+    group1: 12 дек 2019
     group2: 3 дек 2019
     group3: 3 дек 2019
     group4: 4 дек 2019
@@ -246,6 +246,7 @@
       deadline:
   show: true
   staff:
+    group1: '[тетрадка](https://github.com/Pandaklez/teaching/blob/master/control_preparation.ipynb)'
 
 # =========================================================================== #
 
