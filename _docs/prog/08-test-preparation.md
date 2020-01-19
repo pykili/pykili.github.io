@@ -1,5 +1,5 @@
 ---
-title: 8 &mdash; Задачи для подготовки к контрольной работе №1
+title: 9 &mdash; Задачи для подготовки к контрольной работе №1
 ---
 
 # Задачи для подготовки к контрольной работе №1
@@ -90,7 +90,7 @@ Word found: велосипед 28.34
 Частотный словарь можно скачать по
 [ссылке](https://gist.githubusercontent.com/Sapunov/22d060fe952eca5a347e8f105ebe7a42/raw/9595d0cf0276d972775ce6ce899c2299c492468a/freq_dict.txt)
 
-Реализуйте функцию `retrieve(filename, lte=None, gte=None, gender=None)`. 
+Реализуйте функцию `retrieve(filename, lte=None, gte=None, gender=None)`.
 
 Функция должна проходить по всем строкам файла `filename` и отбирать те слова вместе с частотой и морфологической информацией, которые подпадают под критерии.
 
@@ -173,8 +173,8 @@ def retrieve(filename, lte=None, gte=None, gender=None):
 
 ## Задача №4
 
-Напишите функцию, которая принимает два аргумента: 
-первый -- произвольная строка, 
+Напишите функцию, которая принимает два аргумента:
+первый -- произвольная строка,
 второй -- опциональный (по умолчанию равен пустой строке)
 
 Второй аргумент может принимать значения `"longest"`, `"alphanumerically_last"`, `"same_vowels"`.
@@ -193,7 +193,7 @@ def longest(my_str):
         return ''
 
     maximal_subseq_found = my_str[0]
-    
+
     for letter_pos, letter in enumerate(my_str[:-1]):
         subseq = ''
         for subseq_letter in my_str[letter_pos:]:
@@ -203,7 +203,7 @@ def longest(my_str):
                 break
         if len(subseq) > len(maximal_subseq_found):
             maximal_subseq_found = subseq
-    
+
     return maximal_subseq_found
 
 
@@ -224,7 +224,7 @@ def alphanumerically_last(my_str):
             continue
         if alphabet.index(letter.lower()) > alphabet.index(alnum_last_letter.lower()):
             alnum_last_letter = letter
-    
+
     return alnum_last_letter
 
 
@@ -238,7 +238,7 @@ def contains_same_vowels(my_str):
     for letter in my_str:
         if letter.lower() in vowels:
             my_str_vowels += letter.lower()
-    
+
     harmonic_subsequence_present = False
     for idx in range(1, len(my_str_vowels[1:])):
         vowel = my_str_vowels[idx]
@@ -251,7 +251,7 @@ def contains_same_vowels(my_str):
 
 
 def foo(my_str, my_param=''):
-    
+
     if my_param == "longest":
         return longest(my_str)
     elif my_param == "alphanumerically_last":
@@ -273,9 +273,9 @@ print(foo(""))
 ```
 
 ## Задача №5
-Реализовать функции `my_append`, `my_extend`, `my_remove`. 
+Реализовать функции `my_append`, `my_extend`, `my_remove`.
 
-`my_append` принимает на вход список и элемент произволной природы, возвращает список, равный исходному, продолженному переданным элементом. (Короче, то, что бы сделал аппенд этого элемента к списку) Использовать метод `append` и `extend` нельзя 
+`my_append` принимает на вход список и элемент произволной природы, возвращает список, равный исходному, продолженному переданным элементом. (Короче, то, что бы сделал аппенд этого элемента к списку) Использовать метод `append` и `extend` нельзя
 
 `my_extend` принимает на вход два списка и возвращает список, полученный конкатенацией переданных. Использовать `extend` нельзя, за использование `append` штраф 1 балл.
 
@@ -284,18 +284,18 @@ print(foo(""))
 ```python
 def my_append(my_li, elem):
     result_li = [elem] * (len(my_li) + 1)
-    
+
     for my_elem_idx, my_elem in enumerate(my_li):
         result_li[my_elem_idx] = my_elem
-    
+
     return result_li
 
 def my_extend(my_li1, my_li2):
     result_li = my_li1
-    
+
     for elem in my_li2:
         result_li = my_append(result_li, elem)
-    
+
     return result_li
 
 def my_remove(my_li, my_idx):
@@ -340,7 +340,7 @@ def foo(src_filename, blacklist = ["fuck", "morning"]):
 
             line_masked = line
             for blacklisted_word in blacklist:
-                line_masked = line_masked.replace(blacklisted_word, 
+                line_masked = line_masked.replace(blacklisted_word,
                                                   "*" * len(blacklisted_word))
 
             if line.startswith("rick:"):
@@ -350,7 +350,7 @@ def foo(src_filename, blacklist = ["fuck", "morning"]):
 
         rick_f.close()
         morty_f.close()
-    
+
     print(f"morty replics written to {morty_fn}")
     print(f"rick replics written to {rick_fn}")
 
