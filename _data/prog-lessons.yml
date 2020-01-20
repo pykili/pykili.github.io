@@ -256,14 +256,14 @@
 - name: Импорт и функции
   link: /prog/12-functions-and-import
   when:
-    group1:
+    group1: 20 янв 2020
     group2: 21 янв 2020
     group3: 21 янв 2020
     group4:
   hw:
     group1:
       classroom:
-      deadline:
+      deadline: 27 янв 2020 23:59
     group2:
       classroom:
       deadline:
