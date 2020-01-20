@@ -262,7 +262,7 @@
     group4:
   hw:
     group1:
-      classroom:
+      classroom: https://classroom.github.com/a/O_v1DNrX
       deadline: 27 янв 2020 23:59
     group2:
       classroom:
@@ -275,6 +275,7 @@
       deadline:
   show: true
   staff:
+    group1: '[Задание](https://gist.github.com/Pandaklez/e458b913f0f861739a8592a1d7c8a3d3)'
 
 # =========================================================================== #
 
