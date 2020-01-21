@@ -268,14 +268,15 @@
       classroom:
       deadline:
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/T36RdzuU
+      deadline: 27 янв 2020 23:55
     group4:
       classroom:
       deadline:
   show: true
   staff:
     group1: '[Задание](https://gist.github.com/Pandaklez/e458b913f0f861739a8592a1d7c8a3d3)'
+    group3: '[слайды](/content/slides/groups/3/seminar_10.pdf)'
 
 # =========================================================================== #
 
