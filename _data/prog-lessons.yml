@@ -265,13 +265,13 @@
       classroom: https://classroom.github.com/a/O_v1DNrX
       deadline: 27 янв 2020 23:59
     group2:
-      classroom: https://classroom.github.com/a/68TUhc5z
+      classroom:
       deadline:
     group3:
       classroom: https://classroom.github.com/a/T36RdzuU
       deadline: 27 янв 2020 23:55
     group4:
-      classroom:
+      classroom: https://classroom.github.com/a/68TUhc5z
       deadline:
   show: true
   staff:
