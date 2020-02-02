@@ -285,19 +285,19 @@
   link: /prog/13-dicts
   when:
     group1:
-    group2:
-    group3:
+    group2: 31 янв 2020
+    group3: 31 янв 2020
     group4: 20 янв 2020
   hw:
     group1:
       classroom:
       deadline:
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/_O3dEuiT
+      deadline: 7 фев 2019
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/Yl7gZRz1
+      deadline: 7 фев 2019
     group4:
       classroom: https://classroom.github.com/a/ymCIxloc
       deadline:
