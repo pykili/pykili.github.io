@@ -325,8 +325,8 @@
       classroom:
       deadline:
     group4:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/A-m1FRAc
+      deadline: 12 фев 23.59
   show: true
   staff:
     group4: '[задачка по кодитб для разогрева](https://gist.github.com/oserikov/79b1c4ff66c0fd4cd1dc144a55c62435); [задачка по кодитб другая](https://gist.github.com/oserikov/ac8d0021494c2158a47f1d949688363b)'
