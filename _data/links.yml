@@ -12,6 +12,9 @@ semicode:
   url: https://docs.google.com/spreadsheets/d/1YvLzijZUR0xtD5_MBM4-8TUm2F_TEiaBL2VZFx_TH1s/edit?usp=sharing
   text: Логины SEMiCODE
 
+projects:
+  url: https://docs.google.com/spreadsheets/d/1ILCOrB7bOBVqzCMSUUSFggcX-bH1ZRkSxKJWBsGHmVY/edit?usp=sharing
+
 extra:
   - title: Игры про основы программирования
     desc: "Эти игры подойдут тому, кто чувствует себя неуверенным в понимании базовых понятий программирования: переменная, цикл, условия."
