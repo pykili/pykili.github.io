@@ -337,8 +337,8 @@
   link: /prog/16-regexp
   when:
     group1:
-    group2:
-    group3:
+    group2: 15 фев 2020
+    group3: 15 фев 2020
     group4:
   hw:
     group1:
@@ -353,7 +353,7 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
 
 # =========================================================================== #
