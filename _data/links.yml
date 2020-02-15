@@ -8,6 +8,10 @@ marks:
 contacts:
   url: https://forms.gle/fvhghS7cNQ5LZqtj9
 
+semicode:
+  url: https://docs.google.com/spreadsheets/d/1YvLzijZUR0xtD5_MBM4-8TUm2F_TEiaBL2VZFx_TH1s/edit?usp=sharing
+  text: Логины SEMiCODE
+
 extra:
   - title: Игры про основы программирования
     desc: "Эти игры подойдут тому, кто чувствует себя неуверенным в понимании базовых понятий программирования: переменная, цикл, условия."
