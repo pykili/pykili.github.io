@@ -310,14 +310,14 @@
 - name: Вложенные словари
   link: /prog/14-nested-dict
   when:
-    group1:
+    group1: 10 фев 2020
     group2: 8 фев 2020
     group3: 8 фев 2020
     group4:
   hw:
     group1:
       classroom: https://classroom.github.com/a/STiQbJ4U
-      deadline: 17 фев 2020
+      deadline: 24 фев 2020 23:59
     group2:
       classroom: https://classroom.github.com/a/wh6qQ8ZL
       deadline: 22 фев 2020 23:55
