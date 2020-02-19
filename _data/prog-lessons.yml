@@ -339,7 +339,7 @@
     group1:
     group2: 15 фев 2020
     group3: 15 фев 2020
-    group4:
+    group4: 19 фев 2020
   hw:
     group1:
       classroom:
@@ -356,7 +356,7 @@
   show: true
   staff:
     group3: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
-    group4: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
+    group4: '[материалы к паре](bit.ly/oleg_py_doc), [слайды (спасибо, @sapunov)](/content/slides/groups/2/seminar_13.pdf)'
 
 # =========================================================================== #
 
