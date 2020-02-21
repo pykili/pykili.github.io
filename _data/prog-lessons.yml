@@ -336,7 +336,7 @@
 - name: Поиск с регулярными выражениями
   link: /prog/16-regexp
   when:
-    group1:
+    group1: 22 фев 2020
     group2: 15 фев 2020
     group3: 15 фев 2020
     group4: 19 фев 2020
