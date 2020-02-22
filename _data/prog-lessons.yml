@@ -355,6 +355,7 @@
       deadline:
   show: true
   staff:
+    group2: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
     group4: '[материалы к паре](bit.ly/oleg_py_doc), [слайды (спасибо, @sapunov)](/content/slides/groups/2/seminar_13.pdf)'
 
@@ -364,8 +365,8 @@
   link: /prog/17-regexp-group
   when:
     group1:
-    group2:
-    group3:
+    group2: 22 фев 2020
+    group3: 22 фев 2020
     group4:
   hw:
     group1:
@@ -380,8 +381,10 @@
     group4:
       classroom:
       deadline:
-  show: false
+  show: true
   staff:
+    group2: '[слайды](/content/slides/groups/2/seminar_17.pdf)'
+    group3: '[слайды](/content/slides/groups/2/seminar_17.pdf)'
 
 # =========================================================================== #
 
