@@ -86,43 +86,43 @@ digits_str = ''.join(digits)    # '301930'
 
 ```python
 def phone_num_validation(string):
-	pass
+    pass
 
 
 def date_validation(string):
-	pass
+    pass
 
 
 def roman_num_validation(string):
-	pass
+    pass
 
 
 def ipv4_validation(string):
-	pass
+    pass
 
 
 def whitespace_cleaning(filename):
-	pass
+    pass
 
 
 def named_entitites_counter(filename):
-	pass
+    pass
 
 
 def numbering_cleaning(filename):
-	pass
+    pass
 
 
 def loanwords_extraction(filename):
-	pass
+    pass
 
 
 def html_tag_extraction(filename):
-	pass
+    pass
 
 
 def html_tag_cleaning(filename):
-	pass
+    pass
 ```
 
 Первые 4 функции принимают на вход строку и возвращают `True` или `False` в зависимости от того, является ли строка:
