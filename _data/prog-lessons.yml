@@ -342,17 +342,17 @@
     group4: 19 фев 2020
   hw:
     group1:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/9rp6HnOh
+      deadline: 8 мар 2020 23:55
     group2:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/dhBcANGK
+      deadline: 8 мар 2020 23:55
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/1yvMFE7y
+      deadline: 8 мар 2020 23:55
     group4:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/TVRoYZ6N
+      deadline: 8 мар 2020 23:55
   show: true
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_13.pdf)'

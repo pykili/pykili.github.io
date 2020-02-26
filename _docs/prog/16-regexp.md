@@ -146,10 +146,3 @@ def html_tag_cleaning(filename):
 * чистит текст файла от HTML-тэгов и возвращает очищенный текст.
 
 Тестировать можно, например, на "Пене дней" ([txt](https://raw.githubusercontent.com/pykili/pykili.github.io/master/content/pena0.txt), [html](https://raw.githubusercontent.com/pykili/pykili.github.io/master/content/pena0.html)).
-
-Выполните задание, пройдя по ссылке в GitHub Classroom (дедлайн – **08 мар 2020 23:59**):
-
-* 1 группа: – <https://classroom.github.com/a/9rp6HnOh>
-* 2 группа: – <https://classroom.github.com/a/dhBcANGK>
-* 3 группа: – <https://classroom.github.com/a/1yvMFE7y>
-* 4 группа: – <https://classroom.github.com/a/TVRoYZ6N>
