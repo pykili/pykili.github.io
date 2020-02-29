@@ -121,7 +121,11 @@ redirect_from: /
         {% if lesson.show %}
         <tr>
           <th scope="row" class="text-center">{{ forloop.index }}</th>
+          {% if lesson.link %}
           <td><a href="{{ lesson.link }}">{{ lesson.name }}</a></td>
+          {% else %}
+          <td><span>{{ lesson.name }}</span></td>
+          {% endif %}
           <td class="text-center">
             {{ lesson.when.group1 }}
             {% if lesson.staff.group1 %}

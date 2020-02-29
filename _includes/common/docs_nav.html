@@ -1,7 +1,7 @@
 <div role="tablist" aria-multiselectable="true">
   <ul class="list-group left-nav">
     {% for lesson in site.data.prog-lessons %}
-    {% if lesson.show %}
+    {% if lesson.show and lesson.link %}
     <a
       href="{{ lesson.link }}"
       class="list-group-item {% if page.url contains lesson.link %}active{% endif %}">
