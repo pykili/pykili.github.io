@@ -374,7 +374,7 @@
 - name: Нахождение строк, соответствующих шаблону
   link: /prog/17-regexp-group
   when:
-    group1:
+    group1: 7 марта 2020
     group2: 22 фев 2020
     group3: 22 фев 2020
     group4:
