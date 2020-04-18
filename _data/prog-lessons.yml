@@ -223,7 +223,9 @@
     group1: '[задача](https://gist.github.com/Pandaklez/64bd3b92a4dc13a05282ab56f307327b)'
     group2: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
-    group4: '[слайды](https://colab.research.google.com/drive/1WtNpvajNhG-PiBMP8tlr7hEXfLDmrOHA), [блокнот](https://etherpad.net/p/pykili194)'
+    group4: |
+      [слайды](https://colab.research.google.com/drive/1WtNpvajNhG-PiBMP8tlr7hEXfLDmrOHA)<br>
+      [блокнот](https://etherpad.net/p/pykili194)
 
 # =========================================================================== #
 
@@ -313,7 +315,9 @@
       deadline: 29 янв 2020
   show: true
   staff:
-    group4: '[тетрадка красивая](https://colab.research.google.com/gist/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc/python-20-2020.ipynb), [тетрадка некрасивая](https://gist.github.com/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc)'
+    group4: |
+      [тетрадка красивая](https://colab.research.google.com/gist/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc/python-20-2020.ipynb)<br>
+      [тетрадка некрасивая](https://gist.github.com/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc)
 
 # =========================================================================== #
 
@@ -339,7 +343,9 @@
       deadline: 12 фев 23.59
   show: true
   staff:
-    group4: '[задачка по кодитб для разогрева](https://gist.github.com/oserikov/79b1c4ff66c0fd4cd1dc144a55c62435); [задачка по кодитб другая](https://gist.github.com/oserikov/ac8d0021494c2158a47f1d949688363b)'
+    group4: |
+      [задачка по кодитб для разогрева](https://gist.github.com/oserikov/79b1c4ff66c0fd4cd1dc144a55c62435)<br>
+      [задачка по кодитб другая](https://gist.github.com/oserikov/ac8d0021494c2158a47f1d949688363b)
 
 # =========================================================================== #
 
@@ -367,7 +373,9 @@
   staff:
     group2: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
     group3: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
-    group4: '[материалы к паре](bit.ly/oleg_py_doc), [слайды (спасибо, @sapunov)](/content/slides/groups/2/seminar_13.pdf)'
+    group4: |
+      [материалы к паре](bit.ly/oleg_py_doc)<br>
+      [слайды (спасибо, @sapunov)](/content/slides/groups/2/seminar_13.pdf)
 
 # =========================================================================== #
 
@@ -427,8 +435,8 @@
   link: /prog/19-regexp-findall
   when:
     group1:
-    group2:
-    group3:
+    group2: 18 апр 2020
+    group3: 14 апр 2020
     group4:
   hw:
     group1:
@@ -445,6 +453,24 @@
       deadline:
   show: true
   staff:
+    group2: |
+      [слайды](/content/slides/groups/2/seminar_16.pdf)<br>
+      [тетрадь](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/seminar.html)<br>
+      [задача](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/task.html)
+    group3: |
+      [слайды](/content/slides/groups/2/seminar_16.pdf)<br>
+      [тетрадь](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/seminar.html)<br>
+      [задача](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/task.html)
+
+# =========================================================================== #
+
+- name: Предзащита проектов
+  when:
+    group1:
+    group2: 25 апр 2020 (тест)
+    group3: 21 апр 2020 (тест)
+    group4:
+  show: true
 
 # =========================================================================== #
 
@@ -515,16 +541,6 @@
       deadline:
   show: true
   staff:
-
-# =========================================================================== #
-
-- name: Предзащита проектов
-  when:
-    group1:
-    group2:
-    group3:
-    group4:
-  show: true
 
 # =========================================================================== #
 
