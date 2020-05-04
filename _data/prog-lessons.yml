@@ -409,7 +409,7 @@
 - name: Замены с помощью регулярных выражений
   link: /prog/18-regexp-sub
   when:
-    group1:
+    group1: 21 мар 2020
     group2: 29 фев 2020
     group3: 29 фев 2020
     group4:
@@ -428,6 +428,7 @@
       deadline:
   show: true
   staff:
+    group1: '[слайды](https://docs.google.com/presentation/d/1TsQIZlODsGneg-1bof0eCpjzpCiCwP2Mx8BEt_O-quk/edit?usp=sharing)'
 
 # =========================================================================== #
 
