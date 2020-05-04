@@ -434,7 +434,7 @@
 - name: Разбиения с регулярными выражениями
   link: /prog/19-regexp-findall
   when:
-    group1:
+    group1: 18 апр 2020
     group2: 18 апр 2020
     group3: 14 апр 2020
     group4:
@@ -453,6 +453,7 @@
       deadline:
   show: true
   staff:
+    group1: '[тетрадка](https://colab.research.google.com/drive/18HmpRpHWMAkfgCciyRe_dGoSvLdSEhVX#scrollTo=3JToP9XiPj_O)'
     group2: |
       [слайды](/content/slides/groups/2/seminar_16.pdf)<br>
       [тетрадь](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/seminar.html)<br>
@@ -466,7 +467,7 @@
 
 - name: Предзащита проектов
   when:
-    group1:
+    group1: 25 апр 2020
     group2: 25 апр 2020 (тест)
     group3: 21 апр 2020 (тест)
     group4:
@@ -476,7 +477,7 @@
 
 - name: Подготовка к контрольной работе №2
   when:
-    group1:
+    group1: 16 мая 2020 (тест)
     group2:
     group3:
     group4:
