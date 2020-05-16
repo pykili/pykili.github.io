@@ -469,8 +469,8 @@
 - name: Предзащита проектов
   when:
     group1: 25 апр 2020
-    group2: 25 апр 2020 (тест)
-    group3: 21 апр 2020 (тест)
+    group2: 25 апр 2020
+    group3: 21 апр 2020
     group4:
   show: true
 
@@ -479,18 +479,25 @@
 - name: Подготовка к контрольной работе №2
   when:
     group1: 16 мая 2020 (тест)
-    group2:
-    group3:
+    group2: 16 мая 2020 (тест)
+    group3: 12 мая 2020 (тест)
     group4:
   show: true
+  staff:
+    group2: |
+      [gist с решениями](https://gist.github.com/Sapunov/2361770aa7ae15aebeaca1620df6b41f)
+      [про json](/prog/25-json)
+    group3: |
+      [gist с решениями](https://gist.github.com/Sapunov/2361770aa7ae15aebeaca1620df6b41f)
+      [про json](/prog/25-json)
 
 # =========================================================================== #
 
 - name: Контрольная работа №2
   when:
     group1:
-    group2:
-    group3:
+    group2: 23 мая 2020
+    group3: 19 мая 2020
     group4:
   show: true
 
@@ -500,8 +507,8 @@
   link: /prog/22-file-manipulation
   when:
     group1:
-    group2:
-    group3:
+    group2: 30 мая 2020
+    group3: 26 мая 2020
     group4:
   hw:
     group1:
@@ -525,8 +532,8 @@
   link: /prog/23-tree-and-format
   when:
     group1:
-    group2:
-    group3:
+    group2: 30 мая 2020
+    group3: 26 мая 2020
     group4:
   hw:
     group1:
@@ -546,13 +553,11 @@
 
 # =========================================================================== #
 
-# =========================================================================== #
-
 - name: Защита проектов
   when:
     group1:
-    group2:
-    group3:
+    group2: 6 июн 2020
+    group3: 2 июн 2020
     group4:
   show: true
 
@@ -563,8 +568,8 @@
 - name: Экзамен
   when:
     group1:
-    group2:
-    group3:
+    group2: soon
+    group3: soon
     group4:
   show: true
 
