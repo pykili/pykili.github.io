@@ -259,18 +259,258 @@ python bot.py
 ```
 
 
-## Создание бота, сообщающего курс доллара на основе библиотеки pyTelegramBotAPI
+## Создание бота, сообщающего курс валют
 
-    todo
+Общение с ботом выглядит примерно так:
+
+<img src="static/25/currency.png">
+
+Код:
+
+```python
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, ParseMode)
+import requests
 
 
-## Создание бота для учета расходов на основе библиотеки python-telegram-bot
+TOKEN = '<ваш токен из BotFather>'
 
-    todo
+START_MESSAGE = '''Привет!
+Я умею сообщать курс для 2 валют: 🇺🇸 USD, 🇪🇺 EUR.
+'''
+
+UNKNOWN_MESSAGE = 'Даже и не знаю, что вам ответить. Попробуйте /start'
+
+ALLOWED_CURRENCIES = ['🇺🇸 USD', '🇪🇺 EUR']
+
+
+def fetch_currency(currency_name):
+    url = 'https://api.ratesapi.io/api/latest'
+    params = {'base': currency_name, 'symbols': 'RUB'}
+    req = requests.get(url, params=params)
+    data = req.json()
+    rates = data['rates']
+    return rates['RUB']
+
+
+def command_start(update, context):
+    update.message.reply_text(
+        START_MESSAGE,
+        reply_markup=ReplyKeyboardMarkup.from_column(ALLOWED_CURRENCIES)
+    )
+
+
+def handle_currency(update, context):
+    currency = update.message.text[-3:]
+    rate = fetch_currency(currency)
+
+    message = 'Курс {} <-> RUB сейчас *{}*'.format(currency, rate)
+    update.message.reply_text(message, parse_mode=ParseMode.MARKDOWN)
+
+
+def handle_unknown(update, context):
+    update.message.reply_text(UNKNOWN_MESSAGE)
+
+
+def main():
+    updater = Updater(TOKEN, use_context=True)
+
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler('start', command_start))
+
+    dp.add_handler(
+        MessageHandler(
+            Filters.text(ALLOWED_CURRENCIES),
+            handle_currency
+        )
+    )
+
+    dp.add_handler(MessageHandler(Filters.all, handle_unknown))
+
+    updater.start_polling()
+    updater.idle()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+Здесь мы не только пишем пользователю странные сообщения, но и ходит в сторонний сервис за данными. Такое часто встречается.
+
+Для того, чтобы получить актуальный курс валют мы используем сервис [ratesapi.io](https://ratesapi.io) и прекрасную библиотеку [requests](https://requests.readthedocs.io/en/master/).
+
+Также тут есть интересность про создание клавиатуры
+
+```python
+reply_markup=ReplyKeyboardMarkup.from_column(ALLOWED_CURRENCIES)
+```
+
+Как видите, это очень просто.
 
 
 ## Куда выложить бота чтобы он работал всегда
 
-    todo
+В облако!
+
+Если бот будет работать у вас на компьютере, то вам придется всегда держать компьютер включенным. Это не всегда удобно. Поэтому лучше выложить бота в облака.
+
+Есть много сервисов. В том числе от именитых ребят Google, Yandex, Microsoft, Amazon. Но у них все платное и сложное. Для простого бота нужно что-то простое.
+
+<https://heroku.com> - это простой облачный сервис. И у него есть бесплатный тариф.
+
+Чтобы выложить бота на удаленный сервер нужно немного подготовиться.
+
+#### 1. Создайте аккаунт на heroku.
+
+Думаю, тут вы сами справитесь. Заходите на <https://signup.heroku.com> и регистрируетесь. Помните, ваша компания - это HSE.
+
+#### 2. Создания приложения на heroku
+
+Когда зайдете в личный кабинет, нужно будет создать приложение. Жмите на кнопку "Create new app".
+
+<img src="static/25/her-new-app.png">
+<img src="static/25/her-new-app-2.png">
+
+Скопитейте **имя приложения**.
 
 
+#### 3. Дополнительные файлы
+
+В папку с файлом `bot.py` нужно будет положить еще 3 файла.
+
+Файл **Procfile** и его содержимое
+
+```
+web: python bot.py
+```
+
+Файл **runtime.txt** и его содержимое
+
+```
+python-3.7.6
+```
+
+И самый важный файл **requirements.txt**. С содержимым этого файла придется повозиться.
+
+Этот файл должен содержать список тех модулей, которые нужны вашему боту для работы. Помните мы устанавливали библиотеку `python-telegram-bot` через `pip`?
+
+Пип позволит нам получить этот список. Выполните команду 
+
+```bash
+pip freeze > requirements.txt
+```
+
+
+После этого у вас появится файл **requrements.txt** со всеми вашими модулями.
+
+У меня это выглядит так для echo-bot:
+
+```
+certifi==2020.4.5.1
+cffi==1.14.0
+cryptography==2.9.2
+decorator==4.4.2
+future==0.18.2
+pycparser==2.20
+PySocks==1.7.1
+python-telegram-bot==12.7
+six==1.14.0
+tornado==6.0.4
+```
+
+#### 4. Модификация кода
+
+Импортируйте системный модуль `os`
+
+```
+import os
+```
+
+После переменной `TOKEN` добавьте еще 2 переменные
+
+```python
+PORT = int(os.environ.get('PORT', '8443'))
+
+HEROKU_APPNAME = '<имя вашего приложения>' # у меня my-lovely-bot
+```
+
+В функции main вместо `updater.start_polling()` напишите следующее:
+
+```python
+    updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN)
+    updater.bot.set_webhook(f'https://{HEROKU_APPNAME}.herokuapp.com/{TOKEN}')
+```
+
+В итоге, код echo-bot будет выглядеть так:
+
+```python
+import os
+
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
+
+TOKEN = '<ваш токен от BotFather>'
+
+PORT = int(os.environ.get('PORT', '8443'))
+
+HEROKU_APPNAME = 'fathomless-journey-56345'
+
+
+def command_start(update, context):
+    update.message.reply_text('Привет!\nЯ бот, который почти ничего не умеет')
+
+
+def handler_echo(update, context):
+    message = 'Вы спросили у меня: ' + update.message.text
+    message += '\nА я вам отвечу: ' + update.message.text
+    update.message.reply_text(message)
+
+
+def main():
+    updater = Updater(TOKEN, use_context=True)
+
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler('start', command_start))
+
+    dp.add_handler(MessageHandler(Filters.text, handler_echo))
+
+    updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN)
+    updater.bot.set_webhook(f'https://{HEROKU_APPNAME}.herokuapp.com/{TOKEN}')
+
+    updater.idle()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+А внутри папки должны лежать эти файлы:
+
+```
+Procfile
+bot.py
+requirements.txt
+runtime.txt
+```
+
+#### 5. Отправка бота на heroku
+
+Для начала нужно поставить специальную утилиту для работы с heroku - Официальная инструкция, как это сделать - <https://devcenter.heroku.com/articles/heroku-cli>
+
+Как только это сделаете. Зайдите в командной строке в вашу папку и выполните эти команды
+
+```
+heroku login
+git init
+heroku git:remote -a <имя вашего приложения на heroku>
+git add .
+git commit -m init
+git push heroku master
+heroku ps:scale web=1
+```
+
+Ну вот и все, можете писать своему боту.
+
+Кстати, заметили, что тут нет ничего про прокси? Потому что бот будет запущен в европе или америке, где нет ограничений на telegram. Ура!
