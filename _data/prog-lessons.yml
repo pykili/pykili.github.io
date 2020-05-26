@@ -518,13 +518,17 @@
       classroom:
       deadline:
     group3:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/XtG4dEua
+      deadline: 2 июн 2020 23:55
     group4:
       classroom:
       deadline:
   show: true
   staff:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_21.pdf)
+    group3: |
+      [слайды](/content/slides/groups/3/seminar_21.pdf)
 
 # =========================================================================== #
 
@@ -550,6 +554,10 @@
       deadline:
   show: true
   staff:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_22.pdf)
+    group3: |
+      [слайды](/content/slides/groups/3/seminar_22.pdf)
 
 # =========================================================================== #
 
