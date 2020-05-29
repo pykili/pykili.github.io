@@ -506,14 +506,14 @@
 - name: Работа с файлами и папками
   link: /prog/22-file-manipulation
   when:
-    group1:
+    group1: 30 мая 2020
     group2: 30 мая 2020
     group3: 26 мая 2020
     group4:
   hw:
     group1:
-      classroom:
-      deadline:
+      classroom: https://classroom.github.com/a/fCY8xDoz
+      deadline: 6 июн 2020 23:59
     group2:
       classroom:
       deadline:
@@ -535,7 +535,7 @@
 - name: Файловое дерево и форматирование строк
   link: /prog/23-tree-and-format
   when:
-    group1:
+    group1: 30 мая 2020
     group2: 30 мая 2020
     group3: 26 мая 2020
     group4:
@@ -563,7 +563,7 @@
 
 - name: Защита проектов
   when:
-    group1:
+    group1: 6 июн 2020
     group2: 6 июн 2020
     group3: 2 июн 2020
     group4:
