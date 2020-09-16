@@ -247,7 +247,7 @@ counter = collections.Counter(words)
 
 
 
-# Домашнее задание
+<!-- ====================================================================== -->
 
 {% include_relative hw/hw_13_base/README.md %}
 
