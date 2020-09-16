@@ -245,5 +245,5 @@ if __name__ == '__main__':
 
 # Домашнее задание
 
-{% include_relative hw/hw_112_base/README.md %}
+{% include_relative hw/hw_12_base/README.md %}
 
