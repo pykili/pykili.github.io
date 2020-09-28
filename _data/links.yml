@@ -1,19 +1,15 @@
 program:
-  url: https://www.hse.ru/ba/ling/courses/298695936.html
+  url: https://www.hse.ru/ba/ling/courses/396725193.html
   text: Программа курса на сайте ВШЭ
 
 marks:
-  url: https://docs.google.com/spreadsheets/d/1JL_b47ePXj0OqnsA3A3QZ3gYapZoHqDDVtBqXT0HQzA/edit?usp=sharing
+  url: #
 
 contacts:
   url: https://forms.gle/fvhghS7cNQ5LZqtj9
 
-semicode:
-  url: https://docs.google.com/spreadsheets/d/1YvLzijZUR0xtD5_MBM4-8TUm2F_TEiaBL2VZFx_TH1s/edit?usp=sharing
-  text: Логины SEMiCODE
-
 projects:
-  url: https://docs.google.com/spreadsheets/d/1ILCOrB7bOBVqzCMSUUSFggcX-bH1ZRkSxKJWBsGHmVY/edit?usp=sharing
+  url: #
 
 extra:
   - title: Игры про основы программирования

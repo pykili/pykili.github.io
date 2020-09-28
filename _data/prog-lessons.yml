@@ -1,10 +1,10 @@
 - name: Git и введение в Python
   link: /prog/01-git_and_python_intro
   when:
-    group1: 8 окт 2019
-    group2: 7 окт 2019
-    group3: 8 окт 2019
-    group4: 11 окт 2019
+    group1:
+    group2: 28 сен 2020
+    group3:
+    group4:
   hw:
     group1:
       classroom:
@@ -21,245 +21,106 @@
   show: true
   staff:
     group1:
-    group2:
+    group2: '[слайды](/content/slides/groups/2/seminar_1.pdf)'
     group3:
-    group4: '[слайды](https://docs.google.com/presentation/d/1wWfdkFqNq84t3jldSSi6v_AwoI_1Zd3g6PDPjDF_F7c/view), [заметка](https://github.com/pykili/pykili.github.io/blob/master/content/notes/groups/04/note1.md)'
+    group4:
 
 # =========================================================================== #
 
 - name: Условия и операторы сравнения
   link: /prog/02-if-and-comparison-ops
   when:
-    group1: 14 окт 2019
-    group2: 8 окт 2019
-    group3: 11 окт 2019
-    group4: 15 окт 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/AxABacqh
-      deadline: 20 окт 2019 23:59
     group2:
-      classroom: https://classroom.github.com/a/aAHD61KE
-      deadline: 14 окт 2019 23:55
     group3:
-      classroom: https://classroom.github.com/a/thZBW1nz
-      deadline: 17 окт 2019 23:55
     group4:
-      classroom: https://classroom.github.com/a/9Z9-cq_X
-      deadline: 23 окт 2019 23:59
   show: true
-  staff:
-    group1: '[задание](https://gist.github.com/Pandaklez/3d37145136427c325ba872454224a4b5)'
-    group2: '[слайды](/content/slides/groups/2/seminar_2.pdf)'
-    group3: '[слайды](/content/slides/groups/3/seminar_2.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/1EB6CE4fkS08kw7yFDfGz5Mqr_b7DxVuyEE7e-EsKgC4/view)'
 
 # =========================================================================== #
 
 - name: Циклы и индексы
   link: /prog/03-loops
   when:
-    group1: 16 окт 2019
-    group2: 14 окт 2019 (тест)
-    group3: 15 окт 2019 (тест)
-    group4: 16 окт 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/68Ef9P_o
-      deadline: 25 окт 2019
     group2:
-      classroom: https://classroom.github.com/a/mReK1ZpP
-      deadline: 21 окт 2019
     group3:
-      classroom: https://classroom.github.com/a/pL-wcAKV
-      deadline: 22 окт 2019
     group4:
-      classroom: https://classroom.github.com/a/jNU6_uJS
-      deadline: 24 окт 2019
   show: true
-  staff:
-    group2: '[слайды](/content/slides/groups/2/seminar_3.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_3.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/1Rdwpe13o_sFNMc1wuddujgZSOfT_k17wdigpQXLmH9o/view)'
 
 # =========================================================================== #
 
 - name: Списки
   link: /prog/04-lists
   when:
-    group1: 28 окт 2019
-    group2: 29 окт 2019
-    group3: 29 окт 2019
-    group4: 06 ноя 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/z5cBF9Er
-      deadline: 6 ноя 2019
     group2:
-      classroom: https://classroom.github.com/a/mYwT9kdn
-      deadline: 5 ноя 2019
     group3:
-      classroom: https://classroom.github.com/a/Hl_CETZp
-      deadline: 5 ноя 2019
     group4:
-      classroom: https://classroom.github.com/a/wW2SwF8-
-      deadline: 12 ноя 2019 23:59
   show: true
-  staff:
-    group1: '[задание_чистка](https://gist.github.com/Pandaklez/b9fa39d14e9c57346d9d4f660d977318)'
-    group2: '[слайды](/content/slides/groups/2/seminar_4.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_4.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/1uQTeemw2DuS0KcT55cpn26Ppwp-DlYm_n2hyogS9q5Q/view)'
 
 # =========================================================================== #
 
 - name: Файлы
   link: /prog/05-files
   when:
-    group1: 11 ноя 2019
-    group2: 5 ноя 2019 (тест)
-    group3: 5 ноя 2019 (тест)
-    group4: 13 ноя 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/M3xJUN8r
-      deadline: 16 ноя 2019
     group2:
-      classroom: https://classroom.github.com/a/bsuz6n3H
-      deadline: 11 ноя 2019
     group3:
-      classroom: https://classroom.github.com/a/XnfkMvqd
-      deadline: 11 ноя 2019
     group4:
-      classroom: https://classroom.github.com/a/_Ymxtcww
-      deadline: 24 ноя 2019 01:00
   show: true
-  staff:
-    group2: '[слайды](/content/slides/groups/2/seminar_5.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_5.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/1YEvSpZQZ3WqDCO0xl8KL46SNoznspr-IQGwGhf1ANuc/view)'
 
 # =========================================================================== #
 
 - name: Запись файлов
   link: /prog/06-write-files
   when:
-    group1: 18 ноя 2019
-    group2: 12 ноя 2019
-    group3: 12 ноя 2019
-    group4: 20 ноя 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/B2LlCFGP
-      deadline: 24 ноя 2019 23:59
     group2:
-      classroom: https://classroom.github.com/a/c6RqLAnw
-      deadline: 18 ноя 2019 23:55
     group3:
-      classroom: https://classroom.github.com/a/TTqJE0XF
-      deadline: 18 ноя 2019 23:55
     group4:
-      classroom: https://classroom.github.com/a/MOv8aehm
-      deadline: 3 дек 2019 23:59
   show: true
-  staff:
-    group1: '[задание1](https://gist.github.com/Pandaklez/16b0dbfc30dcdedf42ab23fa4b7d42b5), [задание2](https://gist.github.com/Pandaklez/0889ddc27101367dfc12539f08684db4), [доп_задание](https://gist.github.com/Pandaklez/afe42c9d9de05aa91f63a11de5ff9b35)'
-    group2: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_6.pdf)'
-    group4: '[слайды](https://docs.google.com/presentation/d/12MHwoVQblFpuXqsPcWZAjAJWCeOSsm5dm4y7lFP-70k/view)'
+
 
 # =========================================================================== #
 
 - name: Введение в функции
   link: /prog/07-functions
   when:
-    group1: 28 ноя 2019
-    group2: 19 ноя 2019 (тест)
-    group3: 19 ноя 2019 (тест)
-    group4: 25 ноя 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/QzubYVDy
-      deadline: 3 дек 3019 23:59
     group2:
-      classroom: https://classroom.github.com/a/xXGh4-t6
-      deadline: 25 ноя 2019 23:55
     group3:
-      classroom: https://classroom.github.com/a/shj_c3ob
-      deadline: 25 ноя 2019 23:55
     group4:
-      classroom: https://classroom.github.com/a/EAwM2dFV
-      deadline: 3 дек 2019 23:59
   show: true
-  staff:
-    group2: '[слайды](/content/slides/groups/2/seminar_7.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_7.pdf)'
-    group4: '[слайды](https://colab.research.google.com/drive/1x8piPc13Ti9p6aaAoF9c_9jcNl4WT5SF)'
 
 # =========================================================================== #
 
 - name: Продолжение функций, кортежи
   link: /prog/10-functions-two
   when:
-    group1: 9 дек 2019
-    group2: 26 ноя 2019
-    group3: 26 ноя 2019
-    group4: 29 ноя 2019
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/KqxJon2c
-      deadline: 15 дек 2019 23:59
     group2:
-      classroom: https://classroom.github.com/a/yqRJTzx5
-      deadline: 2 дек 2019 23:55
     group3:
-      classroom: https://classroom.github.com/a/Q81kIPBT
-      deadline: 2 дек 2019 23:55
     group4:
-      classroom: https://classroom.github.com/a/a6G45V6G
-      deadline: 7 дек 2019 23:59
   show: true
-  staff:
-    group1: '[задача](https://gist.github.com/Pandaklez/64bd3b92a4dc13a05282ab56f307327b)'
-    group2: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_8.pdf)'
-    group4: |
-      [слайды](https://colab.research.google.com/drive/1WtNpvajNhG-PiBMP8tlr7hEXfLDmrOHA)<br>
-      [блокнот](https://etherpad.net/p/pykili194)
 
 # =========================================================================== #
 
 - name: Подготовка к контрольной работе №1
   link: /prog/08-test-preparation
   when:
-    group1: 12 дек 2019
-    group2: 3 дек 2019 (тест)
-    group3: 3 дек 2019 (тест)
-    group4: 4 дек 2019
-  hw:
     group1:
-      classroom:
-      deadline:
     group2:
-      classroom:
-      deadline:
     group3:
-      classroom:
-      deadline:
     group4:
-      classroom:
-      deadline:
-  show: true
-  staff:
-    group1: '[тетрадка](https://github.com/Pandaklez/teaching/blob/master/control_preparation.ipynb)'
+  show: false
 
 # =========================================================================== #
 
 - name: Контрольная работа №1
   when:
     group1:
-    group2: 10 дек 2019
-    group3: 10 дек 2019
+    group2:
+    group3:
     group4:
   show: true
 
@@ -268,236 +129,105 @@
 - name: Импорт и функции
   link: /prog/12-functions-and-import
   when:
-    group1: 20 янв 2020
-    group2: 27 янв 2020
-    group3: 21 янв 2020
-    group4:
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/O_v1DNrX
-      deadline: 27 янв 2020 23:59
     group2:
-      classroom: https://classroom.github.com/a/JsyRP5gQ
-      deadline: 3 фев 2020 23:55
     group3:
-      classroom: https://classroom.github.com/a/T36RdzuU
-      deadline: 27 янв 2020 23:55
     group4:
-      classroom: https://classroom.github.com/a/68TUhc5z
-      deadline: 25 янв 2020
   show: true
-  staff:
-    group1: '[Задание](https://gist.github.com/Pandaklez/e458b913f0f861739a8592a1d7c8a3d3)'
-    group2: '[слайды](/content/slides/groups/3/seminar_10.pdf)'
-    group3: '[слайды](/content/slides/groups/3/seminar_10.pdf)'
 
 # =========================================================================== #
 
 - name: Словари
   link: /prog/13-dicts
   when:
-    group1: 3 фев 2020
-    group2: 31 янв 2020
-    group3: 31 янв 2020
-    group4: 20 янв 2020
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/9rp6HnOh
-      deadline: 10 фев 2020
     group2:
-      classroom: https://classroom.github.com/a/_O3dEuiT
-      deadline: 7 фев 2020
     group3:
-      classroom: https://classroom.github.com/a/Yl7gZRz1
-      deadline: 7 фев 2020
     group4:
-      classroom: https://classroom.github.com/a/ymCIxloc
-      deadline: 29 янв 2020
   show: true
-  staff:
-    group4: |
-      [тетрадка красивая](https://colab.research.google.com/gist/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc/python-20-2020.ipynb)<br>
-      [тетрадка некрасивая](https://gist.github.com/oserikov/b5bc30cca8f7d499d9703be3fa5a31cc)
 
 # =========================================================================== #
 
 - name: Вложенные словари
   link: /prog/14-nested-dict
   when:
-    group1: 10 фев 2020
-    group2: 8 фев 2020
-    group3: 8 фев 2020
-    group4:
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/STiQbJ4U
-      deadline: 24 фев 2020 23:59
     group2:
-      classroom: https://classroom.github.com/a/wh6qQ8ZL
-      deadline: 22 фев 2020 23:55
     group3:
-      classroom: https://classroom.github.com/a/ug7x2qHL
-      deadline: 22 фев 2020 23:55
     group4:
-      classroom: https://classroom.github.com/a/A-m1FRAc
-      deadline: 12 фев 23.59
   show: true
-  staff:
-    group4: |
-      [задачка по кодитб для разогрева](https://gist.github.com/oserikov/79b1c4ff66c0fd4cd1dc144a55c62435)<br>
-      [задачка по кодитб другая](https://gist.github.com/oserikov/ac8d0021494c2158a47f1d949688363b)
 
 # =========================================================================== #
 
 - name: Поиск с регулярными выражениями
   link: /prog/16-regexp
   when:
-    group1: 22 фев 2020
-    group2: 15 фев 2020 (тест)
-    group3: 15 фев 2020 (тест)
-    group4: 19 фев 2020
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/9rp6HnOh
-      deadline: 8 мар 2020 23:55
     group2:
-      classroom: https://classroom.github.com/a/dhBcANGK
-      deadline: 8 мар 2020 23:55
     group3:
-      classroom: https://classroom.github.com/a/1yvMFE7y
-      deadline: 8 мар 2020 23:55
     group4:
-      classroom: https://classroom.github.com/a/TVRoYZ6N
-      deadline: 8 мар 2020 23:55
   show: true
-  staff:
-    group2: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_13.pdf)'
-    group4: |
-      [материалы к паре](bit.ly/oleg_py_doc)<br>
-      [слайды (спасибо, @sapunov)](/content/slides/groups/2/seminar_13.pdf)
 
 # =========================================================================== #
 
 - name: Нахождение строк, соответствующих шаблону
   link: /prog/17-regexp-group
   when:
-    group1: 7 марта 2020
-    group2: 22 фев 2020
-    group3: 22 фев 2020
-    group4:
-  hw:
     group1:
-      classroom:
-      deadline:
     group2:
-      classroom:
-      deadline:
     group3:
-      classroom:
-      deadline:
     group4:
-      classroom:
-      deadline:
   show: true
-  staff:
-    group2: '[слайды](/content/slides/groups/2/seminar_17.pdf)'
-    group3: '[слайды](/content/slides/groups/2/seminar_17.pdf)'
 
 # =========================================================================== #
 
 - name: Замены с помощью регулярных выражений
   link: /prog/18-regexp-sub
   when:
-    group1: 21 мар 2020
-    group2: 29 фев 2020
-    group3: 29 фев 2020
-    group4:
-  hw:
     group1:
-      classroom:
-      deadline:
     group2:
-      classroom:
-      deadline:
     group3:
-      classroom:
-      deadline:
     group4:
-      classroom:
-      deadline:
   show: true
-  staff:
-    group1: '[слайды](https://docs.google.com/presentation/d/1TsQIZlODsGneg-1bof0eCpjzpCiCwP2Mx8BEt_O-quk/edit?usp=sharing)'
 
 # =========================================================================== #
 
 - name: Разбиения с регулярными выражениями
   link: /prog/19-regexp-findall
   when:
-    group1: 18 апр 2020
-    group2: 18 апр 2020
-    group3: 14 апр 2020
-    group4:
-  hw:
     group1:
-      classroom:
-      deadline:
     group2:
-      classroom:
-      deadline:
     group3:
-      classroom:
-      deadline:
     group4:
-      classroom:
-      deadline:
   show: true
-  staff:
-    group1: '[тетрадка](https://colab.research.google.com/drive/18HmpRpHWMAkfgCciyRe_dGoSvLdSEhVX#scrollTo=3JToP9XiPj_O)'
-    group2: |
-      [слайды](/content/slides/groups/2/seminar_16.pdf)<br>
-      [тетрадь](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/seminar.html)<br>
-      [задача](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/task.html)
-    group3: |
-      [слайды](/content/slides/groups/2/seminar_16.pdf)<br>
-      [тетрадь](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/seminar.html)<br>
-      [задача](https://storage.yandexcloud.net/pykili/19-2020/seminars/16/task.html)
 
 # =========================================================================== #
 
 - name: Предзащита проектов
   when:
-    group1: 25 апр 2020
-    group2: 25 апр 2020
-    group3: 21 апр 2020
+    group1:
+    group2:
+    group3:
     group4:
-  show: true
+  show: false
 
 # =========================================================================== #
 
 - name: Подготовка к контрольной работе №2
   when:
-    group1: 16 мая 2020 (тест)
-    group2: 16 мая 2020 (тест)
-    group3: 12 мая 2020 (тест)
+    group1:
+    group2:
+    group3:
     group4:
-  show: true
-  staff:
-    group2: |
-      [gist с решениями](https://gist.github.com/Sapunov/2361770aa7ae15aebeaca1620df6b41f)<br>
-      [про json](/prog/25-json)
-    group3: |
-      [gist с решениями](https://gist.github.com/Sapunov/2361770aa7ae15aebeaca1620df6b41f)<br>
-      [про json](/prog/25-json)
+  show: false
 
 # =========================================================================== #
 
 - name: Контрольная работа №2
   when:
     group1:
-    group2: 23 мая 2020
-    group3: 19 мая 2020
+    group2:
+    group3:
     group4:
   show: true
 
@@ -506,78 +236,39 @@
 - name: Работа с файлами и папками
   link: /prog/22-file-manipulation
   when:
-    group1: 30 мая 2020
-    group2: 30 мая 2020
-    group3: 26 мая 2020
-    group4:
-  hw:
     group1:
-      classroom: https://classroom.github.com/a/fCY8xDoz
-      deadline: 6 июн 2020 23:59
     group2:
-      classroom: https://classroom.github.com/a/jOg6XWFw
-      deadline: 6 июн 2020 23:55
     group3:
-      classroom: https://classroom.github.com/a/XtG4dEua
-      deadline: 2 июн 2020 23:55
     group4:
-      classroom: https://classroom.github.com/a/qls0E7jJ
-      deadline: 18 июн 2020 23:59
   show: true
-  staff:
-    group2: |
-      [слайды](/content/slides/groups/3/seminar_21.pdf)
-    group3: |
-      [слайды](/content/slides/groups/3/seminar_21.pdf)
 
 # =========================================================================== #
 
 - name: Файловое дерево и форматирование строк
   link: /prog/23-tree-and-format
   when:
-    group1: 30 мая 2020
-    group2: 30 мая 2020
-    group3: 26 мая 2020
-    group4:
-  hw:
     group1:
-      classroom:
-      deadline:
     group2:
-      classroom:
-      deadline:
     group3:
-      classroom:
-      deadline:
     group4:
-      classroom: https://classroom.github.com/a/qls0E7jJ
-      deadline: 18 июн 2020 23:59
-  show: true
-  staff:
-    group2: |
-      [слайды](/content/slides/groups/3/seminar_22.pdf)
-    group3: |
-      [слайды](/content/slides/groups/3/seminar_22.pdf)
 
 # =========================================================================== #
 
 - name: Защита проектов
   when:
-    group1: 6 июн 2020
-    group2: 6 июн 2020
-    group3: 2 июн 2020
+    group1:
+    group2:
+    group3:
     group4:
-  show: true
-
-# =========================================================================== #
+  show: false
 
 # =========================================================================== #
 
 - name: Экзамен
   when:
     group1:
-    group2: soon
-    group3: soon
+    group2:
+    group3:
     group4:
   show: true
 
