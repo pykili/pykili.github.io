@@ -21,9 +21,9 @@
   show: true
   staff:
     group1:
-    group2:
+    group2: 
     group3: '[слайды](/content/slides/groups/2/seminar_1.pdf)'
-    group4:
+    group4: 'к паре попробуйте сделать [задание](https://github.com/oserikov/py-204)'
 
 # =========================================================================== #
 
