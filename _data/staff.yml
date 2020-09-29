@@ -1,20 +1,26 @@
 teachers:
-  - name: Анна Клезович
+  - name: Никишина Ирина Александровна
+    email:
+    photo: /img/staff/lilas_pourpre.jpg
+    group: Группа БКЛ201
+    telegram: lilas_pourpre
+
+  - name: Клезович Анна Геннадьевна
     email: belkannkl@gmail.com
     photo: /img/staff/aklezovich.jpg
-    group:
+    group: Группа БКЛ202
     telegram: annaklezovich
 
-  - name: Никита Сапунов
+  - name: Сапунов Никита Александрович
     email: kiton1994@gmail.com
-    group: 2 группа
+    group: Группа БКЛ203
     telegram: sapunov
     photo: /img/staff/sapunov.png
 
-  - name: Олег Сериков
+  - name: Сериков Олег Алексеевич
     email: srkvoa@gmail.com
     photo: /img/staff/serikov.png
-    group:
+    group: Группа БКЛ204
     telegram: oserikov
 
   - name: Ольга Николаевна Ляшевская
@@ -25,23 +31,22 @@ teachers:
 
 
 assistants:
-  - name: Екатерина Такташева
+  - name: Такташева Екатерина Вадимовна
     email: evtaktasheva@gmail.com
-    group:
+    group: Группы БКЛ201 и БКЛ202
     telegram: tak_ty
     vk: vk.com/tak_ty
     photo: /img/staff/tak_ty.jpg
 
-  - name: Антон Бузанов
+  - name: Бузанов Антон Олегович
     email: anton.buzanov.00@gmail.com
-    group:
+    group: Группа БКЛ203
     telegram: Vantral
     vk: vk.com/vantral
     photo: /img/staff/vantral.jpg
 
-  - name: Алина Рогулина
-    email: rogulina99alina@gmail.com
-    telegram: avrogulina
-    vk: vk.com/id65682706
-    group:
-    photo: /img/staff/avrogulina.jpg
+  - name: Ревенко Дарья Сергеевна
+    email:
+    telegram: dariarev
+    group: Группа БКЛ204
+    photo: /img/staff/dariarev.jpg
