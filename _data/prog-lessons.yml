@@ -21,8 +21,8 @@
   show: true
   staff:
     group1:
-    group2: '[слайды](/content/slides/groups/2/seminar_1.pdf)'
-    group3:
+    group2:
+    group3: '[слайды](/content/slides/groups/2/seminar_1.pdf)'
     group4:
 
 # =========================================================================== #
