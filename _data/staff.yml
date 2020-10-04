@@ -5,17 +5,17 @@ teachers:
     group: Группа БКЛ201
     telegram: lilas_pourpre
 
+  - name: Сапунов Никита Александрович
+    email: kiton1994@gmail.com
+    group: Группа БКЛ202
+    telegram: sapunov
+    photo: /img/staff/sapunov.png
+    
   - name: Клезович Анна Геннадьевна
     email: belkannkl@gmail.com
     photo: /img/staff/aklezovich.jpg
-    group: Группа БКЛ202
-    telegram: annaklezovich
-
-  - name: Сапунов Никита Александрович
-    email: kiton1994@gmail.com
     group: Группа БКЛ203
-    telegram: sapunov
-    photo: /img/staff/sapunov.png
+    telegram: annaklezovich
 
   - name: Сериков Олег Алексеевич
     email: srkvoa@gmail.com
