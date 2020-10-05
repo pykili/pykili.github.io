@@ -33,14 +33,14 @@ teachers:
 assistants:
   - name: Такташева Екатерина Вадимовна
     email: evtaktasheva@gmail.com
-    group: Группы БКЛ201 и БКЛ202
+    group: Группы БКЛ201 и БКЛ203
     telegram: tak_ty
     vk: vk.com/tak_ty
     photo: /img/staff/tak_ty.jpg
 
   - name: Бузанов Антон Олегович
     email: anton.buzanov.00@gmail.com
-    group: Группа БКЛ203
+    group: Группа БКЛ202
     telegram: Vantral
     vk: vk.com/vantral
     photo: /img/staff/vantral.jpg
