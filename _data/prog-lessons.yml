@@ -30,7 +30,7 @@
 - name: Условия и операторы сравнения
   link: /prog/02-if-and-comparison-ops
   when:
-    group1:
+    group1:  '[семинар и hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)'
     group2:
     group3:
     group4:
