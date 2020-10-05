@@ -2,7 +2,7 @@
   link: /prog/01-git_and_python_intro
   when:
     group1:
-    group2: 28 сен 2020
+    group2:
     group3:
     group4:
   hw:
@@ -30,11 +30,18 @@
 - name: Условия и операторы сравнения
   link: /prog/02-if-and-comparison-ops
   when:
-    group1:  '[семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)'
+    group1:  
     group2:
     group3:
     group4:
   show: true
+  staff:
+    group1: '[семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)'
+    group2: 
+    group3: 
+    group4: 
+
+
 
 # =========================================================================== #
 
