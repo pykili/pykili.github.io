@@ -3,7 +3,7 @@
   when:
     group1:
     group2:
-    group3: 30 сент 2020
+    group3: 30 сент
     group4:
   hw:
     group1:
@@ -32,7 +32,7 @@
   when:
     group1:  
     group2:
-    group3:
+    group3: 10 окт
     group4:
   show: true
   staff:
