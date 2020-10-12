@@ -53,6 +53,11 @@
     group3:
     group4:
   show: true
+  staff:
+    group1: '[семинар & hw-2](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_03/03_Loops_and_indices.ipynb)'
+    group2: 
+    group3:
+    group4: 
 
 # =========================================================================== #
 
