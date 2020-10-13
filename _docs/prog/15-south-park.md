@@ -148,6 +148,7 @@ def episodes_with_word(d, word, at_most):
     return episodes
 ```
 
-# Домашнее задание
+<!-- ====================================================================== -->
 
-**???**
+{% include_relative hw/hw_15_base/README.md %}
+

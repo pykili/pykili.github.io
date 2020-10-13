@@ -1,0 +1,45 @@
+[submodule "_docs/prog/hw/hw_05_base"]
+	path = _docs/prog/hw/hw_05_base
+	url = https://github.com/pykili/05-files
+[submodule "_docs/prog/hw/hw_02_base"]
+	path = _docs/prog/hw/hw_02_base
+	url = https://github.com/pykili/02-if-and-comparison-ops
+[submodule "_docs/prog/hw/hw_03_base"]
+	path = _docs/prog/hw/hw_03_base
+	url = https://github.com/pykili/03-loops
+[submodule "_docs/prog/hw/hw_04_base"]
+	path = _docs/prog/hw/hw_04_base
+	url = https://github.com/pykili/04-lists
+[submodule "_docs/prog/hw/hw_06_base"]
+	path = _docs/prog/hw/hw_06_base
+	url = https://github.com/pykili/06-write-files
+[submodule "_docs/prog/hw/hw_07_base"]
+	path = _docs/prog/hw/hw_07_base
+	url = https://github.com/pykili/07-functions
+[submodule "_docs/prog/hw/hw_10_base"]
+	path = _docs/prog/hw/hw_10_base
+	url = https://github.com/pykili/10-functions-two
+[submodule "_docs/prog/hw/hw_11_base"]
+	path = _docs/prog/hw/hw_11_base
+	url = https://github.com/pykili/11-rick-and-morty
+[submodule "_docs/prog/hw/hw_12_base"]
+	path = _docs/prog/hw/hw_12_base
+	url = https://github.com/pykili/12-functions-and-import
+[submodule "_docs/prog/hw/hw_13_base"]
+	path = _docs/prog/hw/hw_13_base
+	url = https://github.com/pykili/13-dicts
+[submodule "_docs/prog/hw/hw_14_base"]
+	path = _docs/prog/hw/hw_14_base
+	url = https://github.com/pykili/14-nested-dict
+[submodule "_docs/prog/hw/hw_15_base"]
+	path = _docs/prog/hw/hw_15_base
+	url = https://github.com/pykili/15-south-park
+[submodule "_docs/prog/hw/hw_16_base"]
+	path = _docs/prog/hw/hw_16_base
+	url = https://github.com/pykili/16-regexp
+[submodule "_docs/prog/hw/hw_17_base"]
+	path = _docs/prog/hw/hw_17_base
+	url = https://github.com/pykili/17-regexp-group
+[submodule "_docs/prog/hw/hw_18_base"]
+	path = _docs/prog/hw/hw_18_base
+	url = https://github.com/pykili/18-regexp-sub

@@ -151,6 +151,7 @@ def get_mail_provider(email):
 'yandex.ru'
 ```
 
-# Домашнее задание
+<!-- ====================================================================== -->
 
-TBD
+{% include_relative hw/hw_18_base/README.md %}
+
