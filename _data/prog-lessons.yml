@@ -52,7 +52,7 @@
   when:
     group1:
     group2: 12 окт
-    group3:
+    group3: 17 окт
     group4:
   show: true
   staff:
@@ -61,7 +61,7 @@
       [слайды](/content/slides/groups/2/seminar_3.pdf)<br>
       [тетрадка](/content/notebooks/groups/2/seminar_3.ipynb)<br>
       Дедлайн ДЗ: 25 окт
-    group3:
+    group3: '[тетрадка & hw-2](https://colab.research.google.com/drive/1dZBzGt3D5utO6SZ-8Gny5xlMxd7F6yzK?usp=sharing)'
     group4:
 
 # =========================================================================== #
