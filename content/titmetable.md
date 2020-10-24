@@ -1,6 +1,6 @@
-| week | deadline | who's responsible |
-| --- | ---- |  --- |
-| 26.10-01.11| 24.10| Irina |
+| week | deadline | who's responsible | Gist
+| --- | ---- |  --- | --- |
+| 26.10-01.11| 24.10| Irina | https://gist.github.com/lilaspourpre/1b336ff3424517ac4cf84d2ccff59e8f
 | 02.11-08.11| 31.10| Anna |
 | 09.11-15.11| 07.11| Nikita |
 | 16.11-22.11| 14.11| Oleg |
