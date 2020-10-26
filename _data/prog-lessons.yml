@@ -71,9 +71,7 @@
   when:
     group1:
     group2:
-    group3: |
-      [тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)<br>
-      Дедлайн: 8 ноя
+    group3: '[тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)'
     group4:
   show: true
 
