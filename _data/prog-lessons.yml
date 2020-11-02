@@ -87,7 +87,7 @@
 - name: Файлы
   link: /prog/05-files
   when:
-    group1:
+    group1: 02 ноя 2020
     group2:
     group3:
     group4:
