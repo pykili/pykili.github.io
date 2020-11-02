@@ -92,6 +92,11 @@
     group3:
     group4:
   show: true
+  staff:
+    group1: '| [семинар & hw-4](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_05/Files.ipynb) <br> Дедлайн 22 ноября'
+    group2: 
+    group3: 
+    group4:
 
 # =========================================================================== #
 
