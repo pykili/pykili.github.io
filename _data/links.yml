@@ -3,7 +3,8 @@ program:
   text: Программа курса на сайте ВШЭ
 
 marks:
-  url: #
+  url: https://docs.google.com/spreadsheets/d/1Z5Sd_RhFg7dNCL9fF23YJVCg0O-yC1dNwSfHer1-sdI/edit?usp=sharing
+  text: Таблица с оценками
 
 contacts:
   url: https://forms.gle/fvhghS7cNQ5LZqtj9
