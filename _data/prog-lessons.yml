@@ -103,11 +103,16 @@
 - name: Запись файлов
   link: /prog/06-write-files
   when:
-    group1:
+    group1: 09 ноя 2020
     group2:
     group3:
     group4:
   show: true
+  staff:
+    group1: '| [семинар & hw-5](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_06/Writing_to_files.ipynb) <br> Дедлайн 29 ноября'
+    group2: 
+    group3:
+    group4:
 
 
 # =========================================================================== #
