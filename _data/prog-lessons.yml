@@ -120,11 +120,16 @@
 - name: Введение в функции
   link: /prog/07-functions
   when:
-    group1:
+    group1: 16 ноя 2020
     group2:
     group3:
     group4:
   show: true
+  staff:
+    group1: '| [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07/Functions.ipynb) <br> Дедлайн 6 декабря'
+    group2: 
+    group3:
+    group4:
 
 # =========================================================================== #
 
