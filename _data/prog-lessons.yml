@@ -1,26 +1,14 @@
 - name: Git и введение в Python
   link: /prog/01-git_and_python_intro
   when:
-    group1: 28 сен
-    group2: 28 сен
-    group3: 30 сен
+    group1: 28 сен 2020
+    group2: 28 сен 2020
+    group3: 30 сен 2020
     group4:
-  hw:
-    group1:
-      classroom:
-      deadline:
-    group2:
-      classroom:
-      deadline:
-    group3:
-      classroom:
-      deadline:
-    group4:
-      classroom:
-      deadline:
   show: true
   staff:
-    group1: '| [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_01/01_Intro.ipynb)'
+    group1: |
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_01/01_Intro.ipynb)
     group2: |
       [слайды](/content/slides/groups/2/seminar_1.pdf)
     group3: '[слайды](https://docs.google.com/presentation/d/1ersdWkShenYS-Vi5VVNEuHPR8ZI7W2R9vucW7osTo4w/edit?usp=sharing)'
@@ -31,13 +19,14 @@
 - name: Условия и операторы сравнения
   link: /prog/02-if-and-comparison-ops
   when:
-    group1: 5 окт
-    group2: 5 окт
-    group3: 10 окт
+    group1: 5 окт 2020
+    group2: 5 окт 2020
+    group3: 10 окт 2020
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)'
+    group1: |
+      [семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)
     group2: |
       Дедлайн ДЗ: 18 окт
     group3: '[семинар & link to hw1](https://docs.google.com/presentation/d/1332z2N0nqCb_5S16AqmSkgxG0aqhbywIz7bOGUCzYoQ/edit?usp=sharing)'
@@ -50,13 +39,14 @@
 - name: Циклы и индексы
   link: /prog/03-loops
   when:
-    group1: 12 окт
-    group2: 12 окт
-    group3: 17 окт
+    group1: 12 окт 2020
+    group2: 12 окт 2020
+    group3: 17 окт 2020
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-2](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_03/03_Loops_and_indices.ipynb)'
+    group1: |
+      [семинар & hw-2](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_03/03_Loops_and_indices.ipynb)
     group2: |
       [слайды](/content/slides/groups/2/seminar_3.pdf)<br>
       [тетрадка](/content/notebooks/groups/2/seminar_3.ipynb)<br>
@@ -75,9 +65,12 @@
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-3](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_04/Lists.ipynb) <br> Дедлайн 15 ноября'
+    group1: |
+      [семинар & hw-3](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_04/Lists.ipynb)<br>
+      Дедлайн 15 ноября
     group2: |
       [тетрадка](/content/notebooks/groups/2/seminar_lists.ipynb)<br>
+      [запись семинара](https://clck.ru/S37mC)<br>
       Дедлайн ДЗ: 18 ноя 2020
     group3: '[тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)'
     group4:
@@ -93,9 +86,12 @@
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-4](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_05/Files.ipynb) <br> Дедлайн 22 ноября'
+    group1: |
+      [семинар & hw-4](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_05/Files.ipynb)<br>
+      Дедлайн 22 ноября
     group2: |
-      [тетрадка](#)<br>
+      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-read-files.ipynb)<br>
+      [запись семинара](https://clck.ru/S37bA)<br>
       Дедлайн ДЗ: 02 дек 2020
     group3: '[тетрадка & hw-4](https://colab.research.google.com/drive/1YJHFC1iO_lyT6tSOXk__6Xbc2e4K_vAN?usp=sharing)'
     group4:
@@ -111,8 +107,13 @@
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-5](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_06/Writing_to_files.ipynb) <br> Дедлайн 29 ноября'
-    group2: 
+    group1: |
+      [семинар & hw-5](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_06/Writing_to_files.ipynb)<br>
+      Дедлайн ДЗ: 29 ноября
+    group2: |
+      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-files-write.ipynb)<br>
+      [запись семинара](https://clck.ru/S37e5)<br>
+      Дедлайн ДЗ: 02 дек 2020
     group3:
     group4:
 
@@ -128,7 +129,9 @@
     group4:
   show: true
   staff:
-    group1: '| [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07/Functions.ipynb) <br> Дедлайн 6 декабря'
+    group1: |
+      [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07/Functions.ipynb)<br>
+      Дедлайн 6 декабря
     group2: 
     group3:
     group4:
