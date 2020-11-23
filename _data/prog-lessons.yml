@@ -141,13 +141,15 @@
 - name: Продолжение функций, кортежи
   link: /prog/10-functions-two
   when:
-    group1:
+    group1: 23 ноя 2020 (тест)
     group2:
     group3: 23 ноя 2020
     group4:
   show: true
   staff:
-    group1:
+    group1:  |
+      [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Functions_Part_2.ipynb)<br>
+      Дедлайн 13 декабря
     group2:
     group3: '[семинар & hw-7](https://colab.research.google.com/drive/1NL-HFZKqIOd_Kxr4QDYucKFYJhl2KmC4?usp=sharing)'
     group4:
