@@ -163,7 +163,7 @@
     group2:
     group3:
     group4:
-  show: false
+  show: true
   staff:
     group1:  |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Trees.ipynb)
