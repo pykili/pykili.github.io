@@ -159,11 +159,17 @@
 - name: Подготовка к контрольной работе №1
   link: /prog/08-test-preparation
   when:
-    group1:
+    group1: 30 ноя 2020
     group2:
     group3:
     group4:
   show: false
+  staff:
+    group1:  |
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Trees.ipynb)
+    group2:
+    group3:
+    group4:
 
 # =========================================================================== #
 
