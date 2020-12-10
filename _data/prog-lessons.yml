@@ -124,7 +124,7 @@
   link: /prog/07-functions
   when:
     group1: 16 ноя 2020
-    group2:
+    group2: 25 ноя 2020
     group3:
     group4:
   show: true
@@ -132,7 +132,10 @@
     group1: |
       [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07/Functions.ipynb)<br>
       Дедлайн 6 декабря
-    group2: 
+    group2: |
+      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions.ipynb)<br>
+      [запись семинара](https://zoom.us/rec/share/Rc6iMBsD1Nj2pAZVzg7j_XbAf9oMbHWoUEG_xvuFgoftTVCXITRZdixY0UrJyUmy.v4n_fvXUyv25EbbK)<br>
+      Дедлайн ДЗ: 24 дек 2020
     group3: '[семинар & hw-6](https://colab.research.google.com/drive/1f0xl8HArTQhyQ-mf4hZbArXKMKJsorFc?usp=sharing)'
     group4:
 
@@ -142,7 +145,7 @@
   link: /prog/10-functions-two
   when:
     group1: 23 ноя 2020 (тест)
-    group2:
+    group2: 2 дек 2020
     group3: 23 ноя 2020
     group4:
   show: true
@@ -150,7 +153,10 @@
     group1:  |
       [семинар & hw-7](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Functions_Part_2.ipynb)<br>
       Дедлайн 13 декабря
-    group2:
+    group2: |
+      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions_two.ipynb)<br>
+      [запись семинара](https://zoom.us/rec/share/hwua9W0RJsRKZjg_RUy8puv3zHauKjUJQjk8Ew110-R6Flovar2FwyT1OLpOrMHu.-dAnsjMwDST5XGcy)<br>
+      Дедлайн ДЗ: 14 янв 2021
     group3: '[семинар & hw-7](https://colab.research.google.com/drive/1NL-HFZKqIOd_Kxr4QDYucKFYJhl2KmC4?usp=sharing)'
     group4:
 
@@ -160,14 +166,17 @@
   link: /prog/08-test-preparation
   when:
     group1: 30 ноя 2020
-    group2:
+    group2: 9 дек 2020 (тест)
     group3: 30 ноя 2020
     group4:
   show: true
   staff:
     group1:  |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Trees.ipynb)
-    group2:
+    group2: |
+      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_test_prep.ipynb)<br>
+      [примерный вариант КР](https://gist.github.com/Sapunov/4d58a83b6b02e61ef16fccd2fbdad98e)<br>
+      [запись семинара (not ready)](#)<br>
     group3: '[семинар](https://colab.research.google.com/drive/1fzeMXn7VZnO0CmwnlfraXdQmQnmqTT2F?usp=sharing)'
     group4:
 
