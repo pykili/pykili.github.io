@@ -202,7 +202,7 @@
   show: true
   staff:
     group2: |
-      [слайды](/content/slides/groups/2/seminar_modules.pdf)
+      [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_modules.ipynb)<br>
       [запись семинара](#)<br>
 
