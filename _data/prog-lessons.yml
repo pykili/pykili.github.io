@@ -184,7 +184,7 @@
 
 - name: Контрольная работа №1
   when:
-    group1:
+    group1: 7 дек 2020
     group2: 9 дек 2020
     group3:
     group4:
@@ -195,12 +195,13 @@
 - name: Импорт и функции
   link: /prog/12-functions-and-import
   when:
-    group1:
+    group1: 14 дек 2020
     group2: 16 дек 2020
     group3:
     group4:
   show: true
   staff:
+    group1: | [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_09/Import.ipynb)
     group2: |
       [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_modules.ipynb)<br>
