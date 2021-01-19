@@ -213,7 +213,7 @@
 - name: Словари 1 и множества
   link: /prog/dict-1-set
   when:
-    group1: 16 янв 2021
+    group1: 16 янв 2021 (тест)
     group2:
     group3:
     group4:
