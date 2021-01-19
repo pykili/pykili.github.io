@@ -130,7 +130,7 @@
   show: true
   staff:
     group1: |
-      [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07/Functions.ipynb)<br>
+      [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions.ipynb)<br>
       Дедлайн 6 декабря
     group2: |
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions.ipynb)<br>
@@ -151,7 +151,7 @@
   show: true
   staff:
     group1:  |
-      [семинар & hw-7](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Functions_Part_2.ipynb)<br>
+      [семинар & hw-7](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions_Part_2.ipynb)<br>
       Дедлайн 13 декабря
     group2: |
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions_two.ipynb)<br>
@@ -172,7 +172,7 @@
   show: true
   staff:
     group1:  |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-08/Trees.ipynb)
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Trees.ipynb)
     group2: |
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_test_prep.ipynb)<br>
       [примерный вариант КР](https://gist.github.com/Sapunov/4d58a83b6b02e61ef16fccd2fbdad98e)<br>
@@ -202,7 +202,7 @@
   show: true
   staff:
     group1: | 
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_09/Import.ipynb)
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_10/Import.ipynb)
     group2: |
       [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_modules.ipynb)<br>
@@ -213,11 +213,14 @@
 - name: Словари 1 и множества
   link: /prog/dict-1-set
   when:
-    group1:
+    group1: 16 янв 2021
     group2:
     group3:
     group4:
   show: true
+  staff:
+    group1: | 
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)
 
 # =========================================================================== #
 
