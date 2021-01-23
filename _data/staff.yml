@@ -5,12 +5,12 @@ teachers:
     group: Группа БКЛ201
     telegram: lilas_pourpre
 
-  - name: Сапунов Никита Александрович
-    email: kiton1994@gmail.com
+  - name: Леонов Антон Александрович
+    email: grmmr07@gmail.com
     group: Группа БКЛ202
-    telegram: sapunov
-    photo: /img/staff/sapunov.png
-    
+    telegram: grmmr
+    photo: /img/staff/anton.jpeg
+
   - name: Клезович Анна Геннадьевна
     email: belkannkl@gmail.com
     photo: /img/staff/aklezovich.jpg
@@ -31,19 +31,18 @@ teachers:
 
 
 assistants:
-  - name: Такташева Екатерина Вадимовна
-    email: evtaktasheva@gmail.com
-    group: Группы БКЛ201 и БКЛ203
-    telegram: tak_ty
-    vk: vk.com/tak_ty
-    photo: /img/staff/tak_ty.jpg
-
   - name: Бузанов Антон Олегович
     email: anton.buzanov.00@gmail.com
-    group: Группа БКЛ202
+    group: Группа БКЛ201
     telegram: Vantral
     vk: vk.com/vantral
     photo: /img/staff/vantral.jpg
+
+  - name: Касенов Данияр Ерланович
+    email: antidanyar@protonmail.com
+    group: Группы БКЛ202 и БКЛ203
+    telegram: antidanyar
+    photo: /img/staff/danyar.jpg
 
   - name: Ревенко Дарья Сергеевна
     email:
