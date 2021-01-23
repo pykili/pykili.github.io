@@ -228,12 +228,15 @@
 - name: Словари 2
   link: /prog/dict-2
   when:
-    group1:
+    group1: 23 января 2021
     group2:
     group3:
     group4:
   show: true
-
+  staff:
+    group1: | 
+      [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
+      Дедлайн 14 февраля
 # =========================================================================== #
 
 - name: Словари 3
