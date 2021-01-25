@@ -231,12 +231,13 @@
     group1: 23 января 2021
     group2:
     group3:
-    group4:
+    group4: 25 января 2021
   show: true
   staff:
     group1: | 
       [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 14 февраля
+    group4: [слайды (запись и ссылки в слайдах)](https://docs.google.com/presentation/d/e/2PACX-1vQDCHPRs8DhA98k68HNU8H9b30gYzoim0vn1Xu_sTZ7uh-kiNAS4p72o3sCDT17HUTfJp3vd9qV4M5t/pub?start=false&loop=false&delayms=3000)
 # =========================================================================== #
 
 - name: Словари 3
