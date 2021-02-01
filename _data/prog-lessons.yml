@@ -201,7 +201,7 @@
     group4:
   show: true
   staff:
-    group1: | 
+    group1: |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_10/Import.ipynb)
     group2: |
       [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
@@ -219,7 +219,7 @@
     group4:
   show: true
   staff:
-    group1: | 
+    group1: |
       [семинар & hw-8](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 7 февраля
 
@@ -229,14 +229,15 @@
   link: /prog/dict-2
   when:
     group1: 23 января 2021
-    group2:
+    group2: 30 января 2021
     group3:
     group4: 25 января 2021
   show: true
   staff:
-    group1: | 
+    group1: |
       [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 14 февраля
+    group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - словари - 2.ipynb)'
     group4: '[слайды (запись и ссылки в слайдах)](https://docs.google.com/presentation/d/e/2PACX-1vQDCHPRs8DhA98k68HNU8H9b30gYzoim0vn1Xu_sTZ7uh-kiNAS4p72o3sCDT17HUTfJp3vd9qV4M5t/pub?start=false&loop=false&delayms=3000)'
 # =========================================================================== #
 
