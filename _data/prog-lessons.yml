@@ -247,13 +247,14 @@
     group1: 6 февраля (тест)
     group2: 6 февраля
     group3:
-    group4:
+    group4: 5 февраля
   show: true
   staff:
     group1: |
       [семинар & hw-10](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 28 февраля
     group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ Программирование 202 - Словари - 3.ipynb)'
+    group4: '[ссылка на запись](https://drive.google.com/file/d/1zoMOUPH_Ln48whOIYc3DXDQt2LcjLFTU/view?usp=sharing)'
 
 # =========================================================================== #
 
