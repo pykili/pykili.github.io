@@ -222,6 +222,9 @@
     group1: |
       [семинар & hw-8](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 7 февраля
+    group3: |
+      [семинар & hw-8](https://colab.research.google.com/drive/1PiHWAtT8grd9PRjw6VaLanAzG1FEMVk5?usp=sharing)<br>
+      Дедлайн 6 февраля
 
 # =========================================================================== #
 
@@ -238,6 +241,9 @@
       [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 21 февраля
     group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - словари - 2.ipynb)'
+    group3: |
+      [семинар & hw-9](https://colab.research.google.com/drive/10hwTD6-_KNOb2v46tTBKpdm4YaEwN_FS?usp=sharing)<br>
+      Дедлайн 20 февраля
     group4: '[слайды (запись и ссылки в слайдах)](https://docs.google.com/presentation/d/e/2PACX-1vQDCHPRs8DhA98k68HNU8H9b30gYzoim0vn1Xu_sTZ7uh-kiNAS4p72o3sCDT17HUTfJp3vd9qV4M5t/pub?start=false&loop=false&delayms=3000)'
 # =========================================================================== #
 
@@ -254,6 +260,7 @@
       [семинар & hw-10](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
       Дедлайн 28 февраля
     group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ Программирование 202 - Словари - 3.ipynb)'
+    group3: '[семинар](https://colab.research.google.com/drive/1zNGzzU0Oj_7HasBKUcOFdYUdUtO5kJqP?usp=sharing)'
     group4: '[ссылка на запись](https://drive.google.com/file/d/1zoMOUPH_Ln48whOIYc3DXDQt2LcjLFTU/view?usp=sharing)'
 
 # =========================================================================== #
@@ -263,7 +270,7 @@
   when:
     group1:
     group2:
-    group3:
+    group3: 13 февраля
     group4:
   show: true
 
