@@ -268,11 +268,14 @@
 - name: Регулярные выражения 1
   link: /prog/regexp-1
   when:
-    group1:
+    group1: 13 февраля
     group2:
     group3: 13 февраля
     group4:
   show: true
+  staff:
+    group1: |
+      [лекция](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/regex.pdf)<br>
 
 # =========================================================================== #
 
