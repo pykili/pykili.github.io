@@ -284,11 +284,15 @@
 - name: Регулярные выражения 2
   link: /prog/regexp-2
   when:
-    group1:
+    group1: 20 февраля
     group2: 27 февраля
     group3:
     group4:
   show: true
+  staff:
+    group1: |
+      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
+  
 
 # =========================================================================== #
 
