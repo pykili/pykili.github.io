@@ -278,6 +278,9 @@
       [лекция](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/regex.pdf)<br>
     group2: |
         [Лекция и запись](https://docs.google.com/presentation/d/1cqaNXnBfTJHRG5qatq-bUvcOpY7UCo_fNLE32gjhrSk/edit?usp=sharing)<br>
+    group3: |
+        [лекция](https://docs.google.com/presentation/d/1Sb1QXPaSHTZB2ZCyDMqzhh-Rm5madsu_XQmbRpxWSIA/edit?usp=sharing)<br>
+        [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)
 
 # =========================================================================== #
 
@@ -286,13 +289,16 @@
   when:
     group1: 20 февраля
     group2: 27 февраля
-    group3:
+    group3: 20 февраля
     group4:
   show: true
   staff:
     group1: |
       [семинар & hw-11](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
       Дедлайн 14 марта
+    group3: |
+      [лекция](https://docs.google.com/presentation/d/12Wi2vrpr4yMvuzTcXFOUEfUFOxYl_qzVLbrm45O8MRI/edit?usp=sharing)<br>
+      [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)
   
 
 # =========================================================================== #
