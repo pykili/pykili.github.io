@@ -308,7 +308,7 @@
 - name: Регулярные выражения 3
   link: /prog/regexp-3
   when:
-    group1:
+    group1: 27 февраля
     group2:
     group3:
     group4:
