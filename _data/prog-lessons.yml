@@ -310,7 +310,7 @@
   link: /prog/regexp-3
   when:
     group1: 27 февраля
-    group2:
+    group2: 6 марта
     group3: 6 марта
     group4:
   show: true
@@ -318,6 +318,8 @@
     group1: |
       [семинар & hw-12](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
       Дедлайн 21 марта
+    group2: |
+      [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - регулярки - 3.ipynb)<br>
     group3: |
       [лекция](https://docs.google.com/presentation/d/1EmK4MINzZiAndfAAzQenUz7dXQIdvm5qhQ-eLIbumaI/edit?usp=sharing)<br>
       [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)<br>
