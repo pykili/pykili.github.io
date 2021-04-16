@@ -329,7 +329,7 @@
 
 - name: Контрольная работа №2
   when:
-    group1:
+    group1: 27 марта
     group2: 17 апреля
     group3:
     group4:
