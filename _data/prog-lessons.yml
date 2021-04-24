@@ -356,10 +356,13 @@
   link: /prog/22-file-manipulation
   when:
     group1:
-    group2:
+    group2: 24 апреля
     group3:
     group4:
   show: true
+  staff:
+    group2: |
+          [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ - Программирование 202 - файлы.ipynb)<br>
 
 # =========================================================================== #
 
@@ -374,8 +377,6 @@
   staff:
     group1: |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
-    group2: |
-      [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ - Программирование 202 - файлы.ipynb)<br>
 # =========================================================================== #
 
 - name: Защита проектов
