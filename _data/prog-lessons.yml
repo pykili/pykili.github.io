@@ -335,7 +335,7 @@
     group4:
   show: true
   staff:
-    group1: | 
+    group1: |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_17)<br>
     group2: |
       [Тетрадка и запись подготовки](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/Программирование 202 - подготовка к КР.ipynb)<br>
@@ -372,15 +372,16 @@
     group4:
   show: true
   staff:
-    group1: | 
+    group1: |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
-
+    group2: |
+      [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ - Программирование 202 - файлы.ipynb)<br>
 # =========================================================================== #
 
 - name: Защита проектов
   when:
     group1: 15 мая
-    group2:
+    group2: 15 мая
     group3:
     group4:
   show: true
