@@ -331,7 +331,7 @@
   when:
     group1: 27 марта
     group2: 17 апреля
-    group3:
+    group3: 27 марта
     group4:
   show: true
   staff:
@@ -339,7 +339,7 @@
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_17)<br>
     group2: |
       [Тетрадка и запись подготовки](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/Программирование 202 - подготовка к КР.ipynb)<br>
-    group3:
+    group3: подготовка к кр была 20 марта
 
 # =========================================================================== #
 
@@ -357,7 +357,7 @@
   when:
     group1: 29 мая
     group2: 24 апреля
-    group3:
+    group3: 17 апреля
     group4:
   show: true
   staff:
@@ -365,6 +365,8 @@
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
     group2: |
           [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/%D0%A4%D0%B8%D0%9A%D0%9B%20-%20%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20202%20-%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B.ipynb)<br>
+    group3: |
+      [презентация 1](https://docs.google.com/presentation/d/1IP46o7vZqAeIy3UhDbW6Jt-7-n9u-wyjmsHRvQZRXFo/edit?usp=sharing)
 
 # =========================================================================== #
 
@@ -373,7 +375,7 @@
   when:
     group1: 17 апреля
     group2: 29 мая
-    group3:
+    group3: 22 мая
     group4:
   show: true
   staff:
@@ -381,13 +383,16 @@
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
     group2: |
             [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/Программирование%20202%20-%20работа%20с%20деревом%2C%20строки.ipynb)<br>
+    group3: |
+      [презентация 2](https://docs.google.com/presentation/d/1tvpGt9LckE24fzZhM8wtErlFpvYpa0R5Q1qb95WONuk/edit?usp=sharing)<br>
+      [тетрадка за обе пары](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
 # =========================================================================== #
 
 - name: Защита проектов
   when:
     group1: 15 мая
     group2: 15 мая
-    group3:
+    group3: 15 мая
     group4:
   show: true
 
@@ -397,12 +402,14 @@
   when:
     group1: 5 июня
     group2: 
-    group3:
+    group3: 29 мая
     group4:
   show: true
   staff:
     group1: |
       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_20)<br>
+    group3: |
+      [та же тетрадка + про гит говорили](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
 
 # =========================================================================== #
 
