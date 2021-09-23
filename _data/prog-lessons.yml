@@ -16,411 +16,411 @@
 
 # =========================================================================== #
 
-- name: Условия и операторы сравнения
-  link: /prog/02-if-and-comparison-ops
-  when:
-    group1: 5 окт 2020
-    group2: 5 окт 2020
-    group3: 10 окт 2020
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)
-    group2: |
-      Дедлайн ДЗ: 18 окт
-    group3: '[семинар & link to hw1](https://docs.google.com/presentation/d/1332z2N0nqCb_5S16AqmSkgxG0aqhbywIz7bOGUCzYoQ/edit?usp=sharing)'
-    group4:
+# - name: Условия и операторы сравнения
+#   link: /prog/02-if-and-comparison-ops
+#   when:
+#     group1: 5 окт 2020
+#     group2: 5 окт 2020
+#     group3: 10 окт 2020
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)
+#     group2: |
+#       Дедлайн ДЗ: 18 окт
+#     group3: '[семинар & link to hw1](https://docs.google.com/presentation/d/1332z2N0nqCb_5S16AqmSkgxG0aqhbywIz7bOGUCzYoQ/edit?usp=sharing)'
+#     group4:
 
 
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Циклы и индексы
-  link: /prog/03-loops
-  when:
-    group1: 12 окт 2020
-    group2: 12 окт 2020
-    group3: 17 окт 2020
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-2](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_03/03_Loops_and_indices.ipynb)
-    group2: |
-      [слайды](/content/slides/groups/2/seminar_3.pdf)<br>
-      [тетрадка](/content/notebooks/groups/2/seminar_3.ipynb)<br>
-      Дедлайн ДЗ: 1 ноя 2020
-    group3: '[тетрадка & hw-2](https://colab.research.google.com/drive/1dZBzGt3D5utO6SZ-8Gny5xlMxd7F6yzK?usp=sharing)'
-    group4:
+# - name: Циклы и индексы
+#   link: /prog/03-loops
+#   when:
+#     group1: 12 окт 2020
+#     group2: 12 окт 2020
+#     group3: 17 окт 2020
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-2](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_03/03_Loops_and_indices.ipynb)
+#     group2: |
+#       [слайды](/content/slides/groups/2/seminar_3.pdf)<br>
+#       [тетрадка](/content/notebooks/groups/2/seminar_3.ipynb)<br>
+#       Дедлайн ДЗ: 1 ноя 2020
+#     group3: '[тетрадка & hw-2](https://colab.research.google.com/drive/1dZBzGt3D5utO6SZ-8Gny5xlMxd7F6yzK?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Списки
-  link: /prog/04-lists
-  when:
-    group1: 29 окт 2020 (тест)
-    group2: 28 окт 2020 (тест)
-    group3: 26 окт 2020
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-3](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_04/Lists.ipynb)<br>
-      Дедлайн 15 ноября
-    group2: |
-      [тетрадка](/content/notebooks/groups/2/seminar_lists.ipynb)<br>
-      [запись семинара](https://clck.ru/S37mC)<br>
-      Дедлайн ДЗ: 18 ноя 2020
-    group3: '[тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)'
-    group4:
+# - name: Списки
+#   link: /prog/04-lists
+#   when:
+#     group1: 29 окт 2020 (тест)
+#     group2: 28 окт 2020 (тест)
+#     group3: 26 окт 2020
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-3](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_04/Lists.ipynb)<br>
+#       Дедлайн 15 ноября
+#     group2: |
+#       [тетрадка](/content/notebooks/groups/2/seminar_lists.ipynb)<br>
+#       [запись семинара](https://clck.ru/S37mC)<br>
+#       Дедлайн ДЗ: 18 ноя 2020
+#     group3: '[тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Файлы
-  link: /prog/05-files
-  when:
-    group1: 02 ноя 2020
-    group2: 11 ноя 2020
-    group3:
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-4](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_05/Files.ipynb)<br>
-      Дедлайн 22 ноября
-    group2: |
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-read-files.ipynb)<br>
-      [запись семинара](https://clck.ru/S37bA)<br>
-      Дедлайн ДЗ: 02 дек 2020
-    group3: '[тетрадка & hw-4](https://colab.research.google.com/drive/1YJHFC1iO_lyT6tSOXk__6Xbc2e4K_vAN?usp=sharing)'
-    group4:
+# - name: Файлы
+#   link: /prog/05-files
+#   when:
+#     group1: 02 ноя 2020
+#     group2: 11 ноя 2020
+#     group3:
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-4](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_05/Files.ipynb)<br>
+#       Дедлайн 22 ноября
+#     group2: |
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-read-files.ipynb)<br>
+#       [запись семинара](https://clck.ru/S37bA)<br>
+#       Дедлайн ДЗ: 02 дек 2020
+#     group3: '[тетрадка & hw-4](https://colab.research.google.com/drive/1YJHFC1iO_lyT6tSOXk__6Xbc2e4K_vAN?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Запись файлов
-  link: /prog/06-write-files
-  when:
-    group1: 09 ноя 2020
-    group2: 18 ноя 2020 (тест)
-    group3:
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-5](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_06/Writing_to_files.ipynb)<br>
-      Дедлайн 29 ноября
-    group2: |
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-files-write.ipynb)<br>
-      [запись семинара](https://clck.ru/S37e5)<br>
-      Дедлайн ДЗ: 09 дек 2020
-    group3: '[семинар & hw-5](https://colab.research.google.com/drive/1AScfYQjJqcXjiO1n9qu6VMXsi8tpekka#scrollTo=eCmZIGsDnnbM)'
-    group4:
-
-
-# =========================================================================== #
-
-- name: Введение в функции
-  link: /prog/07-functions
-  when:
-    group1: 16 ноя 2020
-    group2: 25 ноя 2020
-    group3:
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions.ipynb)<br>
-      Дедлайн 6 декабря
-    group2: |
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions.ipynb)<br>
-      [запись семинара](https://zoom.us/rec/share/Rc6iMBsD1Nj2pAZVzg7j_XbAf9oMbHWoUEG_xvuFgoftTVCXITRZdixY0UrJyUmy.v4n_fvXUyv25EbbK)<br>
-      Дедлайн ДЗ: 24 дек 2020
-    group3: '[семинар & hw-6](https://colab.research.google.com/drive/1f0xl8HArTQhyQ-mf4hZbArXKMKJsorFc?usp=sharing)'
-    group4:
-
-# =========================================================================== #
-
-- name: Продолжение функций, кортежи
-  link: /prog/10-functions-two
-  when:
-    group1: 23 ноя 2020 (тест)
-    group2: 2 дек 2020
-    group3: 23 ноя 2020
-    group4:
-  show: true
-  staff:
-    group1:  |
-      [семинар & hw-7](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions_Part_2.ipynb)<br>
-      Дедлайн 13 декабря
-    group2: |
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions_two.ipynb)<br>
-      [запись семинара](https://zoom.us/rec/share/hwua9W0RJsRKZjg_RUy8puv3zHauKjUJQjk8Ew110-R6Flovar2FwyT1OLpOrMHu.-dAnsjMwDST5XGcy)<br>
-      Дедлайн ДЗ: 14 янв 2021
-    group3: '[семинар & hw-7](https://colab.research.google.com/drive/1NL-HFZKqIOd_Kxr4QDYucKFYJhl2KmC4?usp=sharing)'
-    group4:
-
-# =========================================================================== #
-
-- name: Подготовка к контрольной работе №1
-  link: /prog/08-test-preparation
-  when:
-    group1: 30 ноя 2020
-    group2: 9 дек 2020 (тест)
-    group3: 30 ноя 2020
-    group4:
-  show: true
-  staff:
-    group1:  |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Trees.ipynb)
-    group2: |
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_test_prep.ipynb)<br>
-      [примерный вариант КР](https://gist.github.com/Sapunov/4d58a83b6b02e61ef16fccd2fbdad98e)<br>
-      [запись семинара](https://zoom.us/rec/share/1Jc5lYEe4FujWmUbG0UqKItngExw1VQs8iEGsovgCZRfebiQCjdDGnXpla2WqO9c.ag0FUzNLRBdxYujZ)<br>
-    group3: '[семинар](https://colab.research.google.com/drive/1fzeMXn7VZnO0CmwnlfraXdQmQnmqTT2F?usp=sharing)'
-    group4:
-
-# =========================================================================== #
-
-- name: Контрольная работа №1
-  when:
-    group1: 7 дек 2020
-    group2: 9 дек 2020
-    group3:
-    group4:
-  show: true
-
-# =========================================================================== #
-
-- name: Импорт и функции
-  link: /prog/12-functions-and-import
-  when:
-    group1: 14 дек 2020
-    group2: 16 дек 2020
-    group3:
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_10/Import.ipynb)
-    group2: |
-      [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
-      [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_modules.ipynb)<br>
-      [запись семинара](https://zoom.us/rec/share/mbqnkP9Fc9e9YCo085yEeUvHuNb-ANU_wHQ8bx9Lt_0p1Oyqy935UKKTjWfyslg7.ckCU4_dUPPbAWjep)<br>
-
-# =========================================================================== #
-
-- name: Словари 1 и множества
-  link: /prog/dict-1-set
-  when:
-    group1: 16 янв 2021 (тест)
-    group2:
-    group3:
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-8](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
-      Дедлайн 7 февраля
-    group3: |
-      [семинар & hw-8](https://colab.research.google.com/drive/1PiHWAtT8grd9PRjw6VaLanAzG1FEMVk5?usp=sharing)<br>
-      Дедлайн 6 февраля
-
-# =========================================================================== #
-
-- name: Словари 2
-  link: /prog/dict-2
-  when:
-    group1: 23 января 2021
-    group2: 30 января 2021
-    group3:
-    group4: 25 января 2021
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
-      Дедлайн 21 февраля
-    group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - словари - 2.ipynb)'
-    group3: |
-      [семинар & hw-9](https://colab.research.google.com/drive/10hwTD6-_KNOb2v46tTBKpdm4YaEwN_FS?usp=sharing)<br>
-      Дедлайн 20 февраля
-    group4: '[слайды (запись и ссылки в слайдах)](https://docs.google.com/presentation/d/e/2PACX-1vQDCHPRs8DhA98k68HNU8H9b30gYzoim0vn1Xu_sTZ7uh-kiNAS4p72o3sCDT17HUTfJp3vd9qV4M5t/pub?start=false&loop=false&delayms=3000)'
-# =========================================================================== #
-
-- name: Словари 3
-  link: /prog/dict-3
-  when:
-    group1: 6 февраля (тест)
-    group2: 6 февраля
-    group3:
-    group4: 5 февраля
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-10](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
-      Дедлайн 7 марта
-    group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - Словари - 3.ipynb)'
-    group3: '[семинар](https://colab.research.google.com/drive/1zNGzzU0Oj_7HasBKUcOFdYUdUtO5kJqP?usp=sharing)'
-    group4: '[ссылка на запись](https://drive.google.com/file/d/1zoMOUPH_Ln48whOIYc3DXDQt2LcjLFTU/view?usp=sharing)'
-
-# =========================================================================== #
-
-- name: Регулярные выражения 1
-  link: /prog/regexp-1
-  when:
-    group1: 13 февраля
-    group2: 20 февраля
-    group3: 13 февраля
-    group4:
-  show: true
-  staff:
-    group1: |
-      [лекция](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/regex.pdf)<br>
-    group2: |
-        [Лекция и запись](https://docs.google.com/presentation/d/1cqaNXnBfTJHRG5qatq-bUvcOpY7UCo_fNLE32gjhrSk/edit?usp=sharing)<br>
-    group3: |
-        [лекция](https://docs.google.com/presentation/d/1Sb1QXPaSHTZB2ZCyDMqzhh-Rm5madsu_XQmbRpxWSIA/edit?usp=sharing)<br>
-        [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)
-
-# =========================================================================== #
-
-- name: Регулярные выражения 2
-  link: /prog/regexp-2
-  when:
-    group1: 20 февраля
-    group2: 27 февраля
-    group3: 20 февраля
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-11](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
-      Дедлайн 14 марта
-    group2: |
-        [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - регулярки - 2.ipynb)<br>
-    group3: |
-      [лекция](https://docs.google.com/presentation/d/12Wi2vrpr4yMvuzTcXFOUEfUFOxYl_qzVLbrm45O8MRI/edit?usp=sharing)<br>
-      [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)<br>
-      Дедлайн 7 марта
+# - name: Запись файлов
+#   link: /prog/06-write-files
+#   when:
+#     group1: 09 ноя 2020
+#     group2: 18 ноя 2020 (тест)
+#     group3:
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-5](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_06/Writing_to_files.ipynb)<br>
+#       Дедлайн 29 ноября
+#     group2: |
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar-files-write.ipynb)<br>
+#       [запись семинара](https://clck.ru/S37e5)<br>
+#       Дедлайн ДЗ: 09 дек 2020
+#     group3: '[семинар & hw-5](https://colab.research.google.com/drive/1AScfYQjJqcXjiO1n9qu6VMXsi8tpekka#scrollTo=eCmZIGsDnnbM)'
+#     group4:
 
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Регулярные выражения 3
-  link: /prog/regexp-3
-  when:
-    group1: 27 февраля
-    group2: 6 марта
-    group3: 6 марта
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар & hw-12](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
-      Дедлайн 21 марта
-    group2: |
-      [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - регулярки - 3.ipynb)<br>
-    group3: |
-      [лекция](https://docs.google.com/presentation/d/1EmK4MINzZiAndfAAzQenUz7dXQIdvm5qhQ-eLIbumaI/edit?usp=sharing)<br>
-      [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)<br>
-      Дедлайн 21 марта
+# - name: Введение в функции
+#   link: /prog/07-functions
+#   when:
+#     group1: 16 ноя 2020
+#     group2: 25 ноя 2020
+#     group3:
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-6](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions.ipynb)<br>
+#       Дедлайн 6 декабря
+#     group2: |
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions.ipynb)<br>
+#       [запись семинара](https://zoom.us/rec/share/Rc6iMBsD1Nj2pAZVzg7j_XbAf9oMbHWoUEG_xvuFgoftTVCXITRZdixY0UrJyUmy.v4n_fvXUyv25EbbK)<br>
+#       Дедлайн ДЗ: 24 дек 2020
+#     group3: '[семинар & hw-6](https://colab.research.google.com/drive/1f0xl8HArTQhyQ-mf4hZbArXKMKJsorFc?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Контрольная работа №2
-  when:
-    group1: 27 марта
-    group2: 17 апреля
-    group3: 27 марта
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_17)<br>
-    group2: |
-      [Тетрадка и запись подготовки](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - подготовка к КР.ipynb)<br>
-    group3: подготовка к кр была 20 марта
+# - name: Продолжение функций, кортежи
+#   link: /prog/10-functions-two
+#   when:
+#     group1: 23 ноя 2020 (тест)
+#     group2: 2 дек 2020
+#     group3: 23 ноя 2020
+#     group4:
+#   show: true
+#   staff:
+#     group1:  |
+#       [семинар & hw-7](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Functions_Part_2.ipynb)<br>
+#       Дедлайн 13 декабря
+#     group2: |
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_functions_two.ipynb)<br>
+#       [запись семинара](https://zoom.us/rec/share/hwua9W0RJsRKZjg_RUy8puv3zHauKjUJQjk8Ew110-R6Flovar2FwyT1OLpOrMHu.-dAnsjMwDST5XGcy)<br>
+#       Дедлайн ДЗ: 14 янв 2021
+#     group3: '[семинар & hw-7](https://colab.research.google.com/drive/1NL-HFZKqIOd_Kxr4QDYucKFYJhl2KmC4?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Предзащита проектов
-  when:
-    group1: по договоренности
-    group2:
-    group3:
-    group4:
+# - name: Подготовка к контрольной работе №1
+#   link: /prog/08-test-preparation
+#   when:
+#     group1: 30 ноя 2020
+#     group2: 9 дек 2020 (тест)
+#     group3: 30 ноя 2020
+#     group4:
+#   show: true
+#   staff:
+#     group1:  |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_07-09/Trees.ipynb)
+#     group2: |
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_test_prep.ipynb)<br>
+#       [примерный вариант КР](https://gist.github.com/Sapunov/4d58a83b6b02e61ef16fccd2fbdad98e)<br>
+#       [запись семинара](https://zoom.us/rec/share/1Jc5lYEe4FujWmUbG0UqKItngExw1VQs8iEGsovgCZRfebiQCjdDGnXpla2WqO9c.ag0FUzNLRBdxYujZ)<br>
+#     group3: '[семинар](https://colab.research.google.com/drive/1fzeMXn7VZnO0CmwnlfraXdQmQnmqTT2F?usp=sharing)'
+#     group4:
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Работа с файлами и папками
-  link: /prog/22-file-manipulation
-  when:
-    group1: 29 мая
-    group2: 24 апреля
-    group3: 17 апреля
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
-    group2: |
-          [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - файлы.ipynb)<br>
-    group3: |
-      [презентация 1](https://docs.google.com/presentation/d/1IP46o7vZqAeIy3UhDbW6Jt-7-n9u-wyjmsHRvQZRXFo/edit?usp=sharing)
+# - name: Контрольная работа №1
+#   when:
+#     group1: 7 дек 2020
+#     group2: 9 дек 2020
+#     group3:
+#     group4:
+#   show: true
 
-# =========================================================================== #
+# # =========================================================================== #
 
-- name: Файловое дерево и форматирование строк
-  link: /prog/23-tree-and-format
-  when:
-    group1: 17 апреля
-    group2: 29 мая
-    group3: 22 мая
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
-    group2: |
-            [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - работа с деревом, строки.ipynb)<br>
-    group3: |
-      [презентация 2](https://docs.google.com/presentation/d/1tvpGt9LckE24fzZhM8wtErlFpvYpa0R5Q1qb95WONuk/edit?usp=sharing)<br>
-      [тетрадка за обе пары](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
-# =========================================================================== #
+# - name: Импорт и функции
+#   link: /prog/12-functions-and-import
+#   when:
+#     group1: 14 дек 2020
+#     group2: 16 дек 2020
+#     group3:
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_10/Import.ipynb)
+#     group2: |
+#       [слайды](/content/slides/groups/2/seminar_modules.pdf)<br>
+#       [тетрадка](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/seminar_modules.ipynb)<br>
+#       [запись семинара](https://zoom.us/rec/share/mbqnkP9Fc9e9YCo085yEeUvHuNb-ANU_wHQ8bx9Lt_0p1Oyqy935UKKTjWfyslg7.ckCU4_dUPPbAWjep)<br>
 
-- name: Защита проектов
-  when:
-    group1: 15 мая
-    group2: 15 мая
-    group3: 15 мая
-    group4:
-  show: true
+# # =========================================================================== #
 
-# =========================================================================== #
+# - name: Словари 1 и множества
+#   link: /prog/dict-1-set
+#   when:
+#     group1: 16 янв 2021 (тест)
+#     group2:
+#     group3:
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-8](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
+#       Дедлайн 7 февраля
+#     group3: |
+#       [семинар & hw-8](https://colab.research.google.com/drive/1PiHWAtT8grd9PRjw6VaLanAzG1FEMVk5?usp=sharing)<br>
+#       Дедлайн 6 февраля
 
-- name: Подготовка к экзамену
-  when:
-    group1: 5 июня
-    group2: 14 июня
-    group3: 29 мая
-    group4:
-  show: true
-  staff:
-    group1: |
-      [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_20)<br>
-    group2: |
-        [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ Программирование 202 - подготовка к экзамену.ipynb)<br>
-    group3: |
-      [та же тетрадка + про гит говорили](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
+# # =========================================================================== #
 
-# =========================================================================== #
+# - name: Словари 2
+#   link: /prog/dict-2
+#   when:
+#     group1: 23 января 2021
+#     group2: 30 января 2021
+#     group3:
+#     group4: 25 января 2021
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-9](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
+#       Дедлайн 21 февраля
+#     group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - словари - 2.ipynb)'
+#     group3: |
+#       [семинар & hw-9](https://colab.research.google.com/drive/10hwTD6-_KNOb2v46tTBKpdm4YaEwN_FS?usp=sharing)<br>
+#       Дедлайн 20 февраля
+#     group4: '[слайды (запись и ссылки в слайдах)](https://docs.google.com/presentation/d/e/2PACX-1vQDCHPRs8DhA98k68HNU8H9b30gYzoim0vn1Xu_sTZ7uh-kiNAS4p72o3sCDT17HUTfJp3vd9qV4M5t/pub?start=false&loop=false&delayms=3000)'
+# # =========================================================================== #
 
-- name: Экзамен
-  when:
-    group1: 23 июня
-    group2: 23 июня
-    group3: 23 июня
-    group4: 23 июня
-  show: true
+# - name: Словари 3
+#   link: /prog/dict-3
+#   when:
+#     group1: 6 февраля (тест)
+#     group2: 6 февраля
+#     group3:
+#     group4: 5 февраля
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-10](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_11-13/Dicts.ipynb)<br>
+#       Дедлайн 7 марта
+#     group2: '[Тетрадка и ссылка на запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - Словари - 3.ipynb)'
+#     group3: '[семинар](https://colab.research.google.com/drive/1zNGzzU0Oj_7HasBKUcOFdYUdUtO5kJqP?usp=sharing)'
+#     group4: '[ссылка на запись](https://drive.google.com/file/d/1zoMOUPH_Ln48whOIYc3DXDQt2LcjLFTU/view?usp=sharing)'
 
-# =========================================================================== #
+# # =========================================================================== #
+
+# - name: Регулярные выражения 1
+#   link: /prog/regexp-1
+#   when:
+#     group1: 13 февраля
+#     group2: 20 февраля
+#     group3: 13 февраля
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [лекция](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/regex.pdf)<br>
+#     group2: |
+#         [Лекция и запись](https://docs.google.com/presentation/d/1cqaNXnBfTJHRG5qatq-bUvcOpY7UCo_fNLE32gjhrSk/edit?usp=sharing)<br>
+#     group3: |
+#         [лекция](https://docs.google.com/presentation/d/1Sb1QXPaSHTZB2ZCyDMqzhh-Rm5madsu_XQmbRpxWSIA/edit?usp=sharing)<br>
+#         [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)
+
+# # =========================================================================== #
+
+# - name: Регулярные выражения 2
+#   link: /prog/regexp-2
+#   when:
+#     group1: 20 февраля
+#     group2: 27 февраля
+#     group3: 20 февраля
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-11](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
+#       Дедлайн 14 марта
+#     group2: |
+#         [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - регулярки - 2.ipynb)<br>
+#     group3: |
+#       [лекция](https://docs.google.com/presentation/d/12Wi2vrpr4yMvuzTcXFOUEfUFOxYl_qzVLbrm45O8MRI/edit?usp=sharing)<br>
+#       [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)<br>
+#       Дедлайн 7 марта
+
+
+# # =========================================================================== #
+
+# - name: Регулярные выражения 3
+#   link: /prog/regexp-3
+#   when:
+#     group1: 27 февраля
+#     group2: 6 марта
+#     group3: 6 марта
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар & hw-12](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_14-16/Regular_expressions.ipynb)<br>
+#       Дедлайн 21 марта
+#     group2: |
+#       [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - регулярки - 3.ipynb)<br>
+#     group3: |
+#       [лекция](https://docs.google.com/presentation/d/1EmK4MINzZiAndfAAzQenUz7dXQIdvm5qhQ-eLIbumaI/edit?usp=sharing)<br>
+#       [тетрадка](https://colab.research.google.com/drive/1IRMlWEMvxqCKhxxIC20f8nk7MaKql0gU?usp=sharing)<br>
+#       Дедлайн 21 марта
+
+# # =========================================================================== #
+
+# - name: Контрольная работа №2
+#   when:
+#     group1: 27 марта
+#     group2: 17 апреля
+#     group3: 27 марта
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_17)<br>
+#     group2: |
+#       [Тетрадка и запись подготовки](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - подготовка к КР.ipynb)<br>
+#     group3: подготовка к кр была 20 марта
+
+# # =========================================================================== #
+
+# - name: Предзащита проектов
+#   when:
+#     group1: по договоренности
+#     group2:
+#     group3:
+#     group4:
+
+# # =========================================================================== #
+
+# - name: Работа с файлами и папками
+#   link: /prog/22-file-manipulation
+#   when:
+#     group1: 29 мая
+#     group2: 24 апреля
+#     group3: 17 апреля
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
+#     group2: |
+#           [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - файлы.ipynb)<br>
+#     group3: |
+#       [презентация 1](https://docs.google.com/presentation/d/1IP46o7vZqAeIy3UhDbW6Jt-7-n9u-wyjmsHRvQZRXFo/edit?usp=sharing)
+
+# # =========================================================================== #
+
+# - name: Файловое дерево и форматирование строк
+#   link: /prog/23-tree-and-format
+#   when:
+#     group1: 17 апреля
+#     group2: 29 мая
+#     group3: 22 мая
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_18-19)<br>
+#     group2: |
+#             [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ программирование 202 - работа с деревом, строки.ipynb)<br>
+#     group3: |
+#       [презентация 2](https://docs.google.com/presentation/d/1tvpGt9LckE24fzZhM8wtErlFpvYpa0R5Q1qb95WONuk/edit?usp=sharing)<br>
+#       [тетрадка за обе пары](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
+# # =========================================================================== #
+
+# - name: Защита проектов
+#   when:
+#     group1: 15 мая
+#     group2: 15 мая
+#     group3: 15 мая
+#     group4:
+#   show: true
+
+# # =========================================================================== #
+
+# - name: Подготовка к экзамену
+#   when:
+#     group1: 5 июня
+#     group2: 14 июня
+#     group3: 29 мая
+#     group4:
+#   show: true
+#   staff:
+#     group1: |
+#       [семинар](https://github.com/lilaspourpre/hse_fikl_python2020/tree/master/lecture_20)<br>
+#     group2: |
+#         [Тетрадка и запись](https://github.com/pykili/pykili.github.io/blob/master/content/notebooks/groups/2/ФиКЛ Программирование 202 - подготовка к экзамену.ipynb)<br>
+#     group3: |
+#       [та же тетрадка + про гит говорили](https://colab.research.google.com/drive/1ONxsm_-2Z0z8ZTadrujkjlr1jvW2GJX1?usp=sharing)
+
+# # =========================================================================== #
+
+# - name: Экзамен
+#   when:
+#     group1: 23 июня
+#     group2: 23 июня
+#     group3: 23 июня
+#     group4: 23 июня
+#   show: true
+
+# # =========================================================================== #
