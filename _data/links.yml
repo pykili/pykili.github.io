@@ -54,28 +54,28 @@ extra:
         text: Игра для тех, кто уже освоил азы Python
         lang: en
 
-  - title: Git
-    items:
-      - url: https://githowto.com/ru
-        text: GitHowTo
-        lang: ru
-        desc: хороший курс по Git в командной строке
-      - url: https://git-scm.com/book/ru/v2
-        text: Git Book
-        lang: ru
-        desc: официальный учебник по Git, тоже про командную строку
-      - url: https://guides.github.com
-        text: GitHub Tutorials
-        lang: en
-        desc: официальные руководства по использованию [github](http://github.com)
-      - url: https://www.atlassian.com/git/tutorials
-        text: Bitbucket tutorials
-        lang: en
-        desc: руководства по использованию Git на сайте Bitbucket, сервиса-конкрента GitHub
-      - url: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668
-        text: A Quick Introduction to Version Control with Git and GitHub
-        lang: en
-        desc: короткое введение в git и github
+#   - title: Git
+#     items:
+#       - url: https://githowto.com/ru
+#         text: GitHowTo
+#         lang: ru
+#         desc: хороший курс по Git в командной строке
+#       - url: https://git-scm.com/book/ru/v2
+#         text: Git Book
+#         lang: ru
+#         desc: официальный учебник по Git, тоже про командную строку
+#       - url: https://guides.github.com
+#         text: GitHub Tutorials
+#         lang: en
+#         desc: официальные руководства по использованию [github](http://github.com)
+#       - url: https://www.atlassian.com/git/tutorials
+#         text: Bitbucket tutorials
+#         lang: en
+#         desc: руководства по использованию Git на сайте Bitbucket, сервиса-конкрента GitHub
+#       - url: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004668
+#         text: A Quick Introduction to Version Control with Git and GitHub
+#         lang: en
+#         desc: короткое введение в git и github
 
   - title: Текстовые редакторы
     items:
