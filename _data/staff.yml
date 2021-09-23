@@ -1,51 +1,32 @@
 teachers:
-  - name: Никишина Ирина Александровна
-    email: irina.nikishina@mail.ru
-    photo: /img/staff/lilas_pourpre.jpg
-    group: Группа БКЛ201
-    telegram: lilas_pourpre
 
   - name: Леонов Антон Александрович
     email: grmmr07@gmail.com
-    group: Группа БКЛ202
     telegram: grmmr
-    photo: /img/staff/anton.jpeg
+    photo: /img/staff/grmmr.jpeg
 
-  - name: Клезович Анна Геннадьевна
-    email: belkannkl@gmail.com
-    photo: /img/staff/aklezovich.jpg
-    group: Группа БКЛ203
-    telegram: annaklezovich
 
   - name: Сериков Олег Алексеевич
     email: srkvoa@gmail.com
-    photo: /img/staff/serikov.png
-    group: Группа БКЛ204
+    photo: /img/staff/oserikov.png
     telegram: oserikov
 
-  - name: Ольга Николаевна Ляшевская
-    email: olesar@yandex.ru
-    photo: /img/staff/olesar.jpg
-    telegram: olesar
-    group: Лингвистические данные
+
+  - name: Дарья Максимовна Максимова
+    email: daria.maximova.m@gmail.com
+    photo: /img/staff/narretei.jpg
+    telegram: narretei
 
 
 assistants:
-  - name: Бузанов Антон Олегович
-    email: anton.buzanov.00@gmail.com
-    group: Группа БКЛ201
-    telegram: Vantral
-    vk: vk.com/vantral
-    photo: /img/staff/vantral.jpg
+  - name: Екатерина Руслановна Козлова
+    telegram: da_budet_tak
+    photo: /img/staff/da_budet_tak.jpg
 
-  - name: Касенов Данияр Ерланович
-    email: antidanyar@protonmail.com
-    group: Группы БКЛ202 и БКЛ203
-    telegram: antidanyar
-    photo: /img/staff/danyar.jpg
+  - name: Данила Григорьевич Федоров
+    telegram: noble_hologram
+    photo: /img/staff/noble_hologram.jpg
 
-  - name: Ревенко Дарья Сергеевна
-    email:
-    telegram: dariarev
-    group: Группа БКЛ204
-    photo: /img/staff/dariarev.jpg
+  - name: Анна Владимировна Мартынова
+    telegram: marthynovann
+    photo: /img/staff/marthynovann.jpg
