@@ -1,16 +1,16 @@
 program:
-  url: https://www.hse.ru/ba/ling/courses/396725193.html
+  url: https://www.hse.ru/ba/ling/courses/470893175.html
   text: Программа курса на сайте ВШЭ
 
 marks:
-  url: https://docs.google.com/spreadsheets/d/1Z5Sd_RhFg7dNCL9fF23YJVCg0O-yC1dNwSfHer1-sdI/edit?usp=sharing
+  url: https://docs.google.com/spreadsheets/d/1gnpZKXJmK0T4VdhwW9wEw9YR0tppic8cqlqV53hoAf8/edit?usp=sharing
   text: Таблица с оценками
 
-contacts:
-  url: https://forms.gle/fvhghS7cNQ5LZqtj9
+# contacts:
+#   url: https://forms.gle/fvhghS7cNQ5LZqtj9
 
-projects:
-  url: #
+# projects:
+#   url: #
 
 extra:
   - title: Игры про основы программирования
@@ -29,6 +29,10 @@ extra:
       - url: https://snakify.org/ru
         text: Интерактивный учебник по Python
         lang: ru
+      - url: https://t.me/c/1284190018/147
+        text: Python for linguists
+        lang: en
+        desc: Учебник по питону с фокусом на обрабтоке лингвистических данных
       - url: http://pythontutor.ru
         text: Интерактивный задачник по Python
         lang: ru
