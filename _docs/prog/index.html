@@ -104,8 +104,7 @@ redirect_from: /
         <tr>
           <th class="text-center">#</th>
           <th>Тема</th>
-          <th class="text-center">1</th>
-          <th class="text-center">2</th>
+          <th class="text-center">1-2</th>
           <th class="text-center">3</th>
           <th class="text-center">4</th>
           <!-- <th class="text-center">Материалы</th> -->
@@ -140,13 +139,6 @@ redirect_from: /
             {% if lesson.staff.group3 %}
             <br>
             {{ lesson.staff.group3 | markdownify }}
-            {% endif %}
-          </td>
-          <td class="text-center">
-            {{ lesson.when.group4 }}
-            {% if lesson.staff.group4 %}
-            <br>
-            {{ lesson.staff.group4 | markdownify }}
             {% endif %}
           </td>
           <!-- <td class="text-center">
