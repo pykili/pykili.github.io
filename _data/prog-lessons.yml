@@ -1,10 +1,20 @@
 - name: Введение в Python
   link: /prog/01-git_and_python_intro
   when:
-    group1: 
-    group2: 
-    group3: 
-    group4:
+    group1: 23 сен 2021
+    group2: 25 сен 2021
+    group3: 28 сен 2021
+  show: true
+  hw:
+    group1:
+      classroom: https://classroom.github.com/a/VFs0SYB-
+      deadline: 12 окт 2021 23:59
+    group2:
+      classroom: https://classroom.github.com/a/yjadvpoS
+      deadline: 12 окт 2021 23:55
+    group3:
+      classroom: https://classroom.github.com/a/yZcTLFWN
+      deadline: 12 окт 2021 23:55
   show: true
   staff:
     group1: 
