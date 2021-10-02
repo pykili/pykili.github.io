@@ -31,7 +31,7 @@
 #   link: /prog/02-if-and-comparison-ops
 #   when:
 #     group1: 5 окт 2020
-#     group2: 5 окт 2020
+#     group2: 2 окт 2021
 #     group3: 10 окт 2020
 #     group4:
 #   show: true
@@ -40,7 +40,9 @@
 #       [семинар & hw-1](https://github.com/lilaspourpre/hse_fikl_python2020/blob/master/lecture_02/02_Conditions.ipynb)
 #     group2: |
 #       Дедлайн ДЗ: 18 окт
-#     group3: '[семинар & link to hw1](https://docs.google.com/presentation/d/1332z2N0nqCb_5S16AqmSkgxG0aqhbywIz7bOGUCzYoQ/edit?usp=sharing)'
+#     group3: |
+#       [слайды](/content/slides/groups/3/seminar_2.pptx)<br>
+#       [тетрадка](/content/notebooks/groups/3/seminar_2.ipynb)
 #     group4:
 
 
