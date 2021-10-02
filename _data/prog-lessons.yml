@@ -18,11 +18,11 @@
   show: true
   staff:
     group1:
-    group2:
-    group3: |
+    group2: |
       [слайды](/content/slides/groups/3/seminar_1.pptx)<br>
       [тетрадка](/content/notebooks/groups/3/seminar_1.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1kLCKolb_zERv7n0SVkaj135TIM8t7w-Y/view?usp=sharing)
+    group3:
     group4:
 
 # =========================================================================== #
