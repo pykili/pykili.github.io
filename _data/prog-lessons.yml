@@ -41,8 +41,8 @@
   link:
   when:
     group1: 7 окт 2021
-    group2: 12 окт 2021
-    group3: 16 окт 2021
+    group2: 16 окт 2021
+    group3: 12 окт 2021
   show: true
   staff:
     group1:
