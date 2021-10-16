@@ -34,7 +34,9 @@
   show: true
   staff:
     group1:
-    group2:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_2.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_2.ipynb)<br>
     group3:
     
 - name: Условные операторы
