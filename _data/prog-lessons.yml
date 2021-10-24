@@ -49,7 +49,10 @@
   show: true
   staff:
     group1:
-    group2:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_3.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_3.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1xroiVGan5c2i9JdtWIEaEhxzyoX1Up6h/view?usp=sharing)
     group3:
 
 # =========================================================================== #
