@@ -55,19 +55,19 @@
       [запись семинара](https://drive.google.com/file/d/1xroiVGan5c2i9JdtWIEaEhxzyoX1Up6h/view?usp=sharing)
     group3:
 
- - name: Циклы
-   link: 
-   when:
-     group1: 14 окт 2020
-     group2: 30 окт 2021
-     group3: 26 окт 2020
-   show: true
-   staff:
-     group1: 
-     group2: |
+- name: Циклы
+  link: 
+  when:
+    group1: 14 окт 2020
+    group2: 30 окт 2021
+    group3: 26 окт 2020
+  show: true
+  staff:
+    group1: 
+    group2: |
       [тетрадка](/content/notebooks/groups/3/seminar_4.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1nCi3OEHtpaYuodJ0dniy--9YEnf967o2/view?usp=drivesdk)
-     group3: 
+    group3: 
 
 
 
