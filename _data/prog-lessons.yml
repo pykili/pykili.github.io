@@ -41,7 +41,7 @@
     group3:
     
 - name: Условные операторы
-  link:
+  link: /prog/02-if-and-comparison-ops
   when:
     group1: 7 окт 2021
     group2: 16 окт 2021
@@ -56,11 +56,11 @@
     group3:
 
 - name: Циклы
-  link: 
+  link: /prog/03-loops
   when:
-    group1: 14 окт 2020
+    group1: 14 окт 2021
     group2: 30 окт 2021
-    group3: 26 окт 2020
+    group3: 26 окт 2021
   show: true
   staff:
     group1: 
@@ -69,8 +69,21 @@
       [запись семинара](https://drive.google.com/file/d/1nCi3OEHtpaYuodJ0dniy--9YEnf967o2/view?usp=drivesdk)
     group3: 
 
-
-
+- name: Файлы
+  link: /prog/05-files
+  when:
+    group1:
+    group2: 6 ноя 2021
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_5.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_5.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/17wniMu53fWXppuHl0YF5SxNFt01FUbT7/view?usp=sharing)<br>
+    group3:
+    
 # # =========================================================================== #
 
 # - name: Циклы и индексы
