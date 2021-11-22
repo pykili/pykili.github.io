@@ -73,7 +73,7 @@
   link: /prog/05-files
   when:
     group1:
-    group2: 6 ноя 2021
+    group2: 13 ноя 2021
     group3:
   show: true
   staff:
@@ -83,6 +83,21 @@
       [тетрадка](/content/notebooks/groups/3/seminar_5.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/17wniMu53fWXppuHl0YF5SxNFt01FUbT7/view?usp=sharing)<br>
     group3:
+    
+- name: Списки
+  link: /prog/04-lists
+  when:
+    group1:
+    group2: 20 ноя 2020
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_6.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_6.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1Dw2m7CYSokSjsiHS9RQkRK9O-fRKKrvj/view?usp=sharing)<br>
+    group3: '[тетрадка & hw-3](https://colab.research.google.com/drive/1fbQAqEwdGzgxsSTK6yD0Rz2e1vDkleDU?usp=sharing)'
     
 # # =========================================================================== #
 
