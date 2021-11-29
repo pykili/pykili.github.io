@@ -98,7 +98,22 @@
       [тетрадка](/content/notebooks/groups/3/seminar_6.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1Dw2m7CYSokSjsiHS9RQkRK9O-fRKKrvj/view?usp=sharing)<br>
     group3:
-    
+
+- name: Запись файлов
+  link: /prog/06-write-files
+  when:
+    group1: 
+    group2: 27 ноя 2021
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_7.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_7.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1ugG0ekK5N7HeWLi0JW_lZFQNMbuTI0XS/view?usp=drivesdk)<br>
+    group3: 
+   
 # # =========================================================================== #
 
 # - name: Циклы и индексы
