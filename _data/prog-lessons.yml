@@ -73,7 +73,7 @@
   link: /prog/05-files
   when:
     group1:
-    group2: 13 ноя 2021
+    group2: 3 ноя 2021
     group3:
   show: true
   staff:
@@ -113,7 +113,36 @@
       [тетрадка](/content/notebooks/groups/3/seminar_7.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1ugG0ekK5N7HeWLi0JW_lZFQNMbuTI0XS/view?usp=drivesdk)<br>
     group3: 
-   
+
+- name: Введение в функции
+  link: /prog/07-functions
+  when:
+    group1:
+    group2: 4 дек 2021
+    group3:
+  show: true
+  staff:
+    group1: 
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_8.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_8.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1gYbi2epJj8XBnhH7J0OteCkwqGBHyDIQ/view?usp=sharing)<br>
+    group3: 
+
+- name: Продолжение функций
+  link: /prog/10-functions-two
+  when:
+    group1:
+    group2: 7 дек 2020
+    group3:
+  show: true
+  staff:
+    group1: 
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_9.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_9.ipynb)<br>
+    group3:
+
 # # =========================================================================== #
 
 # - name: Циклы и индексы
