@@ -158,6 +158,36 @@
       [запись семинара](https://drive.google.com/file/d/1KTUKwptmFvUHM18nPS6gd70CutOduIFf/view?usp=sharing)<br>
     group3: 
 
+
+- name: Импорт и функции
+  link: /prog/12-functions-and-import
+  when:
+    group1: 
+    group2: 15 янв 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_12.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_12.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1DUM7Wymag9W10UHjNzDUNTp3Rk_jAQJo/view?usp=sharing)<br>
+    group3: 
+
+- name: Словари 1 и множества
+  link: /prog/dict-1-set
+  when:
+    group1: 
+    group2: 22 янв 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_13.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_13.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/15_DKsssGIUgmOXe7iXIPkN4A0eAnS-qT/view?usp=sharing)<br>
+    group3:
 # # =========================================================================== #
 
 # - name: Циклы и индексы
