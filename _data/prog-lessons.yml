@@ -188,6 +188,36 @@
       [тетрадка](/content/notebooks/groups/3/seminar_13.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/15_DKsssGIUgmOXe7iXIPkN4A0eAnS-qT/view?usp=sharing)<br>
     group3:
+
+- name: Словари 2
+  link: /prog/dict-2
+  when:
+    group1: 
+    group2: 29 января 2022
+    group3:
+  show: true
+  staff:
+    group1: 
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_14.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_14.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1cC8_mafoE34NztVrf1neYEHFlrxeRgT6/view?usp=drivesdk)<br>
+    group3:
+
+- name: Словари 3
+  link: /prog/dict-3
+  when:
+    group1: 
+    group2: 5 февраля 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_15.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_15.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1XV0jbqFzsmZ47KKYVoQv8FJGju9Aqu82/view?usp=drivesdk)<br>
+    group3:
 # # =========================================================================== #
 
 # - name: Циклы и индексы
