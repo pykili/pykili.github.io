@@ -193,7 +193,7 @@
   link: /prog/dict-2
   when:
     group1: 
-    group2: 29 января 2022
+    group2: 29 янв 2022
     group3:
   show: true
   staff:
@@ -208,7 +208,7 @@
   link: /prog/dict-3
   when:
     group1: 
-    group2: 5 февраля 2022
+    group2: 5 фев 2022
     group3:
   show: true
   staff:
@@ -217,6 +217,37 @@
       [тетрадка](/content/notebooks/groups/3/seminar_15.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1XV0jbqFzsmZ47KKYVoQv8FJGju9Aqu82/view?usp=drivesdk)<br>
     group3:
+    
+- name: Регулярные выражения 1
+  link: /prog/regexp-1
+  when:
+    group1:
+    group2: 12 фев 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_16.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_16.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1C0kbmMHwgGMLxUmrf5AGiPcAObOiM-Y3/view?usp=sharing)<br>
+    group3:
+
+- name: Регулярные выражения 2
+  link: /prog/regexp-2
+  when:
+    group1:
+    group2: 19 фев 2022
+    group3:
+  show: true
+  staff:
+    group1: 
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_17.pptx)<br>
+      [тетрадка](/content/notebooks/groups/3/seminar_17.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1U9w5TJ23kqSssGVtMxDscfqtbqXMhk75/view?usp=sharing)<br>
+    group3: 
+
 # # =========================================================================== #
 
 # - name: Циклы и индексы
