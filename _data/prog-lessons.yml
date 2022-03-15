@@ -248,6 +248,32 @@
       [запись семинара](https://drive.google.com/file/d/1U9w5TJ23kqSssGVtMxDscfqtbqXMhk75/view?usp=sharing)<br>
     group3: 
 
+- name: Файловое дерево и форматирование строк
+  link: /prog/23-tree-and-format
+  when:
+    group1: 
+    group2: 26 фев 2022
+    group3: 
+  show: true
+  staff:
+    group1: 
+    group2: |
+      [тетрадка](/content/notebooks/groups/3/seminar_18.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1SPgWd2-7ZZKwC3Ts9PZMy04dZ8fLCHxw/view?usp=sharing)<br>
+    group3:
+
+- name: Подготовка к контрольной работе №2
+  when:
+    group1:
+    group2: 5 мар 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [тетрадка](/content/notebooks/groups/3/seminar_19.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1nc9QoLjeAHIyeY59ph2ar2ZQiS4Z6jsL/view?usp=sharing)<br>
+    group3:
 # # =========================================================================== #
 
 # - name: Циклы и индексы
