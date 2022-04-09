@@ -274,6 +274,19 @@
       [тетрадка](/content/notebooks/groups/3/seminar_19.ipynb)<br>
       [запись семинара](https://drive.google.com/file/d/1nc9QoLjeAHIyeY59ph2ar2ZQiS4Z6jsL/view?usp=sharing)<br>
     group3:
+
+- name: Git
+  when:
+    group1:
+    group2: 9 апр 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [тетрадка](/content/slides/groups/3/seminar_20.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1TghbZXPWiqAnAyitTB6cbYyC9RO63dlw/view?usp=sharing)<br>
+    group3:
 # # =========================================================================== #
 
 # - name: Циклы и индексы
