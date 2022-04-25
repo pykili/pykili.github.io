@@ -288,6 +288,33 @@
       [запись семинара](https://drive.google.com/file/d/1TghbZXPWiqAnAyitTB6cbYyC9RO63dlw/view?usp=sharing)<br>
     group3:
 
+- name: Pandas 1
+  when:
+    group1:
+    group2: 16 апр 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [слайды](/content/slides/groups/3/seminar_21.pptx)<br>
+      [тетрадка](/content/slides/groups/3/seminar_21.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1gZkAaLtvarzN0qBGAP4Upv72ezU8sbpN/view?usp=sharing)<br>
+    group3:
+
+- name: Pandas 2
+  when:
+    group1:
+    group2: 23 апр 2022
+    group3:
+  show: true
+  staff:
+    group1:
+    group2: |
+      [тетрадка](/content/slides/groups/3/seminar_22.ipynb)<br>
+      [запись семинара](https://drive.google.com/file/d/1MvZlhupVgNaKtqhcc-tTMp1N7osw9gRe/view?usp=sharing)<br>
+    group3:
+
 # # =========================================================================== #
 
 # - name: Циклы и индексы
