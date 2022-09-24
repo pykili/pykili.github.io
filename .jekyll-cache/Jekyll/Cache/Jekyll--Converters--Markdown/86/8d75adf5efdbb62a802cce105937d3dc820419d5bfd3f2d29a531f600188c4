@@ -1,0 +1,249 @@
+I"r<h1 id="str"><code class="language-plaintext highlighter-rouge">str</code></h1>
+
+<p>В нашем курсе мы постоянно работаем с типом <code class="language-plaintext highlighter-rouge">str</code> — строками.
+На этой странице представлен обзор всего того, что мы уже знаем о них.</p>
+
+<h3 id="создание-строк">Создание строк</h3>
+
+<h4 id="одинарные-и-двойные-кавычки">Одинарные и двойные кавычки</h4>
+<p>«Базовый» способ создание объектов типа <code class="language-plaintext highlighter-rouge">str</code> — это запись набора юникодных символов между парой кавычек. Можно использовать как одинарные кавычки, так и двойные, главное одни и те же. Внутри одного типа кавычек можно использовать кавычки другого типа.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'Я ♥︎ питон'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"ООО 'Рога и копыта'"</span>
+</code></pre></div></div>
+
+<h4 id="тройные-кавычки">Тройные кавычки</h4>
+<p>Вместо пары кавычек может использоваться пара трёх подряд идущих двойных кавычек <code class="language-plaintext highlighter-rouge">"""</code> (иногда вместо них используются тройные одинарные кавычки <code class="language-plaintext highlighter-rouge">'''</code>).
+Основное преимущество тройных кавычек состоит в том, что между ними может использоваться перенос строки.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"""Вчера начнется в три утра.
+... В горах откроется нора.
+... Найдет приют малютка Соня
+... В Преображенском гарнизоне.
+... А не захочет — не найдет,
+... Лишь серый волк ее поймет.
+...
+... Джордж Гуницкий
+"""</span>
+</code></pre></div></div>
+
+<p>Внутри тройных кавычек можно без экранирования использовать обычные кавычки (конечно, если последний символ в строке не совпадает с <code class="language-plaintext highlighter-rouge">"</code>).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"""Оксана сказала: 'Вчера с Семёном ходили на "Человека с киноаппаратом"'"""</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Оксана</span> <span class="n">сказала</span><span class="p">:</span> <span class="s">'Вчера с Семёном ходили на "Человека с киноаппаратом"'</span>
+</code></pre></div></div>
+
+<h4 id="str-1"><code class="language-plaintext highlighter-rouge">str()</code></h4>
+<p>Функция <code class="language-plaintext highlighter-rouge">str()</code> превращает в строки другие питоновские объекты.
+Не стоит злоупотреблять этим преобразованием, например сложно придумать разумное использование преобразования списка в строку, если вы не собираетесь получившуюся строку печатать.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
+<span class="s">'5'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">s</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h4 id="экранирование">Экранирование</h4>
+
+<p>Если в строке встречается специальный символ <code class="language-plaintext highlighter-rouge">\</code> (бэкслеш, обратная косая черта), то идущий за ним символ может интерпретироваться особым образом.
+Такое влияние бэкслеша называется экранированием.
+Например, сочетание <code class="language-plaintext highlighter-rouge">\n</code> обозначает перевод на строку, то есть обозначает конец текущей и начало новой строки.
+Ещё часто используется <code class="language-plaintext highlighter-rouge">\t</code> (символ табуляции), а сам символ бэкслеш обозначается как <code class="language-plaintext highlighter-rouge">\\</code>.
+Кроме того, можно экранировать кавычку, чтобы использовать её как символ строки, а не как обозначение её начала или конца.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'Apples</span><span class="se">\t</span><span class="s">10</span><span class="se">\n</span><span class="s">Oranges</span><span class="se">\t</span><span class="s">7</span><span class="se">\n</span><span class="s">Coconuts</span><span class="se">\t</span><span class="s">23'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Apples</span>	<span class="mi">10</span>
+<span class="n">Oranges</span>	<span class="mi">7</span>
+<span class="n">Coconuts</span>	<span class="mi">23</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'Mama Smith</span><span class="se">\'</span><span class="s">s </span><span class="se">\\</span><span class="s">Pancake</span><span class="se">\\</span><span class="s">'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Mama</span> <span class="n">Smith</span><span class="s">'s \Pancake</span><span class="se">\
+</span></code></pre></div></div>
+
+<h4 id="сырые-строки">«Сырые» строки</h4>
+<p>Питону можно указать, что вы не желаете использовать экранирование.
+Это можно сделать с помощью префикса <code class="language-plaintext highlighter-rouge">r</code> (от raw, реже используют <code class="language-plaintext highlighter-rouge">R</code>) перед первой кавычкой.
+Этот способ работает со всеми видами кавычек и бесценен при использовании регулярных выражений.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="sa">r</span><span class="s">'Apples\t10\nOranges\t7\nCoconuts\t23'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Apples</span>\<span class="n">t10</span>\<span class="n">nOranges</span>\<span class="n">t7</span>\<span class="n">nCoconuts</span>\<span class="n">t23</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="sa">r</span><span class="s">'Mama Smith\'s \\Pancake\\'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Mama</span> <span class="n">Smith</span>\<span class="s">'s </span><span class="se">\\</span><span class="s">Pancake</span><span class="se">\\</span><span class="s">
+</span></code></pre></div></div>
+
+<h3 id="проверка-наличия-подстроки">Проверка наличия подстроки</h3>
+
+<h4 id="оператор-in">Оператор <code class="language-plaintext highlighter-rouge">in</code></h4>
+
+<p><code class="language-plaintext highlighter-rouge">in</code> позволяет узнать является ли одна строка частью другой.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">long</span> <span class="o">=</span> <span class="s">'Hello, dear Mary'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">short</span> <span class="o">=</span> <span class="s">'dear'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">short</span> <span class="ow">in</span> <span class="nb">long</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">short</span><span class="p">,</span> <span class="s">'is a part of'</span><span class="p">,</span> <span class="nb">long</span><span class="p">)</span>
+<span class="p">...</span>
+<span class="n">dear</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">part</span> <span class="n">of</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">dear</span> <span class="n">Mary</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">short</span> <span class="ow">in</span> <span class="nb">long</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">long</span> <span class="ow">in</span> <span class="n">short</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h4 id="проверка-наличия-подстрок-в-начале-или-в-конце-строки-strstartswithsubstr-strendswithsubstr">Проверка наличия подстрок в начале или в конце строки: <code class="language-plaintext highlighter-rouge">str.startswith(substr)</code>, <code class="language-plaintext highlighter-rouge">str.endswith(substr)</code></h4>
+
+<p>Методы проверяют наличие определенной последовательности символов в начале (startswith) или в конце (endswith) строки. То есть, как следует из их название, начинается ли и заканчивается ли строка на определенную последовательность (последовательность может быть и из одного символа), и возвращают <code class="language-plaintext highlighter-rouge">True</code> или <code class="language-plaintext highlighter-rouge">False</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">'абв'</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'аб'</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'абв'</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'б'</span><span class="p">)</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h4 id="поиск-положения-strfind-strrfind">Поиск положения: <code class="language-plaintext highlighter-rouge">str.find()</code>, <code class="language-plaintext highlighter-rouge">str.rfind()</code></h4>
+<p>—</p>
+
+<h3 id="регистр">Регистр</h3>
+
+<h4 id="проверка-регистра-strislower-strisupper-stristitle">Проверка регистра: <code class="language-plaintext highlighter-rouge">str.islower()</code>, <code class="language-plaintext highlighter-rouge">str.isupper()</code>, <code class="language-plaintext highlighter-rouge">str.istitle()</code></h4>
+
+<p>Эти методы возвращают <code class="language-plaintext highlighter-rouge">True</code> или <code class="language-plaintext highlighter-rouge">False</code> в зависимости от того, как написаны буквы в строке: строчными или заглавными.
+<code class="language-plaintext highlighter-rouge">.islower()</code> сообщает, что все буквы в строке строчные, <code class="language-plaintext highlighter-rouge">.isupper()</code> — заглавные, <code class="language-plaintext highlighter-rouge">.istitle()</code> сообщает, что первая встретившаяся буква в каждом «слове» — заглавная, а остальные — строчные.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'h'</span><span class="p">,</span> <span class="s">'H'</span><span class="p">,</span> <span class="s">'hello'</span><span class="p">,</span> <span class="s">'Hello'</span><span class="p">,</span> <span class="s">'hello world'</span><span class="p">,</span> <span class="s">'HELLO WORLD'</span><span class="p">,</span>
+<span class="p">...</span>            <span class="s">'Hello world'</span><span class="p">,</span> <span class="s">'Hello World'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strings</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">': '</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">islower</span><span class="p">():</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">'lower'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">', '</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">'upper'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">', '</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">istitle</span><span class="p">():</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">'title'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">', '</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">()</span>
+<span class="n">h</span><span class="p">:</span> <span class="n">lower</span><span class="p">,</span>
+<span class="n">H</span><span class="p">:</span> <span class="n">upper</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span>
+<span class="n">hello</span><span class="p">:</span> <span class="n">lower</span><span class="p">,</span>
+<span class="n">Hello</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+<span class="n">hello</span> <span class="n">world</span><span class="p">:</span> <span class="n">lower</span><span class="p">,</span>
+<span class="n">HELLO</span> <span class="n">WORLD</span><span class="p">:</span> <span class="n">upper</span><span class="p">,</span>
+<span class="n">Hello</span> <span class="n">world</span><span class="p">:</span>
+<span class="n">Hello</span> <span class="n">World</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+
+</code></pre></div></div>
+
+<p>Все эти методы для строки без букв (в том числе для пустой) возвращают <code class="language-plaintext highlighter-rouge">False</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="s">''</span><span class="p">.</span><span class="n">islower</span><span class="p">()</span> <span class="ow">or</span> <span class="s">''</span><span class="p">.</span><span class="n">isupper</span><span class="p">()</span> <span class="ow">or</span> <span class="s">''</span><span class="p">.</span><span class="n">ititle</span><span class="p">()</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">'123'</span><span class="p">.</span><span class="n">islower</span><span class="p">()</span> <span class="ow">or</span> <span class="s">'123'</span><span class="p">.</span><span class="n">isupper</span><span class="p">()</span> <span class="ow">or</span> <span class="s">'123'</span><span class="p">.</span><span class="n">istitle</span><span class="p">()</span>
+<span class="bp">False</span>
+</code></pre></div></div>
+
+<h4 id="приведение-к-другому-регистру-strlower-strupper-strcapitalize-strtitle">Приведение к другому регистру: <code class="language-plaintext highlighter-rouge">str.lower()</code>, <code class="language-plaintext highlighter-rouge">str.upper()</code>, <code class="language-plaintext highlighter-rouge">str.capitalize()</code>, <code class="language-plaintext highlighter-rouge">str.title()</code></h4>
+
+<p><code class="language-plaintext highlighter-rouge">str.lower()</code> приводит все символы в строке к нижнему регистру. Удобно для унификации текста, для подсчетов слов, независимо от того, как они написаны.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'АО МММ. У МММ нет проблем'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="s">'ао ммм. у ммм нет проблем'</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">str.upper()</code> работает наоборот: превращает все символы в строке в символы верхнего регистра.</p>
+
+<p><code class="language-plaintext highlighter-rouge">str.capitalize()</code> поднимает регистр у первого символа в строке</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'вышка'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="s">'Вышка'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'университет — вышка'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="s">'Университет — вышка'</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">str.title()</code> поднимает регистр у каждого «слова»</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'университет вышка'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">title</span><span class="p">()</span>
+<span class="s">'Университет Вышка'</span>
+</code></pre></div></div>
+
+<h3 id="разбиение-и-объединение">Разбиение и объединение</h3>
+
+<h4 id="разбиение-strsplit">Разбиение: <code class="language-plaintext highlighter-rouge">str.split()</code></h4>
+<p>—</p>
+
+<h4 id="операторы--и-">Операторы <code class="language-plaintext highlighter-rouge">+</code> и <code class="language-plaintext highlighter-rouge">+=</code></h4>
+
+<p>Строки можно конкатенировать (объединять) с помощью операторов <code class="language-plaintext highlighter-rouge">+</code> и <code class="language-plaintext highlighter-rouge">+=</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">'abc'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">'XYZ'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>
+<span class="s">'abcXYZ'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">+=</span> <span class="n">s1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span>
+<span class="s">'XYZabc'</span>
+</code></pre></div></div>
+
+<h4 id="объединение-strjoin">Объединение: <code class="language-plaintext highlighter-rouge">str.join()</code></h4>
+
+<p>Если нужно конкатенировать (объединить) сразу много строк, которые являются элементами списка (или другой коллекции), то удобный и быстрый способ — это <code class="language-plaintext highlighter-rouge">.join()</code>. Строка, к которой применяется метод, используется как разделитель, а список строк, передаваемые как аргумент — как части новой строки.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">strings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'milk'</span><span class="p">,</span> <span class="s">'eggs'</span><span class="p">,</span> <span class="s">'honey'</span><span class="p">,</span> <span class="s">'flour'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="s">'milkeggshoneyflour'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">', '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="s">'milk, eggs, honey, flour'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">))</span>
+<span class="n">milk</span>
+<span class="n">eggs</span>
+<span class="n">honey</span>
+<span class="n">flour</span>
+
+</code></pre></div></div>
+
+<p>Обратите внимание, что <code class="language-plaintext highlighter-rouge">.join()</code> — это обратный метод по отношению к <code class="language-plaintext highlighter-rouge">.split()</code>, вызванному с каким-то аргументом:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">long_string</span> <span class="o">=</span> <span class="s">'milk, eggs, honey, flour'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s">', '</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">strings</span> <span class="o">=</span> <span class="n">long_string</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">delimiter</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">long_string</span> <span class="o">==</span> <span class="n">delimiter</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+<span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="модификация">Модификация</h3>
+
+<h4 id="замена-strreplace">Замена: <code class="language-plaintext highlighter-rouge">str.replace()</code></h4>
+<p>—</p>
+
+<h4 id="обрезание-хвостов-strstrip">Обрезание хвостов: <code class="language-plaintext highlighter-rouge">str.strip()</code></h4>
+<p>Метод <code class="language-plaintext highlighter-rouge">.strip()</code> удаляет «лишние» символы в начале и конце строки. По умолчанию, без аргументов, удаляются все пробельные символы (пробелы, переносы строк и т.п.) от начала и до первого непробельного символа, а также от последнего непробельного символа до конца строки.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'</span><span class="se">\t</span><span class="s">   </span><span class="se">\t</span><span class="s"> hello world</span><span class="se">\n\n</span><span class="s">   </span><span class="se">\n</span><span class="s">'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+	   	 <span class="n">hello</span>
+
+
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="s">'hello world'</span>
+</code></pre></div></div>
+
+<p>Если в качестве аргумента передать строку, то вместо пробельных символов удаляться символы, указанные в переданной строке.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'.--;....;.;-.;-...-;..;-...-;.--;help.-;...;-...-;-.--;---;..-;-.;--.;.;.-.;'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">.</span><span class="n">strip</span><span class="p">(</span><span class="s">'-.;'</span><span class="p">)</span>
+<span class="s">'help'</span>
+</code></pre></div></div>
+
+:ET

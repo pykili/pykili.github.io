@@ -125,3 +125,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.notes {
+  width: 65%;
+  margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .notes {
+    width: 90%;
+  }
+}

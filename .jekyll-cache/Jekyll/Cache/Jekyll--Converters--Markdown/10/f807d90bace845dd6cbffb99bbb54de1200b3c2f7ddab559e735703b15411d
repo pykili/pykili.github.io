@@ -1,0 +1,452 @@
+I"j�<h1 id="условия-if-else-elif-и-операторы-сравнения">Условия (if, else, elif) и операторы сравнения</h1>
+<hr />
+
+<h2 id="содержание">Содержание</h2>
+
+<ol>
+  <li><a href="#лирическое-отступление-про-ввод-данных-и-преобразования-типов">Ввод данных и преобразование типов</a></li>
+  <li><a href="#почему-нужно-конвертировать-строки-в-числа">Почему нужно конвертировать строки в числа</a></li>
+  <li><a href="#условия">Условия</a></li>
+  <li><a href="#операторы-сравнения">Операторы сравнения</a></li>
+  <li><a href="#вложенные-условные-инструкции">Вложенные условные инструкции</a></li>
+  <li><a href="#тип-данных-bool">Тип данных bool</a></li>
+  <li><a href="#логические-операторы">Логические операторы</a></li>
+  <li><a href="#конструкция-elif">Конструкция elif</a></li>
+  <li>Задачи
+    <ol>
+      <li><a href="#задача-знак-числа">Знак числа</a></li>
+      <li><a href="#задача-високосный-год">Високосный год</a></li>
+    </ol>
+  </li>
+  <li><a href="#ссылки-по-теме">Ссылки по теме</a></li>
+  <li><a href="#домашнее-задание"><strong>Домашнее задание</strong></a></li>
+</ol>
+
+<!-- ====================================================================== -->
+
+<h2 id="ввод-данных-и-преобразования-типов">Ввод данных и преобразования типов</h2>
+
+<p>На прошлом занятии мы научились выводить данные с помощью функции <code class="language-plaintext highlighter-rouge">print()</code>. Например, чтобы вывести число 5 на экран нужно написать в интерпретаторе <code class="language-plaintext highlighter-rouge">print(5)</code>, и он сделает свое дело.</p>
+
+<p>Но что, если нужно что-то <strong>ввести</strong> в программу из внешнего мира? Например, если наш самописный калькулятор умеет складывать 2 числа и выводить ответ, то как ввести эти самые 2 числа? На помощь придет функция <code class="language-plaintext highlighter-rouge">input()</code>. Попробуем написать вышеописанный калькулятор.</p>
+
+<blockquote>
+  <p><em>Функции <code class="language-plaintext highlighter-rouge">input()</code> можно передать в качестве аргумента строку, которую увидит пользователь перед вводом.</em></p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите число a: '</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">число</span> <span class="n">a</span><span class="p">:</span> <span class="mi">56</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите число b: '</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">число</span> <span class="n">b</span><span class="p">:</span> <span class="mi">23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="mi">5623</span>
+</code></pre></div></div>
+
+<p>Как видно из примера, что-то пошло не так. Вместо заветных 46 после сложения 12 и 34 мы получили 1234. Все дело в типах данных. Функция <code class="language-plaintext highlighter-rouge">input()</code> всегда считывает данные в виде строки. Так и в примере она считала 12 и 34 как 2 строки и просто «слепила» их вместе. Мы же хотим складывать числа. Чтобы все работало хорошо, нужно выполнить <strong>преобразование типов данных</strong>.</p>
+
+<p>В данном случае можно сделать вот так:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Введите число a: '</span><span class="p">))</span>
+<span class="n">Введите</span> <span class="n">число</span> <span class="n">a</span><span class="p">:</span> <span class="mi">56</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Введите число b: '</span><span class="p">))</span>
+<span class="n">Введите</span> <span class="n">число</span> <span class="n">b</span><span class="p">:</span> <span class="mi">23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="mi">79</span>
+</code></pre></div></div>
+
+<p>То, чего мы и хотели.</p>
+
+<p>Преобразовывать можно не только строку в целое число, но и наоборот. Вот несколько допустимых преобразований:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Преобразование числа в строку
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">34</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'Преобразованное число:'</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s">', его тип:'</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">Преобразованное</span> <span class="n">число</span><span class="p">:</span> <span class="mi">34</span> <span class="p">,</span> <span class="n">его</span> <span class="n">тип</span><span class="p">:</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Преобразование строки в число с плавающей точкой
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s">'45.34'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="mf">45.34</span> <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;
+&gt;&gt;&gt; print(b, type(b))
+45.34 &lt;class '</span><span class="nb">float</span><span class="s">'&gt;
+&gt;&gt;&gt; b**2
+2055.7156000000004
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Преобразовать строку с НЕ числом в число не получится
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s">'python'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;pyshell#22&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s">'python'</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><em>В примерах мы используем функцию <code class="language-plaintext highlighter-rouge">type()</code>. Как должно быть понятно из её названия, она выясняет тип переменной. Возвращает она что-то
+страшное вида <code class="language-plaintext highlighter-rouge">&lt;class 'str'&gt;</code>. Сейчас не стоит вникать почему так. Нам
+важно, что преобразование прошло правильно и получился тип <code class="language-plaintext highlighter-rouge">str</code>.</em></p>
+</blockquote>
+
+<p>Как вы уже поняли, чтобы преобразовать что-то во что-то, надо взять и вызвать функцию, совпадающую по имени с названием типа данных. В нашем примере это <code class="language-plaintext highlighter-rouge">str()</code>, <code class="language-plaintext highlighter-rouge">int()</code> и <code class="language-plaintext highlighter-rouge">float()</code>.</p>
+
+<!-- ====================================================================== -->
+
+<h2 id="почему-нужно-конвертировать-строки-в-числа">Почему нужно конвертировать строки в числа</h2>
+
+<p>Возможно, решая очередную задачу, вы случайно не переведете строки в числа, а программа все равно будет работать. Например, у вас будет такая программа, вычисляющая, какое из 2 введенных чисел больше:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите целое число:'</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">целое</span> <span class="n">число</span><span class="p">:</span><span class="mi">12</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите целое число:'</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">целое</span> <span class="n">число</span><span class="p">:</span><span class="mi">45</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Большее число:'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Большее число:'</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">Большее</span> <span class="n">число</span><span class="p">:</span> <span class="mi">45</span>
+</code></pre></div></div>
+
+<p>Вы удовлетворитесь ответом и пойдете домой. Но потом выяснится, что если ввести другие 2 числа, то все сломается:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите целое число:'</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">целое</span> <span class="n">число</span><span class="p">:</span><span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите целое число:'</span><span class="p">)</span>
+<span class="n">Введите</span> <span class="n">целое</span> <span class="n">число</span><span class="p">:</span><span class="mi">30</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Большее число:'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Большее число:'</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">Большее</span> <span class="n">число</span><span class="p">:</span> <span class="mi">4</span>
+</code></pre></div></div>
+
+<p><strong>Значит, не все так просто…</strong></p>
+
+<p>Чтобы разобраться в вопросе, нужно знать как сравниваются строки.</p>
+
+<p>Компьютер умеет работать только с одним типом данных - числами. Мы же помимо чисел используем кучу разных типов данных: числа, строки, списки, словари, кортежи (последние 3 будут обсуждаться дальше в курсе). Оказывается, что и они все хранятся и обрабатываются компьютером в виде чисел. Разберемся со строчками.</p>
+
+<p>Когда люди задумались, как можно обрабатывать строки, им прошла в голову простая идея - а давайте создадим единую таблицу, в которой каждому символу поставим в соответствие число.
+Так появилась таблица <a href="https://ru.wikipedia.org/wiki/ASCII">ASCII</a> (American standard code for information interchange).</p>
+
+<p>Когда люди стали пользоваться компютером не только в Америке (точнее говоря, не только в англоговорящих странах), то встал вопрос о том, что в таблице не хватает места. Так появились другие таблицы кодировок:</p>
+
+<ul>
+  <li><a href="https://ru.wikipedia.org/wiki/Windows-1251">Windows-1251</a></li>
+  <li><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%9E%D0%98-8">КОИ-8</a></li>
+  <li><a href="https://ru.wikipedia.org/wiki/ISO_8859">ISO-8859</a></li>
+  <li><a href="https://ru.wikipedia.org/wiki/%D0%AE%D0%BD%D0%B8%D0%BA%D0%BE%D0%B4">Юникод</a></li>
+  <li>и множество других…</li>
+</ul>
+
+<p>Python версии 3 использует <strong>Unicode</strong> - кодировку, которая на данный момент включает в себя знаки почти всех письменных языков мира. Emoji в ней, кстати, тоже есть 😀😃😇👩‍💻🐁</p>
+
+<p>При сравнении строк, Python переводит все символы строки в числа и производит сравнение чисел.</p>
+
+<p>Если перевести “числовые” строки из примеров выше в списки чисел, то получится:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">'12'</code> = <code class="language-plaintext highlighter-rouge">[49, 50]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">'45'</code> = <code class="language-plaintext highlighter-rouge">[52, 53]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">'4'</code>  = <code class="language-plaintext highlighter-rouge">[52]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">'30'</code> = <code class="language-plaintext highlighter-rouge">[51, 48]</code></li>
+</ul>
+
+<p>Когда мы пишем <code class="language-plaintext highlighter-rouge">'12' &lt; '45'</code>, то Python сравнивает числа обоих строк по очереди: <code class="language-plaintext highlighter-rouge">49 &lt; 52</code> - <code class="language-plaintext highlighter-rouge">True</code>, значит строка <code class="language-plaintext highlighter-rouge">'12'</code> меньше, чем строка <code class="language-plaintext highlighter-rouge">'45'</code>.</p>
+
+<p>Когда же мы пишем <code class="language-plaintext highlighter-rouge">'4' &lt; '30'</code>, то Python снова сравнивает числа обоих строк по очереди, но на этот раз получается иначе: <code class="language-plaintext highlighter-rouge">52 &lt; 51</code> - <code class="language-plaintext highlighter-rouge">False</code> и ответ получается <code class="language-plaintext highlighter-rouge">'4' &gt; '30'</code>, что абсолютно верно с точки зрения сравнения строк, но абсолютный бред с точки зрения сравнения чисел.</p>
+
+<blockquote>
+  <p>Python сравнивает числа по очереди. Если он уже на первом числе может ответить на вопрос “кто больше”, он прекращает сравнение и выдает ответ. Если же строки имеют одинаковую первую букву, то сравниваться они будут по второй и так далее. Такое сравнение называется <a href="https://ru.stackoverflow.com/questions/489888/%D0%A7%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BB%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8-%D1%87%D1%82%D0%BE-%D0%BE%D0%BD%D0%BE-%D1%81%D0%BE%D0%B1%D0%BE%D0%B9-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D1%82"><strong>лексикографическим</strong></a></p>
+</blockquote>
+
+<p><strong>Поэтому, если вы работаете с числами, то всегда работайте с ними как с числами, а не как со строками.</strong></p>
+
+<!-- ====================================================================== -->
+
+<h2 id="условия">Условия</h2>
+
+<p>Все рассматриваемые нами ранее программы имели линейную структуру — программа просто выполняла инструкции одну за другой сверху вниз. При этом никаких способов повлиять на ход выполнения у нас не было (разве что только на уровне выводимых на экран параметров).
+Также важно то, что наши предыдущие программы обязаны были выполнить все инструкции сверху вниз, в противном случае они бы завершались ошибкой.</p>
+
+<p>Теперь предположим, что мы хотим определить абсолютное значение любого числа. Наша программа должна будет напечатать сам <code class="language-plaintext highlighter-rouge">x</code> в случае, если он неотрицателен и <code class="language-plaintext highlighter-rouge">-x</code> в противном случае. Линейной структурой программы здесь не обойтись*, поэтому нам на помощь приходит инструкция <strong>if (если)</strong>. Вот как это работает в питоне:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Ввод данных с преобразованием типа
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>На самом деле в python есть функция <a href="https://docs.python.org/3/library/functions.html#abs"><code class="language-plaintext highlighter-rouge">abs()</code></a>, с помощью
+которой можно взять модуль числа. Но в качестве примера
+использования конструкции <code class="language-plaintext highlighter-rouge">if</code> и так хорошо.</p>
+</blockquote>
+
+<p>Разберем этот кусочек кода. После слова <code class="language-plaintext highlighter-rouge">if</code> указывается проверяемое условие <code class="language-plaintext highlighter-rouge">(x &gt; 0)</code>, <strong>завершающееся двоеточием</strong> (это важно). После этого идет блок (последовательность) инструкций, который будет выполнен, если условие истинно. В нашем примере это вывод на экран величины <code class="language-plaintext highlighter-rouge">x</code>. Затем идет слово <code class="language-plaintext highlighter-rouge">else</code> (иначе), также <strong>завершающееся двоеточием</strong> (и это важно), и блок инструкций, который будет выполнен, если проверяемое условие неверно. В данном случае будет выведено значение <code class="language-plaintext highlighter-rouge">-x</code>.</p>
+
+<p>Обратите особенное внимание на отступы во фрагменте кода выше. Дело в том, что в питоне, для того, чтобы определить, какой именно код выполнить в результате того или иного условия используется как знак двоеточия (в строке с самим условием), так и отступы от левого края строки.</p>
+
+<blockquote>
+  <p>Небольшая ремарка относительно табуляции.
+Мы используем <strong>4 пробела</strong>!
+В современных текстовых редакторах при нажатии на tab автоматически
+вставляется 4 пробела. Не надо жать 4 раза кнопку space как вот
+<a href="https://www.youtube.com/watch?v=AXLoRpKnK8U">тут</a>. Никакой войны,
+никаких табов. Просто <strong>4 пробела</strong>.</p>
+</blockquote>
+
+<p>Во многих других языках вместо отступов используются конструкции, явно указывающие на начало (begin или открывающаяся фигурная скобка в Си) и конец инструкций, связанных с условием (end или закрывающаяся фигурная скобка в Си). Отступы же выполняют примерно ту же роль, но и заодно делают код более читаемым, позволяя читающему быстро понять, какой именно код относится к условию.</p>
+
+<p>Таким образом, условные конструкции в питоне имеют следующий общий вид:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if Условие:
+    блок инструкций, в случае если условие истинно
+else:
+    блок инструкций, в случае если условие не выполняется
+</code></pre></div></div>
+
+<p>Вторая часть условной конструкции (та, что с else) может и отсутствовать, например так:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span>
+<span class="p">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Эта программа тоже выведет абсолютное значение x, как и та, что была ранее.</p>
+
+<!-- ====================================================================== -->
+
+<h2 id="операторы-сравнения">Операторы сравнения</h2>
+
+<p>Все операторы сравнения в питоне достаточно интуитивны. Вот список основных:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;</code> - больше. Условие истинно, если то, что слева от знака больше того, что справа.<br />
+<code class="language-plaintext highlighter-rouge">&lt;</code> - меньше. Условие истинно, если то, что слева от знака меньше того, что справа.<br />
+<code class="language-plaintext highlighter-rouge">&gt;=</code> - больше либо равно.<br />
+<code class="language-plaintext highlighter-rouge">&lt;=</code> - меньше либо равно.<br />
+<code class="language-plaintext highlighter-rouge">==</code> - в точности равно.<br />
+<code class="language-plaintext highlighter-rouge">!=</code> - не равно.<br /></p>
+
+<!-- ====================================================================== -->
+
+<h2 id="вложенные-условные-инструкции">Вложенные условные инструкции</h2>
+
+<p>Условия могут быть вложены одно в другое, чтобы реализовывать еще более сложную логику, например:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">"a, b &gt; 0"</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">"a &gt; 0, b &lt; 0"</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">"a, b &lt; 0"</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">"a &lt; 0, b &gt; 0"</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>Главное, не забывать <strong>отступы</strong> и <strong>двоеточия</strong>.</p>
+
+<!-- ====================================================================== -->
+
+<h2 id="тип-данных-bool">Тип данных <code class="language-plaintext highlighter-rouge">bool</code></h2>
+
+<p>Операторы сравнения возвращают значения специального логического типа bool. Значения логического типа могут принимать одно из двух значений: <code class="language-plaintext highlighter-rouge">True (истина)</code> или <code class="language-plaintext highlighter-rouge">False (ложь)</code>.</p>
+
+<p>Если преобразовать логическое <code class="language-plaintext highlighter-rouge">True</code> к типу <code class="language-plaintext highlighter-rouge">int</code>, то получится <code class="language-plaintext highlighter-rouge">1</code>, а преобразование <code class="language-plaintext highlighter-rouge">False</code> даст <code class="language-plaintext highlighter-rouge">0</code>. При обратном преобразовании число <code class="language-plaintext highlighter-rouge">0</code> преобразуется в <code class="language-plaintext highlighter-rouge">False</code>, а любое ненулевое число в <code class="language-plaintext highlighter-rouge">True</code>. При преобразовании <code class="language-plaintext highlighter-rouge">str</code> в <code class="language-plaintext highlighter-rouge">bool</code> пустая строка преобразовывается в <code class="language-plaintext highlighter-rouge">False</code>, а любая непустая строка в <code class="language-plaintext highlighter-rouge">True</code>.</p>
+
+<p>Рассмотрим несколько примеров:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Сравнение строки
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Введите своё имя:'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span> 	<span class="k">print</span><span class="p">(</span><span class="s">'Привет,'</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span> 	<span class="k">print</span><span class="p">(</span><span class="s">'Вы не ввели своё имя!'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Преобразование bool к int
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">True</span><span class="p">))</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">False</span><span class="p">))</span>
+<span class="mi">0</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Обратите внимание, ключевые слова <code class="language-plaintext highlighter-rouge">True</code> или <code class="language-plaintext highlighter-rouge">False</code> пишутся с
+<strong>большой буквы</strong>. Если написать их с маленькой, то python подумает, что это переменная, попытается её найти и сломается, когда не найдет
+<code class="language-plaintext highlighter-rouge">:(</code>. А если вы вздумаете называть свои переменные <code class="language-plaintext highlighter-rouge">false</code> или <code class="language-plaintext highlighter-rouge">true</code>, то сдать зачет
+по курсу вам не светит <code class="language-plaintext highlighter-rouge">:)</code>. Учитесь сразу хорошему стилю программирования.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="c1"># Преобразование bool к int
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">true</span><span class="p">))</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;pyshell#32&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">true</span><span class="p">))</span>
+<span class="nb">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s">'true'</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</code></pre></div></div>
+
+<!-- ====================================================================== -->
+
+<h2 id="логические-операторы">Логические операторы</h2>
+
+<p>Если мы хотим проверить два или более условий за раз, мы можем воспользоваться операторами <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code> или <code class="language-plaintext highlighter-rouge">not</code>. Вот как они работают:</p>
+
+<p><code class="language-plaintext highlighter-rouge">and</code> (логическое И) возвращает истину (<code class="language-plaintext highlighter-rouge">True</code>) только в случае если оба условия по отдельности верны (тоже возвращают <code class="language-plaintext highlighter-rouge">True</code>)<br />
+<code class="language-plaintext highlighter-rouge">or</code> (логическое ИЛИ) вернет истину в случае, если хотя бы одно из условий верно.<br />
+<code class="language-plaintext highlighter-rouge">not</code> (логическое НЕТ) возьмет результат условия и “обратит” его. То есть, если результат условия <code class="language-plaintext highlighter-rouge">True</code>, то <code class="language-plaintext highlighter-rouge">not</code> примененный к этому условию вернет <code class="language-plaintext highlighter-rouge">False</code> и наоборот.<br /></p>
+
+<p>Давайте посмотрим как это работает на примере. Код ниже проверяет, что хотя бы одно число из двух нацело делится на 10 (кончается на 0) и если так, то печатает <strong>YES</strong>, а если нет, то печатает <strong>NO</strong>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'YES'</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'NO'</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>Пусть теперь мы хотим проверить, что числа a и b должны быть еще и обязательно больше нуля:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'YES'</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'NO'</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>Как видите, мы можем не только использовать <code class="language-plaintext highlighter-rouge">and</code> и <code class="language-plaintext highlighter-rouge">or</code> в одном <code class="language-plaintext highlighter-rouge">if</code>, но и группировать условия скобками для того, чтобы явно обозначить приоритет вычисления условий.</p>
+
+<p>Посмотрим пример с <code class="language-plaintext highlighter-rouge">not</code>. Пусть мы хотим проверить, что число a - положительное, а число b - неотрицательное.
+Это можно проверить вот таким условием:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Оператор <code class="language-plaintext highlighter-rouge">pass</code> очень полезен, когда нужно ничего не делать. Если его
+не поставить, то будет синтаксическая ошибка. А так, код считается правильным!</p>
+</blockquote>
+
+<p>Кстати, <code class="language-plaintext highlighter-rouge">not (b &lt; 0)</code> можно было бы и заменить на <code class="language-plaintext highlighter-rouge">b &gt;= 0</code> и код бы работал точно так же.</p>
+
+<!-- ====================================================================== -->
+
+<h2 id="конструкция-elif">Конструкция elif</h2>
+
+<p>Иногда писать конструкции <code class="language-plaintext highlighter-rouge">if-else</code> долго и утомительно, особенно если приходится проверять много условий разом. В этом случае на помощь придет <code class="language-plaintext highlighter-rouge">elif</code> (сокращение от else if). По сути <code class="language-plaintext highlighter-rouge">elif</code> позволяет существенно упростить конструкцию ниже:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">pass</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>И сделать ее вот такой:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span> <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<p>Обратите внимание, мы избавились от одного уровня вложенности. То есть, сам код стал более читаемым, но при этом нисколько не проиграл в функциональности. Разумеется, конструкции типа <code class="language-plaintext highlighter-rouge">if-elif</code> могут завершиться и блоком <code class="language-plaintext highlighter-rouge">else</code>, например так:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span> <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span> <span class="k">elif</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">pass</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<!-- ====================================================================== -->
+
+<h2 id="задача-знак-числа">Задача: знак числа</h2>
+
+<p>В математике есть функция <a href="https://ru.wikipedia.org/wiki/Sgn">sgn</a>, показывающая знак числа. Она определяется так: если число больше 0, то функция возвращает 1. Если число меньше нуля, то функция возвращает -1. Если число равно 0, то функция возвращает 0. Реализуйте данную функцию — для введенного числа выведите число, определяющее его знак. Используйте операторы сравнения и конструкцию <code class="language-plaintext highlighter-rouge">if-elif-else</code>.</p>
+
+<p>Возможное решение:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<!-- ====================================================================== -->
+
+<h2 id="задача-високосный-год">Задача: високосный год</h2>
+
+<p>Дано натуральное число. Требуется определить, является ли год с данным номером високосным. Если год является високосным, то выведите YES, иначе выведите NO. Напомним, что в соответствии с григорианским календарем, год является високосным, если его номер кратен 4, но не кратен 100, а также если он кратен 400.</p>
+
+<p>Возможное решение:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'YES'</span><span class="p">)</span>
+<span class="p">...</span> <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'NO'</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre></div></div>
+
+<!-- ====================================================================== -->
+
+<h2 id="ссылки-по-теме">Ссылки по теме</h2>
+
+<ul>
+  <li><a href="http://pythontutor.ru/lessons/ifelse/">http://pythontutor.ru/lessons/ifelse/</a></li>
+  <li><a href="http://pythonicway.com/python-conditionals">http://pythonicway.com/python-conditionals </a></li>
+</ul>
+
+<!-- ====================================================================== -->
+
+<h2 id="домашнее-задание">Домашнее задание</h2>
+
+<p>Вам надо написать на питоне 6 программ, каждая из которых будет спрашивать у пользователя
+3 числа (a, b, c) и печатать на экран удовлетворяют ли введенные числа перечисленным свойствам:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">a</code> и <code class="language-plaintext highlighter-rouge">b</code> в сумме дают <code class="language-plaintext highlighter-rouge">c</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a</code> умножить на <code class="language-plaintext highlighter-rouge">b</code> равно <code class="language-plaintext highlighter-rouge">c</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a</code> даёт остаток <code class="language-plaintext highlighter-rouge">c</code> при делении на <code class="language-plaintext highlighter-rouge">b</code></li>
+  <li><code class="language-plaintext highlighter-rouge">c</code> является решением линейного уравнения <code class="language-plaintext highlighter-rouge">ax + b = 0</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a</code> разделить на <code class="language-plaintext highlighter-rouge">b</code> равно <code class="language-plaintext highlighter-rouge">c</code></li>
+  <li><code class="language-plaintext highlighter-rouge">a</code> в степени <code class="language-plaintext highlighter-rouge">b</code> равно <code class="language-plaintext highlighter-rouge">c</code></li>
+</ol>
+
+<p>Оформите каждую программу в виде отдельного файла с расширением <code class="language-plaintext highlighter-rouge">.py</code>.</p>
+:ET

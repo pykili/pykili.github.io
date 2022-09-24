@@ -1,0 +1,110 @@
+I"9<h1 id="тестовый-вариант-контрольной-2">Тестовый вариант контрольной №2</h1>
+<p>Для работы программы вам понадобится <a href="/content/test2_mystem.xml">вывод программы для морфологического анализа MyStem в формате XML</a>. Формат разметки описан на <a href="https://tech.yandex.ru/mystem/doc/grammemes-values-docpage/">странице анализатора</a>.</p>
+
+<h1 id="задача-1">Задача №1</h1>
+
+<p>Открыть XML-файл и посчитать число строк внутри тега <code class="language-plaintext highlighter-rouge">se</code>, то есть между строкам <code class="language-plaintext highlighter-rouge">&lt;se&gt;</code> и <code class="language-plaintext highlighter-rouge">&lt;/se&gt;</code>, открыть другой файл и записать туда число подсчитанных строк.</p>
+
+<p><strong>Возможное решение</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="k">def</span> <span class="nf">count_lines_in_se</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s">'^&lt;se&gt;$\n(.*)^&lt;/se&gt;$'</span><span class="p">,</span> <span class="n">xml</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="p">.</span><span class="n">DOTALL</span><span class="p">)</span>
+    <span class="n">lines_inside_se</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines_inside_se</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">problem1</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'mystem.xml'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">xml</span> <span class="o">=</span> <span class="n">fh</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">count_lines_in_se</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'number_of_lines_inside_se.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">))</span>
+
+
+<span class="n">problem1</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h1 id="задача-2">Задача №2</h1>
+
+<p>Создать словарь, в котором ключами являются строка с результатом морфологического разбора слова (то есть значения атрибута <code class="language-plaintext highlighter-rouge">gr</code> для строк, в которых имеется <code class="language-plaintext highlighter-rouge">&lt;w&gt;</code>), а значениями — количество их вхождений в файле. Распечатать пары ключ-значение из словаря в открытый для записи файл таким образом, чтобы каждая пара располагалась на одной строке и была разделена символом табуляции.</p>
+
+<p><strong>Возможное решение</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+
+<span class="k">def</span> <span class="nf">gr_counter</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">gr</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s">'gr="([^"]+)"'</span><span class="p">,</span> <span class="n">xml</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Counter</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">problem2</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'mystem.xml'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">xml</span> <span class="o">=</span> <span class="n">fh</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">gr_counter</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'morphology_counter.tsv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">gr</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">counter</span><span class="p">.</span><span class="n">most_common</span><span class="p">():</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">gr</span><span class="p">)</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="задача-3">Задача №3</h1>
+
+<p>С помощью регулярных выражений найти все вхождения прилагательных женского года (то есть таких, для которых в <code class="language-plaintext highlighter-rouge">gr=...</code> входит запись «A», а также указан род «жен»). Соответствующие этим характеристикам словоформы распечатать в новый файл в одну строку через запятую.</p>
+
+<p>Преобразуйте содержимое корпуса в формат csv. Возьмите строки внутри тега &lt;body&gt; и с помощью re.sub очистите их от тегов. Запишите результат в новый файл следующим образом: на одной строке должны находиться лемма, разбор, словоформа, разделённые точкой с запятой. Пунктуацию и служебную информацию можно удалить.</p>
+
+<p><strong>Возможное решение</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="k">def</span> <span class="nf">feminine_adj</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span>
+        <span class="sa">r</span><span class="s">'^.+gr="A=[^"]*жен[^"]*" /&gt;(\w+)&lt;/w&gt;$'</span><span class="p">,</span>
+        <span class="n">xml</span><span class="p">,</span>
+        <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">MULTILINE</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">words</span>
+
+
+<span class="k">def</span> <span class="nf">problem3_part1</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">feminine_adj</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'feminine_adj.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">','</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">parse_xml</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s">'&lt;body&gt;(.+)&lt;/body&gt;'</span><span class="p">,</span> <span class="n">xml</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">DOTALL</span><span class="p">)</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">body</span><span class="p">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="sa">r</span><span class="s">'^&lt;w&gt;&lt;ana lex="([^"]+)" gr="([^"]+)" /&gt;(\w+)&lt;/w&gt;$'</span><span class="p">,</span>
+            <span class="n">line</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="n">rows</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">match</span><span class="p">.</span><span class="n">groups</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">rows</span>
+
+
+<span class="k">def</span> <span class="nf">problem3_part2</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">parse_xml</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'mystem.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">';'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+            <span class="n">fh</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">problem3</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'mystem.xml'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">xml</span> <span class="o">=</span> <span class="n">fh</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">problem3_part1</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+    <span class="n">problem3_part2</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

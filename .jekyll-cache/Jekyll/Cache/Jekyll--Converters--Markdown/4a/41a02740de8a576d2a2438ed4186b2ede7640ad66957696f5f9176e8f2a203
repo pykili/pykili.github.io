@@ -1,0 +1,481 @@
+I"��<h1 id="как-написать-своего-телеграм-бота">Как написать своего телеграм бота</h1>
+
+<h2 id="содержание">Содержание</h2>
+
+<p>todo</p>
+
+<h2 id="что-такое-telegram-бот">Что такое telegram-бот</h2>
+
+<p>Думаю, что вы все пользовались ботами в телеграмме и не хуже меня знаете, что это такое. Но, что представляет из себя бот на самом деле?</p>
+
+<p>Telegram-бот - это программа, написанная на ЛЮБОМ языке программирования, которой можно посылать данные через одно из приложений телеграмм. К сожалению (или счастью), вы не можете посылать сообщения напрямую со своего телефона вашему коду на python. Чтобы все это работало, нужен сервер, который будет вас связывать. На самом деле так работает весь интернет и телеграмм со своими ботами не исключение.</p>
+
+<p><img src="static/25/telegram-bot-flow.svg" alt="" /></p>
+
+<p>На сайте telegram есть потрясающая документация для разработчиков ботов - <a href="https://core.telegram.org/bots">https://core.telegram.org/bots</a>. Это довольно обширный документ, читая который, можно реализовать любого бота. Однако, делать это с нуля только по документации не такое простое занятие как хотелось бы. Поэтому уже давно существуют библиотеки на python, который ОЧЕНЬ сильно упрощают жизнь создателям ботов.</p>
+
+<h2 id="библиотеки-для-создания-ботов">Библиотеки для создания ботов</h2>
+
+<p>Библиотек довольно много, но мы поговорим здесь о 2 из них:</p>
+
+<ul>
+  <li><a href="https://github.com/eternnoir/pyTelegramBotAPI">pyTelegramBotAPI</a></li>
+  <li><a href="https://github.com/python-telegram-bot/python-telegram-bot">python-telegram-bot</a></li>
+</ul>
+
+<p>Эти библиотеки довольно похожи, но мне лично больше нравится <code class="language-plaintext highlighter-rouge">python-telegram-bot</code>. Она очень качественно написана да и статистика github говорит сама за себя.</p>
+
+<p>На этой библиотеке и ботов написано больше и лайкают её побольше.</p>
+
+<p><img src="static/25/libs-vs.svg" alt="" /></p>
+
+<p>Самый простой бот - это тот, который отвечает вам то, что вы ему послали. Такой бот называется <strong>echo-bot</strong>. Давайте его напишем.</p>
+
+<p>Но сначала попросим разрешение у отца всех ботов…</p>
+
+<h2 id="получение-токена-у-botfather">Получение токена у BotFather</h2>
+
+<p>Перед началом программирования бота нужно получить токен для доступа к серверам telegram. Для этого есть специальный бот - <strong>BotFather</strong>. Можете найти его в telegram по этому логину.</p>
+
+<p>Процесс создания бота очень простой. Пишете боту и дальше следуете инструкциям. На скрине все есть:</p>
+
+<p><img src="static/25/botfather.jpg" width="400" /></p>
+
+<p>В сообщении, которое тут скрыто будет токен, с которым вы всегда будете обращаться к серверу telegram.</p>
+
+<p>Он выглядит примерно следующим образом: <code class="language-plaintext highlighter-rouge">1226478115:AAHwuaJ6i9Sugv6wxqlOLym2H-do3oGli94</code>. У вас будет свой токен.</p>
+
+<p>А теперь приступим к программированию.</p>
+
+<h2 id="создание-echo-bot-на-python-telegram-bot">Создание echo-bot на python-telegram-bot</h2>
+
+<blockquote>
+  <p>Напоминание на всякий случай. Echo-bot - это самый простой учебный бот, который просто отвечает вам то, что вы ему написали.</p>
+</blockquote>
+
+<p>Прежде всего нужно установить библиотеку. Если открыть главную страницу репозитория <a href="https://github.com/python-telegram-bot/python-telegram-bot">https://github.com/python-telegram-bot/python-telegram-bot</a>, то там без труда можно найти команду для установки. Она начинается с <code class="language-plaintext highlighter-rouge">pip</code>. Откройте командную строку своего компьютера и вставьте туда эту строку (<em>как открыть командную строку нужно погуглить, если вы не знаете как это сделать</em>).</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install python-telegram-bot --upgrade
+</code></pre></div></div>
+
+<p>После установки напишем нашего бота. Вот его код:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Updater</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="p">,</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">Filters</span>
+
+
+<span class="n">TOKEN</span> <span class="o">=</span> <span class="s">'&lt;ваш токен от BotFather&gt;'</span>
+
+
+<span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s">'Привет!</span><span class="se">\n</span><span class="s">Я бот, который почти ничего не умеет'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handler_echo</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s">'Вы спросили у меня: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">message</span> <span class="o">+=</span> <span class="s">'</span><span class="se">\n</span><span class="s">А я вам отвечу: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">dp</span> <span class="o">=</span> <span class="n">updater</span><span class="p">.</span><span class="n">dispatcher</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s">'start'</span><span class="p">,</span> <span class="n">command_start</span><span class="p">))</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="n">handler_echo</span><span class="p">))</span>
+
+    <span class="n">updater</span><span class="p">.</span><span class="n">start_polling</span><span class="p">()</span>
+    <span class="n">updater</span><span class="p">.</span><span class="n">idle</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>Разберем этот код по косточкам.</p>
+
+<h4 id="1-импорт-нужных-модулей">1. Импорт нужных модулей</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Updater</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="p">,</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">Filters</span>
+</code></pre></div></div>
+
+<p>Библиотека называется  <strong>python-telegram-bot</strong>, а вот <strong>модуль</strong>, который вы получаете - <strong>telegram</strong>. На этой строчке мы импортируем нужные нам штуки:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Updater</code> - класс для настройки уведомлений о новых сообщениях от сервера telegram</li>
+  <li><code class="language-plaintext highlighter-rouge">CommandHandler</code> - класс для настройки реакции на команды пользователя (<code class="language-plaintext highlighter-rouge">/start</code>, <code class="language-plaintext highlighter-rouge">/help</code> и тд)</li>
+  <li><code class="language-plaintext highlighter-rouge">MessageHandler</code> - класс для настройки реакции на текстовые сообщения от пользователя</li>
+</ul>
+
+<h4 id="2-обработчик-команды-start">2. Обработчик команды <code class="language-plaintext highlighter-rouge">/start</code></h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s">'Привет!</span><span class="se">\n</span><span class="s">Я бот, который почти ничего не умеет'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Это функция, которая будет вызвана, когда пользователь напишет боту <code class="language-plaintext highlighter-rouge">/start</code>. Имя этой функции произвольное. Главное, чтобы имя отражало смысл функции. Эта функция принимает 2 аргумента (обязательно принимает) - <code class="language-plaintext highlighter-rouge">update</code> и <code class="language-plaintext highlighter-rouge">context</code>. Эти аргументы в эту фунцию передает <code class="language-plaintext highlighter-rouge">Updater</code>, который мы настроим в функции <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<p>Аргумент <code class="language-plaintext highlighter-rouge">update</code> - это обновление, которое присылает сервер telegram по запросу бота. Обновление - это обычно сообщения, которые пишет боту пользователь. Также обновлениями могут быть уведомления о том, что пользователь изменил или удалил какое-то сообщение. Подробное описание объекта <code class="language-plaintext highlighter-rouge">update</code> есть на сайте - <a href="https://python-telegram-bot.readthedocs.io/en/stable/telegram.update.html">telegram.update</a>.</p>
+
+<p>Аругмент <code class="language-plaintext highlighter-rouge">context</code> - это некоторый контекст сообщения. Иными словами, этот состояние бота в тот момент, когда ваша функция обрабатывает сообщение. В переменной <code class="language-plaintext highlighter-rouge">context</code> можно, например, хранить данные, которые будут доступны при обработке следующего сообщения. Представьте, что вы сообщаете пользователям курс доллара. Вы его будете не с потолка брать, а спрашивать у какого-то сервиса. Чтобы постоянно у сервиса не спрашивать, можно сохранить курс к себе и переспрашивать актуальный курс только на каждое 10 обращение к боту. Подробное описание объекта <code class="language-plaintext highlighter-rouge">context</code> есть на сайте - <a href="https://python-telegram-bot.readthedocs.io/en/stable/telegram.ext.callbackcontext.html">telegram.ext.callbackcontext</a>.</p>
+
+<p>Внутри самой функции мы вызываем метод <code class="language-plaintext highlighter-rouge">update.message.reply_text</code> и передаем в него сообщение для пользователя.</p>
+
+<h4 id="3-обработка-любого-сообщения-пользователя">3. Обработка любого сообщения пользователя</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">handler_echo</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s">'Вы спросили у меня: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">message</span> <span class="o">+=</span> <span class="s">'</span><span class="se">\n</span><span class="s">А я вам отвечу: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Это функция, которая будет вызвана, когда пользователь напишет боту текст. В этой функции мы отправим пользователю текст, который он послал боту, добавив к нему немного нашей фантазии. Получить текст, который отправил пользователь можно через переменную <code class="language-plaintext highlighter-rouge">update.message.text</code>.</p>
+
+<h4 id="4-функция-main">4. Функция main</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">dp</span> <span class="o">=</span> <span class="n">updater</span><span class="p">.</span><span class="n">dispatcher</span>  <span class="c1"># dp - просто сокращение чтобы потом меньше писать
+</span>
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s">'start'</span><span class="p">,</span> <span class="n">command_start</span><span class="p">))</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="n">handler_echo</span><span class="p">))</span>
+
+    <span class="n">updater</span><span class="p">.</span><span class="n">start_polling</span><span class="p">()</span>
+    <span class="n">updater</span><span class="p">.</span><span class="n">idle</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Библиотека <code class="language-plaintext highlighter-rouge">python-telegram-bot</code> вводит свои абстракции для упрощения создания ботов. Одна из них - <code class="language-plaintext highlighter-rouge">Updater</code>. Как мы уже знаем, нельзя послать пользователю сообщение напрямую. Это всегда нужно делать через сервер telegram. В то же самое время, наш бот как-то должен узнать о сообщениях, которые ему шлют пользователи. Telegram это делает через рассылку обновлений. Как интернет-магазин шлет своим покупателям имейлы о новых поступлениями товара. Ваш бот должен подписаться на новые обновления, которые будет слать сервер telegram.</p>
+
+<p>Чтобы вы вообще не думали о том, как это работает, библиотека предоставляет класс <code class="language-plaintext highlighter-rouge">Updater</code>. Да, мы с вами не знаем, что такое классы (хотя на самом деле мы ими постоянно пользуемся), но в работе с ними нет ничего сложного. В приведенном выше коде мы как-будто вызываем функцию <code class="language-plaintext highlighter-rouge">Updater</code>. Хотя на самом деле мы создаем новый экземпляр класса <code class="language-plaintext highlighter-rouge">Updater</code>. Главное, ему надо передать ваш токен и <code class="language-plaintext highlighter-rouge">use_context=True</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Updater</code> - это большой класс, который занимается большим количеством задач. Внутри себя класс <code class="language-plaintext highlighter-rouge">Updater</code> разбит на более маленькие классы, каждый выполняющий определенные функции. Это как компания, в которой есть отдел кадров, бухгалтерия, логисты и т.д.</p>
+
+<p>Класс <code class="language-plaintext highlighter-rouge">dispatcher</code> - выполняет функцую связывания обновлений, которые шлет telegram с вашими функциями-обработчиками. Ведь вы же не думали, что вы просто написали функции и оно само заработало. Нужно увязать все воедино.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s">'start'</span><span class="p">,</span> <span class="n">command_start</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Здесь мы как раз добавляем обработчик обновлений. Как вы, наверное, уже догадались обновления бывают разные. Пользоваль может отправить команду, может послать картинку или голосовое сообщение. Чтобы связать каждый конткретный тип обновления с обработчиком, нужно это явно прописать.</p>
+
+<p>С помощью <code class="language-plaintext highlighter-rouge">CommandHandler('start', command_start)</code> мы создаем обработчика команд. Причем первым аргументом мы говорим, какую именно команду обрабатывать - <code class="language-plaintext highlighter-rouge">start</code>. А вторым аргументом указываем, какая функция эту команду должна обрабатывать.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="n">handler_echo</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Здесь мы добавляем обработчик сообщений, а не команд. Сообщения бывают разные, поэтому мы первым аргументом передаем фильтр - <code class="language-plaintext highlighter-rouge">Filters.text</code>, который будет срабатывать, когда пользователь будет отправлять простое текстовое сообщение.</p>
+
+<p>Вот и все. Ваш первый бот готов. Давайте его запустим.</p>
+
+<p>Для этого в командной строке наберите (предполагается, что вы созранили код выше в файл bot.py)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python bot.py
+</code></pre></div></div>
+
+<p>После этого можно писать боту.</p>
+
+<p><img src="static/25/echo.jpg" width="400" /></p>
+
+<p>Если вместо того чтобы отвечать ваш бот молчит, а в консоли вы видите примерно такое:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  File "/Users/sapunovnik/Repos/github/tgbots-tutorial/.env/lib/python3.7/site-packages/telegram/utils/request.py", line 277, in get
+    result = self._request_wrapper('GET', url, **urlopen_kwargs)
+  File "/Users/sapunovnik/Repos/github/tgbots-tutorial/.env/lib/python3.7/site-packages/telegram/utils/request.py", line 231, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot105809050/getMe (Caused by ConnectTimeoutError(&lt;telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x10fd05450&gt;, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+</code></pre></div></div>
+
+<p>то могу вас поздравить, вы живете в стране, где запрещен telegram.</p>
+
+<p>Чтобы это обойти нужно использовать прокси.</p>
+
+<h2 id="как-заставить-бота-работать-через-прокси">Как заставить бота работать через прокси</h2>
+
+<p>Есть несколько видов proxy: socks5 и mtproto. Самый классный - это mtproto. Он использует проприетарный протокол telegram, его сложнее обнаружить и сложнее заблокировать. Библиотека python-telegram-bot не позволяет работать с этим видом прокси, поэтому мы будем использовать другой вид -  socks5.</p>
+
+<p>Для socks5 нужно иметь адрес сервера прокси, порт, имя пользователя и пароль. Есть много источников, где все это можно взять. Нужно искать то, что работает так как эти прокси тоже постоянно блокируют.</p>
+
+<p>Есть бот - @socks5_bot (найдите его по этому логину), у которого я нашел работающие прокси.</p>
+
+<p>Чтобы заставить наш код работать с прокси, его надо чуть изменить.</p>
+
+<p>Для начала нужно установить библиотеку <code class="language-plaintext highlighter-rouge">pysocks</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install PySocks
+</code></pre></div></div>
+
+<p>И чуть изменить код в нашей функции <code class="language-plaintext highlighter-rouge">main</code>. Вместо</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>вставить:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">proxy_settings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'proxy_url'</span><span class="p">:</span> <span class="s">'socks5://orbtl.s5.opennetwork.cc:999'</span><span class="p">,</span>
+    <span class="s">'urllib3_proxy_kwargs'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'username'</span><span class="p">:</span> <span class="s">'3571087'</span><span class="p">,</span>
+        <span class="s">'password'</span><span class="p">:</span> <span class="s">'iyyXSuti'</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">request_kwargs</span><span class="o">=</span><span class="n">proxy_settings</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Здесь</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">orbtl.s5.opennetwork.cc</code> - хост из ответа бота</li>
+  <li><code class="language-plaintext highlighter-rouge">999</code> - порт</li>
+  <li><code class="language-plaintext highlighter-rouge">3571087</code> - username</li>
+  <li><code class="language-plaintext highlighter-rouge">iyyXSuti</code> - пароль</li>
+</ul>
+
+<p>Если этот прокси у вас не работает, то вы можете попросить бота дать вам другой и подставить его сюда. После всех манипуляций, можно наконец запустить бота</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python bot.py
+</code></pre></div></div>
+
+<h2 id="создание-бота-сообщающего-курс-валют">Создание бота, сообщающего курс валют</h2>
+
+<p>Общение с ботом выглядит примерно так:</p>
+
+<p><img src="static/25/currency.png" /></p>
+
+<p>Код:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Updater</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="p">,</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">Filters</span>
+<span class="kn">from</span> <span class="nn">telegram</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ParseMode</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+
+<span class="n">TOKEN</span> <span class="o">=</span> <span class="s">'&lt;ваш токен из BotFather&gt;'</span>
+
+<span class="n">START_MESSAGE</span> <span class="o">=</span> <span class="s">'''Привет!
+Я умею сообщать курс для 2 валют: 🇺🇸 USD, 🇪🇺 EUR.
+'''</span>
+
+<span class="n">UNKNOWN_MESSAGE</span> <span class="o">=</span> <span class="s">'Даже и не знаю, что вам ответить. Попробуйте /start'</span>
+
+<span class="n">ALLOWED_CURRENCIES</span> <span class="o">=</span> <span class="p">[</span><span class="s">'🇺🇸 USD'</span><span class="p">,</span> <span class="s">'🇪🇺 EUR'</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">fetch_currency</span><span class="p">(</span><span class="n">currency_name</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s">'https://api.ratesapi.io/api/latest'</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">'base'</span><span class="p">:</span> <span class="n">currency_name</span><span class="p">,</span> <span class="s">'symbols'</span><span class="p">:</span> <span class="s">'RUB'</span><span class="p">}</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">req</span><span class="p">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">rates</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'rates'</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">rates</span><span class="p">[</span><span class="s">'RUB'</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span>
+        <span class="n">START_MESSAGE</span><span class="p">,</span>
+        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardMarkup</span><span class="p">.</span><span class="n">from_column</span><span class="p">(</span><span class="n">ALLOWED_CURRENCIES</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handle_currency</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">currency</span> <span class="o">=</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="n">fetch_currency</span><span class="p">(</span><span class="n">currency</span><span class="p">)</span>
+
+    <span class="n">message</span> <span class="o">=</span> <span class="s">'Курс {} &lt;-&gt; RUB сейчас *{}*'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">currency</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">parse_mode</span><span class="o">=</span><span class="n">ParseMode</span><span class="p">.</span><span class="n">MARKDOWN</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handle_unknown</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="n">UNKNOWN_MESSAGE</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">dp</span> <span class="o">=</span> <span class="n">updater</span><span class="p">.</span><span class="n">dispatcher</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s">'start'</span><span class="p">,</span> <span class="n">command_start</span><span class="p">))</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span>
+        <span class="n">MessageHandler</span><span class="p">(</span>
+            <span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="n">ALLOWED_CURRENCIES</span><span class="p">),</span>
+            <span class="n">handle_currency</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="nb">all</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="p">))</span>
+
+    <span class="n">updater</span><span class="p">.</span><span class="n">start_polling</span><span class="p">()</span>
+    <span class="n">updater</span><span class="p">.</span><span class="n">idle</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Здесь мы не только пишем пользователю странные сообщения, но и ходит в сторонний сервис за данными. Такое часто встречается.</p>
+
+<p>Для того, чтобы получить актуальный курс валют мы используем сервис <a href="https://ratesapi.io">ratesapi.io</a> и прекрасную библиотеку <a href="https://requests.readthedocs.io/en/master/">requests</a>.</p>
+
+<p>Также тут есть интересность про создание клавиатуры</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardMarkup</span><span class="p">.</span><span class="n">from_column</span><span class="p">(</span><span class="n">ALLOWED_CURRENCIES</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Как видите, это очень просто.</p>
+
+<h2 id="куда-выложить-бота-чтобы-он-работал-всегда">Куда выложить бота чтобы он работал всегда</h2>
+
+<p>В облако!</p>
+
+<p>Если бот будет работать у вас на компьютере, то вам придется всегда держать компьютер включенным. Это не всегда удобно. Поэтому лучше выложить бота в облака.</p>
+
+<p>Есть много сервисов. В том числе от именитых ребят Google, Yandex, Microsoft, Amazon. Но у них все платное и сложное. Для простого бота нужно что-то простое.</p>
+
+<p><a href="https://heroku.com">https://heroku.com</a> - это простой облачный сервис. И у него есть бесплатный тариф.</p>
+
+<p>Чтобы выложить бота на удаленный сервер нужно немного подготовиться.</p>
+
+<h4 id="1-создайте-аккаунт-на-heroku">1. Создайте аккаунт на heroku.</h4>
+
+<p>Думаю, тут вы сами справитесь. Заходите на <a href="https://signup.heroku.com">https://signup.heroku.com</a> и регистрируетесь. Помните, ваша компания - это HSE.</p>
+
+<h4 id="2-создания-приложения-на-heroku">2. Создания приложения на heroku</h4>
+
+<p>Когда зайдете в личный кабинет, нужно будет создать приложение. Жмите на кнопку “Create new app”.</p>
+
+<p><img src="static/25/her-new-app.png" />
+<img src="static/25/her-new-app-2.png" /></p>
+
+<p>Скопитейте <strong>имя приложения</strong>.</p>
+
+<h4 id="3-дополнительные-файлы">3. Дополнительные файлы</h4>
+
+<p>В папку с файлом <code class="language-plaintext highlighter-rouge">bot.py</code> нужно будет положить еще 3 файла.</p>
+
+<p>Файл <strong>Procfile</strong> и его содержимое</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>web: python bot.py
+</code></pre></div></div>
+
+<p>Файл <strong>runtime.txt</strong> и его содержимое</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python-3.7.6
+</code></pre></div></div>
+
+<p>И самый важный файл <strong>requirements.txt</strong>. С содержимым этого файла придется повозиться.</p>
+
+<p>Этот файл должен содержать список тех модулей, которые нужны вашему боту для работы. Помните мы устанавливали библиотеку <code class="language-plaintext highlighter-rouge">python-telegram-bot</code> через <code class="language-plaintext highlighter-rouge">pip</code>?</p>
+
+<p>Пип позволит нам получить этот список. Выполните команду</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip freeze <span class="o">&gt;</span> requirements.txt
+</code></pre></div></div>
+
+<p>После этого у вас появится файл <strong>requrements.txt</strong> со всеми вашими модулями.</p>
+
+<p>У меня это выглядит так для echo-bot:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>certifi==2020.4.5.1
+cffi==1.14.0
+cryptography==2.9.2
+decorator==4.4.2
+future==0.18.2
+pycparser==2.20
+PySocks==1.7.1
+python-telegram-bot==12.7
+six==1.14.0
+tornado==6.0.4
+</code></pre></div></div>
+
+<h4 id="4-модификация-кода">4. Модификация кода</h4>
+
+<p>Импортируйте системный модуль <code class="language-plaintext highlighter-rouge">os</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+</code></pre></div></div>
+
+<p>После переменной <code class="language-plaintext highlighter-rouge">TOKEN</code> добавьте еще 2 переменные</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PORT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'PORT'</span><span class="p">,</span> <span class="s">'8443'</span><span class="p">))</span>
+
+<span class="n">HEROKU_APPNAME</span> <span class="o">=</span> <span class="s">'&lt;имя вашего приложения&gt;'</span> <span class="c1"># у меня my-lovely-bot
+</span></code></pre></div></div>
+
+<p>В функции main вместо <code class="language-plaintext highlighter-rouge">updater.start_polling()</code> напишите следующее:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">updater</span><span class="p">.</span><span class="n">start_webhook</span><span class="p">(</span><span class="n">listen</span><span class="o">=</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span> <span class="n">url_path</span><span class="o">=</span><span class="n">TOKEN</span><span class="p">)</span>
+    <span class="n">updater</span><span class="p">.</span><span class="n">bot</span><span class="p">.</span><span class="n">set_webhook</span><span class="p">(</span><span class="sa">f</span><span class="s">'https://</span><span class="si">{</span><span class="n">HEROKU_APPNAME</span><span class="si">}</span><span class="s">.herokuapp.com/</span><span class="si">{</span><span class="n">TOKEN</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>В итоге, код echo-bot будет выглядеть так:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">telegram.ext</span> <span class="kn">import</span> <span class="n">Updater</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="p">,</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">Filters</span>
+
+
+<span class="n">TOKEN</span> <span class="o">=</span> <span class="s">'&lt;ваш токен от BotFather&gt;'</span>
+
+<span class="n">PORT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'PORT'</span><span class="p">,</span> <span class="s">'8443'</span><span class="p">))</span>
+
+<span class="n">HEROKU_APPNAME</span> <span class="o">=</span> <span class="s">'fathomless-journey-56345'</span>
+
+
+<span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s">'Привет!</span><span class="se">\n</span><span class="s">Я бот, который почти ничего не умеет'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handler_echo</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s">'Вы спросили у меня: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">message</span> <span class="o">+=</span> <span class="s">'</span><span class="se">\n</span><span class="s">А я вам отвечу: '</span> <span class="o">+</span> <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">update</span><span class="p">.</span><span class="n">message</span><span class="p">.</span><span class="n">reply_text</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">updater</span> <span class="o">=</span> <span class="n">Updater</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">use_context</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">dp</span> <span class="o">=</span> <span class="n">updater</span><span class="p">.</span><span class="n">dispatcher</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s">'start'</span><span class="p">,</span> <span class="n">command_start</span><span class="p">))</span>
+
+    <span class="n">dp</span><span class="p">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">MessageHandler</span><span class="p">(</span><span class="n">Filters</span><span class="p">.</span><span class="n">text</span><span class="p">,</span> <span class="n">handler_echo</span><span class="p">))</span>
+
+    <span class="n">updater</span><span class="p">.</span><span class="n">start_webhook</span><span class="p">(</span><span class="n">listen</span><span class="o">=</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span> <span class="n">url_path</span><span class="o">=</span><span class="n">TOKEN</span><span class="p">)</span>
+    <span class="n">updater</span><span class="p">.</span><span class="n">bot</span><span class="p">.</span><span class="n">set_webhook</span><span class="p">(</span><span class="sa">f</span><span class="s">'https://</span><span class="si">{</span><span class="n">HEROKU_APPNAME</span><span class="si">}</span><span class="s">.herokuapp.com/</span><span class="si">{</span><span class="n">TOKEN</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="n">updater</span><span class="p">.</span><span class="n">idle</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>А внутри папки должны лежать эти файлы:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Procfile
+bot.py
+requirements.txt
+runtime.txt
+</code></pre></div></div>
+
+<h4 id="5-отправка-бота-на-heroku">5. Отправка бота на heroku</h4>
+
+<p>Для начала нужно поставить специальную утилиту для работы с heroku - Официальная инструкция, как это сделать - <a href="https://devcenter.heroku.com/articles/heroku-cli">https://devcenter.heroku.com/articles/heroku-cli</a></p>
+
+<p>Как только это сделаете. Зайдите в командной строке в вашу папку и выполните эти команды</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>heroku login
+git init
+heroku git:remote -a &lt;имя вашего приложения на heroku&gt;
+git add .
+git commit -m init
+git push heroku master
+heroku ps:scale web=1
+</code></pre></div></div>
+
+<p>Ну вот и все, можете писать своему боту.</p>
+
+<p>Кстати, заметили, что тут нет ничего про прокси? Потому что бот будет запущен в европе или америке, где нет ограничений на telegram. Ура!</p>
+:ET

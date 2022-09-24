@@ -1,0 +1,265 @@
+I"Y~<h1 id="продолжение-функций-кортежи">Продолжение функций, кортежи</h1>
+
+<h2 id="содержание">Содержание</h2>
+<ol>
+  <li><a href="#кортежи">Кортежи - tuple</a></li>
+  <li><a href="#возврат-нескольих-значений-из-функции">Возврат нескольких аргументов из функции</a></li>
+  <li><a href="#возврат-нескольих-значений-из-функции">Именованные аргументы функции</a></li>
+  <li><a href="#домашнее-задание"><strong>Домашнее задание</strong></a></li>
+</ol>
+
+<h2 id="кортежи">Кортежи</h2>
+
+<p><strong>Кортеж</strong> - это неизменяемый и более быстрый аналог списка. Он защищает хранимые данные от непреднамеренных изменений. Называть его можно по-разному: кортеж, тапл, тюпл. Смысл от этого не меняется.</p>
+
+<p>Что означает неизменяемый? То, что после его создания вы не сможете изменить его содержимое.</p>
+
+<p>Посмотрим на примере</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">list_of_digits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># обычный список из 3 чисел
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">list_of_digits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">45</span>  <span class="c1"># Если захочется его изменить, то это легко сделать
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">list_of_digits</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Повторим тот же самый код, но с кортежем</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tuple_of_digits</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">tuple_of_digits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="s">'tuple'</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</code></pre></div></div>
+
+<p>Ничего не получится.</p>
+
+<p>Синтаксис определения кортежей</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">empty_tuple</span> <span class="o">=</span> <span class="p">()</span> <span class="c1"># Создание кортежа с помощью литерала
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">yet_another_empty_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># Создание кортежа с помощью встроенной функции
+</span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">some_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,)</span> <span class="c1"># Инициализация кортежа
+</span><span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span> <span class="c1"># Создание кортежа из итерируемого объекта, коим является строка
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">hello_tuple</span><span class="p">)</span>
+<span class="p">(</span><span class="s">'h'</span><span class="p">,</span> <span class="s">'e'</span><span class="p">,</span> <span class="s">'l'</span><span class="p">,</span> <span class="s">'l'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">' '</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="s">'o'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="s">'l'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>При инициализации кортежа лучше завести привычку писать запятую после последнего элемента, иначе есть шанс ошибиться в случае кортежа, состоящего из одного элемента</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">int_not_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># Это математические скобки, не кортеж
+</span><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">int_not_tuple</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;
+&gt;&gt;&gt; one_element_tuple = (7,) # Кортеж с одним элементом
+&gt;&gt;&gt; print(type(one_element_tuple))
+&lt;class '</span><span class="nb">tuple</span><span class="s">'&gt;
+</span></code></pre></div></div>
+
+<p>Когда использовать кортежи? Когда нужно что-то неизменяемое. Рассмотрим пример</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">months</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">'Январь'</span><span class="p">,</span> <span class="s">'Февраль'</span><span class="p">,</span> <span class="s">'Март'</span><span class="p">,</span>
+    <span class="s">'Апрель'</span><span class="p">,</span> <span class="s">'Май'</span><span class="p">,</span> <span class="s">'Июнь'</span><span class="p">,</span>
+    <span class="s">'Июль'</span><span class="p">,</span> <span class="s">'Август'</span><span class="p">,</span> <span class="s">'Сентябрь'</span><span class="p">,</span>
+    <span class="s">'Октябрь'</span><span class="p">,</span> <span class="s">'Ноябрь'</span><span class="p">,</span> <span class="s">'Декабрь'</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>У меня большие сомнения, что состав месяцев года когда-то изменится. Так что выбор тут очевиден - tuple!</p>
+
+<h2 id="возврат-нескольих-значений-из-функции">Возврат нескольих значений из функции</h2>
+
+<p>Tuple очень полезен, если из функции нужно вернуть несколько объектов. До этого мы всегда возвращали из функции только один объект. Например:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_first_letter</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>А что делать, если нужно вернуть несколько аргументов?
+В контрольной работе был частотный список слов русского словаря. Он имел вот такой вид:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>а|союз|9808.61
+абажур|сущ неод ед муж им|7.77
+аббревиатура|сущ неод ед жен им|1.47
+абвер|сущ неод ед муж им|1.22
+аберрация|сущ неод ед жен им|3.0
+абзац|сущ неод ед муж им|7.83
+абитуриент|сущ одуш ед муж им|1.47
+абонемент|сущ неод ед муж им|1.1
+абонент|сущ одуш ед муж им|3.43
+абориген|сущ одуш ед муж им|10.53
+аборт|сущ неод ед муж им|9.79
+абразив|сущ неод ед муж им|4.35
+абракадабра|сущ неод ед жен им|1.22
+...
+</code></pre></div></div>
+
+<p>Можно сильно упростить себе жизнь, если написать функцию, которая будет обрабатывать каждую строчку и сразу возвращать слово, его морфемы и частотность.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">process_line</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+    <span class="n">word</span><span class="p">,</span> <span class="n">morph</span><span class="p">,</span> <span class="n">ipm</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">)</span>
+    <span class="n">morphs</span> <span class="o">=</span> <span class="n">morph</span><span class="p">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">ipm</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ipm</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">word</span><span class="p">,</span> <span class="n">morphs</span><span class="p">,</span> <span class="n">ipm</span>
+</code></pre></div></div>
+
+<p>И потом пользоваться этой функцией при обработки каждой строки вообще не заботясь о том, какие она операции выполняет.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">line</span> <span class="o">=</span> <span class="s">'абориген|сущ одуш ед муж им|10.53'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">process_line</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="p">(</span><span class="s">'абориген'</span><span class="p">,</span> <span class="p">[</span><span class="s">'сущ'</span><span class="p">,</span> <span class="s">'одуш'</span><span class="p">,</span> <span class="s">'ед'</span><span class="p">,</span> <span class="s">'муж'</span><span class="p">,</span> <span class="s">'им'</span><span class="p">],</span> <span class="mf">10.53</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Обратите внимание, что можно не ставить скобки в последней строке, питон и так знает, что если перечислено несколько значений через запятую после <code class="language-plaintext highlighter-rouge">return</code>, то нужно вернуть кортеж.</p>
+</blockquote>
+
+<h2 id="именованные-аргументы-функции">Именованные аргументы функции</h2>
+
+<p>Мы уже несколько раз сталкивались с именованными аргументами, но не знали, что они так называются.</p>
+
+<p>Все пользовались методом строк <code class="language-plaintext highlighter-rouge">split()</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">line</span> <span class="o">=</span> <span class="s">'абориген|сущ одуш ед муж им|10.53'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">,</span> <span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'абориген'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им|10.53'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>В данном случае <code class="language-plaintext highlighter-rouge">maxsplit</code> — это именованный аргумент метода <code class="language-plaintext highlighter-rouge">split()</code></p>
+
+<p>Всеми любимая функция <code class="language-plaintext highlighter-rouge">print()</code> имеет сразу несколько именованных аргументов:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sep=' '</code></li>
+  <li><code class="language-plaintext highlighter-rouge">end='\n'</code></li>
+  <li>и другие</li>
+</ul>
+
+<p>Причем мы видим, что этим аргументам что-то присвоено — используется знак <code class="language-plaintext highlighter-rouge">=</code>.
+На самом деле разработчики языка <code class="language-plaintext highlighter-rouge">Python</code> много думали и присвоили этим аргументам именно такие значения чтобы всем было удобно, но их можно задать явно. Например, если в конце строки мы хотим распечатать что-то экзотическое, то можно это сделать:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'Привет, мир!'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">'__end'</span><span class="p">)</span>
+<span class="n">Привет</span><span class="p">,</span> <span class="n">мир</span><span class="err">!</span><span class="n">__end</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div></div>
+
+<p>Если мы хотим при печати нескольих аргументов разделить их не пробелом, а чем-то еще, то можно написать вот так:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'Привет'</span><span class="p">,</span> <span class="s">'мой'</span><span class="p">,</span> <span class="s">'родной'</span><span class="p">,</span> <span class="s">'город'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'=='</span><span class="p">)</span>
+<span class="n">Привет</span><span class="o">==</span><span class="n">мой</span><span class="o">==</span><span class="n">родной</span><span class="o">==</span><span class="n">город</span>
+</code></pre></div></div>
+
+<p>Как задавать именованные аргументы для своих функций?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="s">'Барон'</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Привет,'</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">say_hello</span><span class="p">(</span><span class="s">'Иван'</span><span class="p">)</span>
+<span class="n">Привет</span><span class="p">,</span> <span class="n">Барон</span> <span class="n">Иван</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">say_hello</span><span class="p">(</span><span class="s">'Петр'</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="s">'Герцог'</span><span class="p">)</span>
+<span class="n">Привет</span><span class="p">,</span> <span class="n">Герцог</span> <span class="n">Петр</span>
+</code></pre></div></div>
+
+<p><strong>Важно!</strong> Именованные аргументы всегда должны опеределяться после позиционных (обычных) аргументов:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s">'Барон'</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Привет,'</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="nb">SyntaxError</span><span class="p">:</span> <span class="n">non</span><span class="o">-</span><span class="n">default</span> <span class="n">argument</span> <span class="n">follows</span> <span class="n">default</span> <span class="n">argument</span>
+</code></pre></div></div>
+
+<p><strong>Нельзя</strong> определить именованный аргумент без назначения ему начального значения. Можно только задать специальное значение:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">'Привет,'</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="p">...</span>         <span class="k">print</span><span class="p">(</span><span class="s">'Добрый день,'</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">say_hello</span><span class="p">(</span><span class="s">'Петя'</span><span class="p">)</span>
+<span class="n">Привет</span><span class="p">,</span> <span class="n">Петя</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">say_hello</span><span class="p">(</span><span class="s">'Катя'</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="n">Привет</span><span class="p">,</span> <span class="n">Катя</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">say_hello</span><span class="p">(</span><span class="s">'Смит'</span><span class="p">,</span> <span class="s">'миссис'</span><span class="p">)</span>
+<span class="n">Добрый</span> <span class="n">день</span><span class="p">,</span> <span class="n">миссис</span> <span class="n">Смит</span>
+</code></pre></div></div>
+
+<p>Именованные аргументы можно вызывать как позиционные в порядке их определения.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">print_line</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s">'|'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">'|'</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">symbol</span><span class="o">*</span><span class="n">length</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print_line</span><span class="p">(</span><span class="s">'-'</span><span class="p">)</span>
+<span class="o">|</span> <span class="o">----------</span> <span class="o">|</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">print_line</span><span class="p">(</span><span class="s">'-'</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">'['</span><span class="p">,</span> <span class="s">']'</span><span class="p">)</span>
+<span class="p">[</span> <span class="o">--------------------</span> <span class="p">]</span>
+</code></pre></div></div>
+
+<p>Большинство функций стандартной библиотеки python определены с использованием именованных аргументов, однако часто при вызове той или иной функции име не используется.</p>
+
+<p>Этим нужно <strong>пользоваться с осторожностью</strong>. Если в функцию передается много параметров (больше 3), то лучше писать имя каждого параметра.</p>
+
+<h2 id="домашнее-задание">Домашнее задание</h2>
+
+<p>Ваша задача сделать универсальную функцию для фильтрации слов в тексте. Функция должна работать для любого нормального текста (текста без пробелов подаваться не будет). Текст возьмите любой, какой хотите. Ваш текст не нужно передавать в виде решения. Решение - это просто функция.</p>
+
+<p>Список фильтров:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">startswith</code> - строка, с которой должно начинаться слово</li>
+  <li><code class="language-plaintext highlighter-rouge">endswith</code> - строка, на которую должно заканчиваться слово</li>
+  <li><code class="language-plaintext highlighter-rouge">min_length</code> - минимальная длина слова</li>
+  <li><code class="language-plaintext highlighter-rouge">contains</code> - строка, которую обязательно должна быть в слове</li>
+</ul>
+
+<p>Задача будет разбита на несколько вариантов. Каждый вариант реализует только часть фильтров функции. Значения для фильтров будут передаваться в функцию в виде именованных аргументов.</p>
+
+<p><strong>Если функция одного варианта вызывается с аргументами другого варианта, то функция должна выдавать ошибку</strong> (про формат ошибки ниже).</p>
+
+<p>Формат возвращаемого значения: <strong>неизменяемый</strong> список из 3 элементов:</p>
+
+<ol>
+  <li><strong>Код успешности</strong>. Нужно вернуть 0, если пользователь ввел аргумент, который делает другая команда и 1, если все прошло успешно</li>
+  <li><strong>Сообщение пользователю</strong>. Если произошла ошибка, то помимо кода неуспешности 0 нужно вернуть сообщение об ошибке.</li>
+  <li><strong>Список отфильтрованных слов</strong>. Если ошибка, то просто пустой список.</li>
+</ol>
+
+<p>Скелет программы для работы вот такой:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">words_filter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">startswith</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">min_length</span> <span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">endswith</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">contains</span><span class="o">=</span><span class="s">''</span><span class="p">):</span>
+    <span class="s">'''Фильтрует слова в соответствии с фильтрами
+
+    words: list
+    	Список слов
+    startswith: str
+    	Строка, с которой должно начинаться слово
+    endswith: str
+    	Строка, на которую должно заканчиваться слово
+    min_length: int
+    	Минимальная длина слова
+    contains:
+    	Строка, которую обязательно должна быть в слове
+
+    Функция возвращает список отфильтрованных слов
+    '''</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<p>Как видите, здесь нет функции main и пользовательского ввода через <code class="language-plaintext highlighter-rouge">input()</code>. Следует написать просто функцию. Где она будет использоваться - не важно. Ввод может прийти из функции <code class="language-plaintext highlighter-rouge">input()</code>, может из файла, может из ввода пользователя на сайте. Ваша задача - это написать функцию. Конечно, при отладке вы должны будете как-то подавать данные на вход функции (например, через <code class="language-plaintext highlighter-rouge">input()</code>), но в конечном решении должна быть просто функция.</p>
+
+<p>Распределение фильтров функции по вариантам:</p>
+
+<ul>
+  <li>1, 7 - <code class="language-plaintext highlighter-rouge">endswith</code>, <code class="language-plaintext highlighter-rouge">min_length </code></li>
+  <li>2, 3, 4 - <code class="language-plaintext highlighter-rouge">contains</code>, <code class="language-plaintext highlighter-rouge">startswith</code></li>
+  <li>5, 6 - <code class="language-plaintext highlighter-rouge">min_length </code>, <code class="language-plaintext highlighter-rouge">contains</code></li>
+</ul>
+
+<p>Как видите у некоторых команд повторяются функции. Как говорится, “Доверяй, но распределяй одни и те же задачи по разным командам, чтобы работа точно была сделана”.</p>
+
+<p>Пример работы с программой для <strong>варианта 3</strong> (в данном случае ввод вообще сделан руками в idle):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">'машина'</span><span class="p">,</span> <span class="s">'мама'</span><span class="p">,</span> <span class="s">'подшипник'</span><span class="p">,</span> <span class="s">'маршрутка'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filtered_words</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">contains</span><span class="o">=</span><span class="s">'ш'</span><span class="p">,</span> <span class="n">startswith</span><span class="o">=</span><span class="s">'ма'</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="p">[</span><span class="s">'машина'</span><span class="p">,</span> <span class="s">'маршрутка'</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">filtered_words</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">contains</span><span class="o">=</span><span class="s">'ш'</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">'Не умею работать с min_length'</span><span class="p">,</span> <span class="p">[])</span>
+</code></pre></div></div>
+:ET
