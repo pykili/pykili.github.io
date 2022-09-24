@@ -19,7 +19,7 @@
   show: true
   hw: 
     exists: true
-    link: /prog/hw/hw2
+    link: /prog/2022/hw/hw2
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem2){:target="_blank"}
