@@ -1,32 +1,38 @@
 teachers:
 
-  - name: Леонов Антон Александрович
-    email: grmmr07@gmail.com
-    telegram: grmmr
-    photo: /img/staff/grmmr.jpeg
+  - name: Анна Аксёнова
+    email: aksanna_a@mail.ru
+    photo: /img/staff/aksenysh.jpg
+    telegram: aksenysh
 
+  - name: Антон Бузанов
+    email: anton.buzanov.00@gmail.com
+    telegram: vantral
+    photo: /img/staff/vantral.jpg
 
-  - name: Сериков Олег Алексеевич
-    email: srkvoa@gmail.com
-    photo: /img/staff/oserikov.jpg
-    telegram: oserikov
+  - name: Богдан Евстратенко
+    email: bevstratenko@hse.ru
+    photo: /img/staff/evstrat.jpg
+    telegram: evstrat
 
-
-  - name: Дарья Максимовна Максимова
-    email: daria.maximova.m@gmail.com
-    photo: /img/staff/narretei.jpg
-    telegram: narretei
-
+  - name: Елизавета Ершова
+    email: elizaveta.ershova@jetbrains.com
+    photo: /img/staff/Robinfim.jpg
+    telegram: Robinfim
 
 assistants:
-  - name: Екатерина Руслановна Козлова
-    telegram: da_budet_tak
-    photo: /img/staff/da_budet_tak.jpg
-
-  - name: Данила Григорьевич Федоров
-    telegram: noble_hologram
-    photo: /img/staff/noble_hologram.jpg
-
-  - name: Анна Владимировна Мартынова
+  - name: Анна Мартынова
     telegram: marthynovann
     photo: /img/staff/marthynovann.jpg
+
+  - name: Элина Камаева
+    telegram: elinkamaeva
+    photo: /img/staff/elinkamaeva.jpg
+
+  - name: Алёна Сергеева
+    telegram: s_alyona_a
+    photo: /img/staff/s_alyona_a.jpg
+
+  - name: Валерия Быкова
+    telegram: valer1abyk0va
+    photo: /img/staff/valer1abyk0va.jpg

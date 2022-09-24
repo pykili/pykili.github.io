@@ -1,0 +1,112 @@
+I"4<h1 id="содержание">Содержание</h1>
+<ul>
+  <li>Обход дерева</li>
+  <li>Форматирование строк</li>
+</ul>
+
+<p>Функция <code class="language-plaintext highlighter-rouge">walk</code> модуля <code class="language-plaintext highlighter-rouge">os</code> позволяет обходить все папки, начиная с заданной, и получать на каждой итерации списки всех файлов и папок на этом уровне. См. документацию: <a href="https://docs.python.org/3/library/os.html#os.walk"><code class="language-plaintext highlighter-rouge">os.walk</code></a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">start_path</span> <span class="o">=</span> <span class="s">'.'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">start_path</span><span class="p">):</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Где мы сейчас:'</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Папки на этом уровне:'</span><span class="p">,</span> <span class="n">dirs</span><span class="p">)</span>
+<span class="p">...</span>     <span class="k">print</span><span class="p">(</span><span class="s">'Файлы на этом уровне:'</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Начальная директория может обозначаться абсолютным путём (например, r’C:\user\docs’) или относительным (‘./images/’). Подробнее про абсолютные и относительные пути, например, <a href="http://www.uamedwed.com/blog/web/absolyutnyj-i-otnositelnyj-put-k-fajlam.html">здесь</a>.</p>
+
+<p>Обратите внимание, что одна точка обозначает текущую директорию:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">start_path</span> <span class="o">=</span> <span class="s">"."</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"Что здесь есть:"</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">start_path</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Две точки обозначают родительский каталог:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"На уровень выше:"</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">".."</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"А в подпапке docs"</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">"../docs/"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Пользуясь os.walk(), не забывайте, что на каждой итерации в переменных dirs и files — обыкновенные списки строк, и элементы этих списков — имена папок/файлов (с расширениями), а не пути к ним. Например, чтобы открыть один из этих файлов, нужно склеить адрес и название файла с помощью <a href="https://docs.python.org/3/library/os.path.html#os.path.join">os.path.join()</a>.</p>
+
+<h1 id="форматирование-строк">Форматирование строк</h1>
+
+<p>Форматирование строк — это способ презентации данных в виде строковой переменной.
+На настоящий момент в Питоне существует целых три синтаксиса для форматирования, но мы будем использовать только синтаксис с использованием метода строк <code class="language-plaintext highlighter-rouge">.format()</code>, оставив «старый» синтаксис с оператором <code class="language-plaintext highlighter-rouge">%</code> и самый новый с использованием «f-строк» в стороне.</p>
+
+<h3 id="базовый-пример">Базовый пример</h3>
+
+<p>Метод строк <code class="language-plaintext highlighter-rouge">.format()</code> заменяет фигурные скобки в строке, к которой применён, на строковое представление своих аргументов:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">'{}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s2</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'x = {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>Если фигурных скобок несколько, то у метода <code class="language-plaintext highlighter-rouge">.format()</code> должно быть соответствующее число аргументов:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'{} / {} = {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">))</span>
+<span class="mi">26</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">13</span>
+</code></pre></div></div>
+
+<p>В фигурных скобках можно указать номер аргумента, начинаю с нуля:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s">'Алиса'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">day</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s">'''Здраствуйте, {0}.
+... Только по промокоду "{0}{1}" {1} апреля 2019 года
+... вы сможете приобрести гантели в количестве {1} шт.
+... по цене одной!'''</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Здраствуйте</span><span class="p">,</span> <span class="n">Алиса</span><span class="p">.</span>
+<span class="n">Только</span> <span class="n">по</span> <span class="n">промокоду</span> <span class="s">"Алиса22"</span> <span class="mi">22</span> <span class="n">апреля</span> <span class="mi">2019</span> <span class="n">года</span>
+<span class="n">вы</span> <span class="n">сможете</span> <span class="n">приобрести</span> <span class="n">гантели</span> <span class="n">в</span> <span class="n">количестве</span> <span class="mi">22</span> <span class="n">шт</span><span class="p">.</span>
+<span class="n">по</span> <span class="n">цене</span> <span class="n">одной</span><span class="err">!</span>
+</code></pre></div></div>
+
+<p>Для удобства, вместо номеров можно использовать имена аргументов (они не обязаны совпадать с именами переменных, но часто это удобно):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; city1 = 'А'
+&gt;&gt;&gt; city2 = 'Б'
+&gt;&gt;&gt; driver = 'велосипедист'
+&gt;&gt;&gt; velocity = 22
+&gt;&gt;&gt; x = 10.52
+&gt;&gt;&gt; s = '''Из пункта {departure} в пункт {destination}
+... выехал {driver} со скоростью {v} км/ч. За {x} км
+... до пункта {destination} {driver} встретил свою
+... бабушку. Сколько пирожков съел {driver} перед тем
+... как продолжить свой путь к {destination}?
+... '''.format(
+...     departure=city1,
+...     destination=city2,
+...     driver=driver,
+...     x=x,
+...     v=velocity,
+... )
+... print(s)
+Из пункта А в пункт Б
+выехал велосипедист со скоростью 22 км/ч. За 10.52 км
+до пункта Б велосипедист встретил свою
+бабушку. Сколько пирожков съел велосипедист перед тем
+как продолжить свой путь к Б?
+</code></pre></div></div>
+
+<p>Это лишь некоторые примеры форматирования строк, например мы совсем не коснулись выравнивания строк и форматированного вывода чисел. Другие примеры смотрите в <a href="http://pyformat.info">справочнике</a> уделив внимание «новому» синтаксису.</p>
+
+<h1 id="домашняя-работа">Домашняя работа</h1>
+
+<p>Программа должна обходить всё дерево папок, начинающееся с той папки, где она находится, и сообщать следующую информацию (далее — по вариантам): </p>
+
+<ol>
+  <li>сколько в этих папках встречается разных названий файлов без учёта расширений; </li>
+  <li>файлы с каким расширением чаще всего встречаются в этих папках (если таких несколько, можно печатать только одно); </li>
+  <li>какова максимальная глубина папки в этом дереве (глубину папки с программой нужно считать равной 0); </li>
+  <li>в скольких папках встречается хотя бы 3 файла с расширением “.pdf”; </li>
+  <li>на какую букву начинается название большинства папок (если таких несколько, можно печатать только одну); </li>
+  <li>сколько в дереве папок с полностью кириллическими названиями; </li>
+  <li>в какой папке лежит больше всего файлов.</li>
+</ol>
+:ET

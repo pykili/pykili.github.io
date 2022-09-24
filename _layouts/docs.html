@@ -3,19 +3,9 @@ layout: default
 ---
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2">
-      {% include common/docs_nav.html %}
-    </div>
-    <div class="col-md-6">
+    <div class="notes">
       <div id="markdown-content-container">
         {{ content }}
-        <!-- // -->
-        {% capture hw %}
-        {% include prog/hwfooter.md %}
-        {% endcapture %}
-        {{ hw | markdownify }}
       </div>
     </div>
-  </div>
 </div>

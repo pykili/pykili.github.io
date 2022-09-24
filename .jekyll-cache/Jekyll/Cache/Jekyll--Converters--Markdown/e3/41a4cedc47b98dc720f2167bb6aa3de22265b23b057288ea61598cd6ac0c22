@@ -1,0 +1,350 @@
+I"Ų<h1 id="задачи-для-подготовки-к-контрольной-работе-1">Задачи для подготовки к контрольной работе №1</h1>
+
+<h2 id="задача-1">Задача №1</h2>
+
+<p>Напишите функцию, которая принимает на вход список чисел и возвращает
+среднее этих чисел.</p>
+
+<p><strong>Рассуждения:</strong></p>
+
+<ol>
+  <li>Среднее в математике - сумма чисел делить на количество</li>
+  <li>Если список пустой, то количество чисел - 0, а на ноль делить нельзя.
+Нужно это обработать.</li>
+</ol>
+
+<p><strong>Решение:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="задача-2">Задача №2</h2>
+
+<p>Найдите среди всех слов из частотного словаря слово,
+которое имеет самую близкую к средней частоте частоту.</p>
+
+<p>Оформите решение в виде нескольких функций.</p>
+
+<p>Частотный словарь можно скачать по
+<a href="https://gist.githubusercontent.com/Sapunov/22d060fe952eca5a347e8f105ebe7a42/raw/9595d0cf0276d972775ce6ce899c2299c492468a/freq_dict.txt">ссылке</a></p>
+
+<p><strong>Рассуждения</strong></p>
+
+<ol>
+  <li>Сперва нам нужно прочитать файл с частотным словарем. Так как в задаче просят работать только со словами и их частотами, преобразуем содержимое файла в 2 списка - список слов и список частот.</li>
+  <li>Напишем функцию, которая по списку частот вычислит среднюю частоту.</li>
+  <li>Напишем функцию, которая вычислит индекс слова, которое имеет наиболее близкую частоту к средней.</li>
+</ol>
+
+<p><strong>Решение:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">read_dict</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">freqs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+            <span class="n">word</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">)</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+            <span class="n">words</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+            <span class="n">freqs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">words</span><span class="p">,</span> <span class="n">freqs</span>
+
+
+<span class="k">def</span> <span class="nf">avg</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">find_closest</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">avg_freq</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">min_dist</span> <span class="o">=</span> <span class="mi">1000000</span> <span class="c1"># это больше, чем любое значение из списка freqs
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)):</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">freqs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">avg_freq</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">min_dist</span><span class="p">:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="n">min_dist</span> <span class="o">=</span> <span class="n">dist</span>
+    <span class="k">return</span> <span class="n">index</span>
+</code></pre></div></div>
+
+<p>А вот так можно воспользоваться написанными функциями:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">words</span><span class="p">,</span> <span class="n">freqs</span> <span class="o">=</span> <span class="n">read_dict</span><span class="p">(</span><span class="s">'freq_dict.txt'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">closest</span> <span class="o">=</span> <span class="n">find_closest</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">avg</span><span class="p">(</span><span class="n">freqs</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">'Word found:'</span><span class="p">,</span> <span class="n">words</span><span class="p">[</span><span class="n">closest</span><span class="p">],</span> <span class="n">freqs</span><span class="p">[</span><span class="n">closest</span><span class="p">])</span>
+<span class="n">Word</span> <span class="n">found</span><span class="p">:</span> <span class="n">велосипед</span> <span class="mf">28.34</span>
+</code></pre></div></div>
+
+<h2 id="задача-3">Задача №3</h2>
+
+<p>Вам дан частотный словарь слов русского языка.
+Частотный словарь можно скачать по
+<a href="https://gist.githubusercontent.com/Sapunov/22d060fe952eca5a347e8f105ebe7a42/raw/9595d0cf0276d972775ce6ce899c2299c492468a/freq_dict.txt">ссылке</a></p>
+
+<p>Реализуйте функцию <code class="language-plaintext highlighter-rouge">retrieve(filename, lte=None, gte=None, gender=None)</code>.</p>
+
+<p>Функция должна проходить по всем строкам файла <code class="language-plaintext highlighter-rouge">filename</code> и отбирать те слова вместе с частотой и морфологической информацией, которые подпадают под критерии.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lte</code> - частота слова должна быть меньше или равна значению <code class="language-plaintext highlighter-rouge">lte</code>. Если <code class="language-plaintext highlighter-rouge">lte</code> равен <code class="language-plaintext highlighter-rouge">None</code>, то этот параметр фильтрации учитывать не нужно.</li>
+  <li><code class="language-plaintext highlighter-rouge">gte</code> - частота слова должна быть больше или равна значения <code class="language-plaintext highlighter-rouge">gte</code>. Если <code class="language-plaintext highlighter-rouge">gte</code> не указан (то есть равен <code class="language-plaintext highlighter-rouge">None</code>), то этот параметр фильтрации учитывать ну нужно.</li>
+  <li><code class="language-plaintext highlighter-rouge">gender</code> - слово должно принадлежать указанному в <code class="language-plaintext highlighter-rouge">gender</code> роду. Если <code class="language-plaintext highlighter-rouge">gender</code> не указано (то есть равно <code class="language-plaintext highlighter-rouge">None</code>), то учитывать этот параметр при фильтрации не нужно.</li>
+</ul>
+
+<p><strong>Примеры</strong></p>
+
+<p>Если в файл содержит следующие строки:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>абитуриент|сущ одуш ед муж им|1.47
+абонемент|сущ неод ед муж им|1.1
+абонент|сущ одуш ед муж им|3.43
+абориген|сущ одуш ед муж им|10.53
+аборт|сущ неод ед муж им|9.79
+абразив|сущ неод ед муж им|4.35
+абракадабра|сущ неод ед жен им|1.22
+абрек|сущ одуш ед муж им|3.86
+абрикос|сущ неод ед муж им|4.84
+абрикосовый|прл ед муж им|1.53
+абсолют|сущ неод ед муж им|1.35
+</code></pre></div></div>
+
+<p>То функция должна работать следующим образом:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Без аргументов
+</span>
+<span class="n">retrieve</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="p">[(</span><span class="s">'абитуриент'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им'</span><span class="p">,</span> <span class="mf">1.47</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абонемент'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абонент'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им'</span><span class="p">,</span> <span class="mf">3.43</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абориген'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им'</span><span class="p">,</span> <span class="mf">10.53</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'аборт'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">9.79</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абразив'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">4.35</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абракадабра'</span><span class="p">,</span> <span class="s">'сущ неод ед жен им'</span><span class="p">,</span> <span class="mf">1.22</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абрек'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им'</span><span class="p">,</span> <span class="mf">3.86</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абрикос'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">4.84</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абрикосовый'</span><span class="p">,</span> <span class="s">'прл ед муж им'</span><span class="p">,</span> <span class="mf">1.53</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'абсолют'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">1.35</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Только женский род
+</span>
+<span class="n">retrieve</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s">'жен'</span><span class="p">)</span>
+<span class="p">[(</span><span class="s">'абракадабра'</span><span class="p">,</span> <span class="s">'сущ неод ед жен им'</span><span class="p">,</span> <span class="mf">1.22</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Мужской рож с частотой больше 5
+</span>
+<span class="n">retrieve</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s">'муж'</span><span class="p">,</span> <span class="n">gte</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">[(</span><span class="s">'абориген'</span><span class="p">,</span> <span class="s">'сущ одуш ед муж им'</span><span class="p">,</span> <span class="mf">10.53</span><span class="p">),</span>
+ <span class="p">(</span><span class="s">'аборт'</span><span class="p">,</span> <span class="s">'сущ неод ед муж им'</span><span class="p">,</span> <span class="mf">9.79</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p>Обратите внимание на то, что возвращает функция - это список кортежей, состоящих каждый из 3 элементов.</p>
+
+<p><strong>Решение:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">lte</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">gte</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+            <span class="n">word</span><span class="p">,</span> <span class="n">morph</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'|'</span><span class="p">)</span>
+            <span class="n">freq</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">lte</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">freq</span> <span class="o">&gt;</span> <span class="n">lte</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">gte</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">freq</span> <span class="o">&lt;</span> <span class="n">gte</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">gender</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">gender</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">morph</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">output</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">word</span><span class="p">,</span> <span class="n">morph</span><span class="p">,</span> <span class="n">freq</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></div>
+
+<h2 id="задача-4">Задача №4</h2>
+
+<p>Напишите функцию, которая принимает два аргумента:
+первый – произвольная строка,
+второй – опциональный (по умолчанию равен пустой строке)</p>
+
+<p>Второй аргумент может принимать значения <code class="language-plaintext highlighter-rouge">"longest"</code>, <code class="language-plaintext highlighter-rouge">"alphanumerically_last"</code>, <code class="language-plaintext highlighter-rouge">"same_vowels"</code>.</p>
+
+<p>Если значение второго аргумента – <code class="language-plaintext highlighter-rouge">"longest"</code>, нужно найти в строке – первом аргументе – максимальную последовательность из одинаковых букв и вернуть её.</p>
+
+<p>Если значение второго аргумента – <code class="language-plaintext highlighter-rouge">"alphanumerically_last"</code>, нужно найти в строке – первом аргументе – символ, порядковый номер которого в алфавите больше, чем у всех остальных, и вернуть его.</p>
+
+<p>Если значение второго аргумента – <code class="language-plaintext highlighter-rouge">"same_vowels"</code>, нужно проверить, есть ли в строке – первом аргументе – последовательность символов, среди которых несколько гласных, причём все гласные одинаковы. Если такая последовательность есть, нужно вернуть <code class="language-plaintext highlighter-rouge">True</code>, иначе – <code class="language-plaintext highlighter-rouge">False</code>.</p>
+
+<p>Если значение второго аргумента – пустая строка, то нужно выдать в ответ тройку – результат для аргумента <code class="language-plaintext highlighter-rouge">"longest"</code>, результат для аргумента <code class="language-plaintext highlighter-rouge">"alphanumerically_last"</code>, результат для аргумента <code class="language-plaintext highlighter-rouge">"same_vowels"</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">longest</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">''</span>
+
+    <span class="n">maximal_subseq_found</span> <span class="o">=</span> <span class="n">my_str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">letter_pos</span><span class="p">,</span> <span class="n">letter</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_str</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">subseq</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">for</span> <span class="n">subseq_letter</span> <span class="ow">in</span> <span class="n">my_str</span><span class="p">[</span><span class="n">letter_pos</span><span class="p">:]:</span>
+            <span class="k">if</span> <span class="n">subseq_letter</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
+                <span class="n">subseq</span> <span class="o">+=</span> <span class="n">letter</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">subseq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">maximal_subseq_found</span><span class="p">):</span>
+            <span class="n">maximal_subseq_found</span> <span class="o">=</span> <span class="n">subseq</span>
+
+    <span class="k">return</span> <span class="n">maximal_subseq_found</span>
+
+
+<span class="k">def</span> <span class="nf">alphanumerically_last</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">''</span>
+
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s">"абвгдеёжзийклмнопрстуфхцчшщъыьэюя"</span>
+
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">letter</span><span class="p">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">letter</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">alphabet</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"ERROR! passed string </span><span class="si">{</span><span class="n">my_str</span><span class="si">}</span><span class="s"> with unknown letter </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s">''</span>
+
+    <span class="n">alnum_last_letter</span> <span class="o">=</span> <span class="n">my_str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">letter</span><span class="p">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">alphabet</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="n">letter</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">&gt;</span> <span class="n">alphabet</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="n">alnum_last_letter</span><span class="p">.</span><span class="n">lower</span><span class="p">()):</span>
+            <span class="n">alnum_last_letter</span> <span class="o">=</span> <span class="n">letter</span>
+
+    <span class="k">return</span> <span class="n">alnum_last_letter</span>
+
+
+<span class="k">def</span> <span class="nf">contains_same_vowels</span><span class="p">(</span><span class="n">my_str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="n">vowels</span> <span class="o">=</span> <span class="s">"аеёиоуыэюя"</span>
+
+    <span class="n">my_str_vowels</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">my_str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">letter</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+            <span class="n">my_str_vowels</span> <span class="o">+=</span> <span class="n">letter</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="n">harmonic_subsequence_present</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">my_str_vowels</span><span class="p">[</span><span class="mi">1</span><span class="p">:])):</span>
+        <span class="n">vowel</span> <span class="o">=</span> <span class="n">my_str_vowels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">my_str_vowels</span><span class="p">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">vowel</span><span class="p">:</span>
+            <span class="n">harmonic_subsequence_present</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">harmonic_subsequence_present</span>
+
+
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">my_str</span><span class="p">,</span> <span class="n">my_param</span><span class="o">=</span><span class="s">''</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">my_param</span> <span class="o">==</span> <span class="s">"longest"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">longest</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">my_param</span> <span class="o">==</span> <span class="s">"alphanumerically_last"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">alphanumerically_last</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">my_param</span> <span class="o">==</span> <span class="s">"same_vowels"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">contains_same_vowels</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">my_param</span> <span class="o">==</span> <span class="s">""</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">longest</span><span class="p">(</span><span class="n">my_str</span><span class="p">),</span> <span class="n">alphanumerically_last</span><span class="p">(</span><span class="n">my_str</span><span class="p">),</span> <span class="n">contains_same_vowels</span><span class="p">(</span><span class="n">my_str</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"парам пам пурум"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"парам пам пурум"</span><span class="p">,</span> <span class="s">"longest"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"парам пам пурум"</span><span class="p">,</span> <span class="s">"alphanumerically_last"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"парам пам пурум"</span><span class="p">,</span> <span class="s">"same_vowels"</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"кот ехал ехал и уехал"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">"ПЫТАЙТЕСБ ЧТОТ0 N3МЕНИТЬ!"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="s">""</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="задача-5">Задача №5</h2>
+<p>Реализовать функции <code class="language-plaintext highlighter-rouge">my_append</code>, <code class="language-plaintext highlighter-rouge">my_extend</code>, <code class="language-plaintext highlighter-rouge">my_remove</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">my_append</code> принимает на вход список и элемент произволной природы, возвращает список, равный исходному, продолженному переданным элементом. (Короче, то, что бы сделал аппенд этого элемента к списку) Использовать метод <code class="language-plaintext highlighter-rouge">append</code> и <code class="language-plaintext highlighter-rouge">extend</code> нельзя</p>
+
+<p><code class="language-plaintext highlighter-rouge">my_extend</code> принимает на вход два списка и возвращает список, полученный конкатенацией переданных. Использовать <code class="language-plaintext highlighter-rouge">extend</code> нельзя, за использование <code class="language-plaintext highlighter-rouge">append</code> штраф 1 балл.</p>
+
+<p><code class="language-plaintext highlighter-rouge">my_remove</code> принимает на вход список и число, <em>i</em> число может быть позицией любого элемента в списке. Возвращает копию исходного списка, из которой удалён <em>i</em>-тый элемент. Использовать стандартные методы удаления элементов из списка нельзя.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_append</span><span class="p">(</span><span class="n">my_li</span><span class="p">,</span> <span class="n">elem</span><span class="p">):</span>
+    <span class="n">result_li</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_li</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">my_elem_idx</span><span class="p">,</span> <span class="n">my_elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_li</span><span class="p">):</span>
+        <span class="n">result_li</span><span class="p">[</span><span class="n">my_elem_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">my_elem</span>
+
+    <span class="k">return</span> <span class="n">result_li</span>
+
+<span class="k">def</span> <span class="nf">my_extend</span><span class="p">(</span><span class="n">my_li1</span><span class="p">,</span> <span class="n">my_li2</span><span class="p">):</span>
+    <span class="n">result_li</span> <span class="o">=</span> <span class="n">my_li1</span>
+
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">my_li2</span><span class="p">:</span>
+        <span class="n">result_li</span> <span class="o">=</span> <span class="n">my_append</span><span class="p">(</span><span class="n">result_li</span><span class="p">,</span> <span class="n">elem</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result_li</span>
+
+<span class="k">def</span> <span class="nf">my_remove</span><span class="p">(</span><span class="n">my_li</span><span class="p">,</span> <span class="n">my_idx</span><span class="p">):</span>
+    <span class="n">result_li</span> <span class="o">=</span> <span class="n">my_extend</span><span class="p">(</span><span class="n">my_li</span><span class="p">[:</span><span class="n">my_idx</span><span class="p">],</span> <span class="n">my_li</span><span class="p">[</span><span class="n">my_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">result_li</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_append</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="bp">True</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_append</span><span class="p">([</span><span class="mi">2</span><span class="p">],</span> <span class="bp">True</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_append</span><span class="p">([],</span> <span class="bp">True</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_append</span><span class="p">([],</span> <span class="p">[]))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([[]],</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_extend</span><span class="p">([],</span> <span class="p">[]))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="mi">6</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="o">-</span><span class="mi">8</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_remove</span><span class="p">([],</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="задача-6">Задача №6</h2>
+
+<p>Напишите функцию, принимающую на вход имя файла (это будет имя файла с субтитрами к Рику и МОрти, скачать для тренировки можно <a href="https://raw.githubusercontent.com/oserikov/python_13112019/master/data/series/lol_just_another_folder/rick_and_morty/all_subtitles.txt">тут</a> ).
+Функция должна записать два файла – один с репликами рика,  другой – с репликами морти. имена созданных файлов с объяснением, какой про что, нужно вывести на экран.
+За удаление одного-двух ругательств из реплик добавляется дополнительный балл.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">src_filename</span><span class="p">,</span> <span class="n">blacklist</span> <span class="o">=</span> <span class="p">[</span><span class="s">"fuck"</span><span class="p">,</span> <span class="s">"morning"</span><span class="p">]):</span>
+    <span class="n">rick_fn</span> <span class="o">=</span> <span class="s">"rick.txt"</span>
+    <span class="n">morty_fn</span> <span class="o">=</span> <span class="s">"morty.txt"</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">src_filename</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">src_f</span><span class="p">:</span>
+        <span class="n">rick_f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">rick_fn</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">)</span>
+        <span class="n">morty_f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">morty_fn</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">src_f</span><span class="p">:</span>
+
+            <span class="n">line_masked</span> <span class="o">=</span> <span class="n">line</span>
+            <span class="k">for</span> <span class="n">blacklisted_word</span> <span class="ow">in</span> <span class="n">blacklist</span><span class="p">:</span>
+                <span class="n">line_masked</span> <span class="o">=</span> <span class="n">line_masked</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">blacklisted_word</span><span class="p">,</span>
+                                                  <span class="s">"*"</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">blacklisted_word</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">"rick:"</span><span class="p">):</span>
+                <span class="n">rick_f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line_masked</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">"morty:"</span><span class="p">):</span>
+                <span class="n">morty_f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line_masked</span><span class="p">)</span>
+
+        <span class="n">rick_f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">morty_f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"morty replics written to </span><span class="si">{</span><span class="n">morty_fn</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"rick replics written to </span><span class="si">{</span><span class="n">rick_fn</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># change the path to the one that fits for you
+</span><span class="n">foo</span><span class="p">(</span><span class="s">"all_subtitles.txt"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+:ET

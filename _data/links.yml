@@ -1,11 +1,14 @@
 program:
-  url: https://www.hse.ru/ba/ling/courses/470893175.html
+  url: https://www.hse.ru/ba/ling/courses/646477628.html
   text: Программа курса на сайте ВШЭ
 
 marks:
   url: https://docs.google.com/spreadsheets/d/1gnpZKXJmK0T4VdhwW9wEw9YR0tppic8cqlqV53hoAf8/edit?usp=sharing
   text: Таблица с оценками
 
+recordings:
+  url: https://disk.yandex.ru/d/CiZ-CoGyeeRGXA
+  text: Папка с записями
 # contacts:
 #   url: https://forms.gle/fvhghS7cNQ5LZqtj9
 

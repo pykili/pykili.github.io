@@ -1,0 +1,114 @@
+I"a!<h2 id="введение">Введение</h2>
+<p>Git – это консольная утилита, для отслеживания и ведения истории изменения файлов, в вашем проекте. Чаще всего его используют для кода, но можно и для других файлов. Например, для картинок - полезно для дизайнеров.</p>
+
+<p>С помощью Git-a вы можете откатить свой проект до более старой версии, сравнивать, анализировать или сливать свои изменения в репозиторий.</p>
+
+<p>Репозиторием называют хранилище вашего кода и историю его изменений. Git работает локально и все ваши репозитории хранятся в определенных папках на жестком диске.</p>
+
+<p>Так же ваши репозитории можно хранить и в интернете. Обычно для этого используют три сервиса:</p>
+<ul>
+  <li>GitHub</li>
+  <li>Bitbucket</li>
+  <li>GitLab</li>
+</ul>
+
+<p>Каждая точка сохранения вашего проекта носит название коммит (commit). У каждого commit-a есть hash (уникальный id) и комментарий. Из таких commit-ов собирается ветка. Ветка - это история изменений. У каждой ветки есть свое название. Репозиторий может содержать в себе несколько веток, которые создаются из других веток или вливаются в них.</p>
+
+<h2 id="установка-git-а">Установка Git-а</h2>
+
+<ul>
+  <li>Windows
+    <ul>
+      <li><a href="https://git-scm.com/download/win">Официальная сборка</a> (при установке оставляйте всё дефолтным – не прогадаете)</li>
+    </ul>
+  </li>
+  <li>Mac OS
+    <ul>
+      <li>нужно попробовать выполнить команду <code class="language-plaintext highlighter-rouge">git --version</code>. если Git-а нет, то предложит установить</li>
+      <li>но <a href="https://git-scm.com/download/mac">вот</a> официальная сборка на всякий случай</li>
+    </ul>
+  </li>
+  <li>Linux
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt install git</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Кроме всего прочего, давайте посмотрим на этот <a href="https://githowto.com/setup">ресурс</a>.</p>
+
+<h2 id="gitlab">GitLab</h2>
+
+<ul>
+  <li>Регаемся на <a href="https://gitlab.com/">GitLab</a></li>
+</ul>
+
+<hr />
+
+<p>## Выше было введение, теперь рассмотрим коллективную работу</p>
+
+<p>Ветка – это набор commit (обычно кружки), которые идут друг за другом. У ветки есть название, основную ветку чаще всего называют master или main (<a href="https://habr.com/ru/news/t/506876/">Почему master повсеместно заменяется на main?</a>). Если говорить простыми словами, то ветка master – это наш проект.</p>
+
+<p>Другие ветки – это отдельное место для реализации нового функционала или исправление багов (ошибок) нашего проекта. То есть, с отдельной веткой вы делаете что угодно, а затем сливаете эти изменения в основную ветку master.</p>
+
+<hr />
+<p>Не рекомендуется создавать commit напрямую в master . Лучше для этого заводить новую ветку и все изменения писать там.
+——————————————————————————–</p>
+
+<p>Для того, чтобы создать новую ветку вводим:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">git branch &lt;название_ветки&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>или вот так</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">git checkout -b &lt;название_ветки&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Эти команды делают тоже самое, только второй вариант позволяет сразу переключиться в новую ветку. Вносить изменения в новую ветку можно сразу после ее создания.</p>
+
+<p>При создании новой ветки, старайтесь называть ее кратким и ёмким именем. Чтобы сразу было понятно, что именно изменялось по проекту. Если вы используете, какую-нибудь систему для ведения задач, то можете в начале названия ветки указывать ID задачи, чтобы можно было легко найти, на основе какой задачи была создана ветка. Например вот так:</p>
+
+<p><code class="language-plaintext highlighter-rouge">dev-3334_fix_catalog_endpoints</code></p>
+
+<p>Для того чтобы посмотреть текущее состояние ветки, например, какие файлы добавлены или не добавлены для создания commit, можно выполнить команду:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">git status
+</span></code></pre></div></div>
+
+<p>После того, как завершили работу над своей задачей, ветку можно слить в <code class="language-plaintext highlighter-rouge">master</code>/<code class="language-plaintext highlighter-rouge">main</code>. Для этого нужно переключиться в ветку <code class="language-plaintext highlighter-rouge">master</code> и выполнить следующее:</p>
+
+<h2 id="переключаемся-в-master">Переключаемся в master</h2>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">git pull origin master
+git push
+</span></code></pre></div></div>
+
+<hr />
+<p>Теперь склонировать репозитрий ещё раз и смоделировать как происходила бы работа вдвоем, коммитя в две директории на локальном компе
+———————————————————————-</p>
+
+<p>Вспомогательные команды
+Просмотреть изменения относительно двух веток можно командой:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">git diff &lt;исходная_ветка&gt;</span><span class="w"> </span>&lt;целевая_ветка&gt;
+</code></pre></div></div>
+
+<p>Удалить ненужную ветку:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">git branch -d &lt;название_ветки&gt;</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Просмотр историю ветки:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">git log
+</span></code></pre></div></div>
+
+<p>Команды, которые надо знать</p>
+<ul>
+  <li>git help</li>
+  <li>git clone</li>
+  <li>git status</li>
+  <li>git branch</li>
+  <li>git checkout</li>
+  <li>git merge</li>
+  <li>git remote</li>
+  <li>git push</li>
+  <li>git pull</li>
+</ul>
+:ET
