@@ -7,17 +7,23 @@ redirect_from: /
 
 <div class="row top-landing-title">
   <h1>Программирование и лингвистические данные</h1>
-  <h4>Факультет гуманитарных наук, 1 курс, 2021-2022</h4>
+  <h4>Факультет гуманитарных наук, 1 курс, 2022&ndash;2023</h4>
 </div>
 
 <div class="row landing-colored-line landing-buttons landing-colored-line-bt">
   <div class="col-md-8 col-md-offset-2">
-    <a href="{{ site.data.links.marks.url }}" target="_blank">
+    <a href="{{ site.data.links.recordings.url }}" target="_blank">
+      <button type="button" class="btn btn-warning">
+        Папка с записями
+        <span class="glyphicon glyphicon-new-window" style="font-size: 0.9em"></span>
+      </button>
+    </a>
+    <!-- <a href="{{ site.data.links.marks.url }}" target="_blank">
       <button type="button" class="btn btn-warning">
         Таблица с оценками
         <span class="glyphicon glyphicon-new-window" style="font-size: 0.9em"></span>
       </button>
-    </a>
+    </a> -->
     <!-- <a href="/prog/projects">
       <button type="button" class="btn btn-success">
         Проекты
@@ -104,9 +110,10 @@ redirect_from: /
         <tr>
           <th class="text-center">#</th>
           <th>Тема</th>
-          <th class="text-center">1-2<br>Олег</th>
-          <th class="text-center">3<br>Антон</th>
-          <th class="text-center">4<br>Дарья</th>
+          <th class="text-center">Анна</th>
+          <th class="text-center">Антон</th>
+          <th class="text-center">Богдан</th>
+          <th class="text-center">Елизавета</th>
           <!-- <th class="text-center">Материалы</th> -->
         </tr>
       </thead>
@@ -115,11 +122,17 @@ redirect_from: /
         {% if lesson.show %}
         <tr>
           <th scope="row" class="text-center">{{ forloop.index }}</th>
+          <td>
           {% if lesson.link %}
-          <td><a href="{{ lesson.link }}">{{ lesson.name }}</a></td>
+          <a target="_blank" href="{{ lesson.link }}">{{ lesson.name }}</a>
           {% else %}
-          <td><span>{{ lesson.name }}</span></td>
+          <span>{{ lesson.name }}</span>
           {% endif %}
+          {% if lesson.hw.exists %}
+          <br>
+           - <a style="color: crimson;" target="_blank" href="{{lesson.hw.link}}">домашка</a>
+          {%endif%}
+          </td>
           <td class="text-center">
             {{ lesson.when.group1 }}
             {% if lesson.staff.group1 %}
@@ -139,6 +152,13 @@ redirect_from: /
             {% if lesson.staff.group3 %}
             <br>
             {{ lesson.staff.group3 | markdownify }}
+            {% endif %}
+          </td>
+          <td class="text-center">
+            {{ lesson.when.group4 }}
+            {% if lesson.staff.group4 %}
+            <br>
+            {{ lesson.staff.group4 | markdownify }}
             {% endif %}
           </td>
           <!-- <td class="text-center">
