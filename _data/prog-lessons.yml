@@ -47,7 +47,7 @@
     group2: 30 сен 2022
     group3: 30 сен 2022
     group4: 30 сен 2022
-  show: false
+  show: true
   hw: 
     exists: false
     link: /prog/hw/hw3.md
