@@ -50,7 +50,7 @@
   show: true
   hw: 
     exists: true
-    link: /prog/hw/hw3.md
+    link: /prog/2022/hw/hw3.md
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem4){:target="_blank"}
@@ -64,7 +64,7 @@
   show: true
   hw: 
     exists: false
-    link: /prog/hw/hw4.md
+    link: /prog/2022/hw/hw4.md
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem5){:target="_blank"}
