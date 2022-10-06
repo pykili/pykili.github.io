@@ -49,9 +49,23 @@
     group4: 30 сен 2022
   show: true
   hw: 
-    exists: false
+    exists: true
     link: /prog/hw/hw3.md
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem4){:target="_blank"}
+ 
+- name: "Списки и кортежи"
+  when:
+    group1: 7 окт 2022
+    group2: 7 окт 2022
+    group3: 7 окт 2022
+    group4: 7 окт 2022
+  show: true
+  hw: 
+    exists: false
+    link: /prog/hw/hw4.md
+  staff:
+    group2: |
+      [конспект](/prog/2022/anton/sem5){:target="_blank"}
 
