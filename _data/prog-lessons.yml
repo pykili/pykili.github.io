@@ -63,8 +63,8 @@
     group4: 7 окт 2022
   show: true
   hw: 
-    exists: false
-    link: /prog/2022/hw/hw4
+    exists: true
+    link: /prog/2022/hw/hw4_1
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem5){:target="_blank"}
