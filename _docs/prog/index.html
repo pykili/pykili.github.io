@@ -175,6 +175,20 @@ redirect_from: /
 <div class="row landing-colored-line landing-colored-line-bb pb20 landing-colored-line-bt">
   <div class="col-md-8 col-md-offset-2">
     <h3 class="text-center pb20">
+      Правила сдачи домашек
+    </h3>
+    <div>
+      {% capture rules %}
+      {% include prog/landing/rules.md %}
+      {% endcapture %}
+      {{ rules | markdownify }}
+    </div>
+  </div>
+</div>
+
+<div class="row landing-colored-line landing-colored-line-bb pb20 landing-colored-line-bt">
+  <div class="col-md-8 col-md-offset-2">
+    <h3 class="text-center pb20">
       Логистика курса
     </h3>
     <div>
