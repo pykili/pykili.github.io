@@ -69,3 +69,16 @@
     group2: |
       [конспект](/prog/2022/anton/sem5){:target="_blank"}
 
+- name: "Словари и множества"
+  when:
+    group1: 11 ноя 2022
+    group2: 11 ноя 2022
+    group3: 11 ноя 2022
+    group4: 11 ноя 2022
+  show: true
+  hw: 
+    exists: true
+    link: /prog/2022/hw/hw4_2
+  staff:
+    group2: |
+      [конспект](https://mighty-evening-915.notion.site/python-e0fadcea46184ea4b6a257e17da05230){:target="_blank"}
