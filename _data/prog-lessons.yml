@@ -82,3 +82,46 @@
   staff:
     group2: |
       [конспект](https://mighty-evening-915.notion.site/python-e0fadcea46184ea4b6a257e17da05230){:target="_blank"}
+
+
+- name: "Условные операторы"
+  when:
+    group1: 18 ноя 2022
+    group2: 18 ноя 2022
+    group3: 18 ноя 2022
+    group4: 18 ноя 2022
+  show: true
+  hw: 
+    exists: true
+    link: /prog/2022/hw/hw5
+  staff:
+    group2: |
+      [конспект](https://aksanna.notion.site/aksanna/Seminar-6-14a72ffffc864b0789ce60091e2d357e){:target="_blank"}
+
+- name: "Циклы"
+  when:
+    group1: 25 ноя 2022
+    group2: 25 ноя 2022
+    group3: 25 ноя 2022
+    group4: 25 ноя 2022
+  show: true
+  hw: 
+    exists: true
+    link: /prog/2022/hw/hw6
+  staff:
+    group2: |
+      [конспект](https://www.notion.so/range-list-comprehensions-e08ae304c5ad4a22a6e5aa2cca61bf87){:target="_blank"}
+
+- name: "Работа с файлами"
+  when:
+    group1: 25 ноя 2022
+    group2: 25 ноя 2022
+    group3: 25 ноя 2022
+    group4: 25 ноя 2022
+  show: true
+  hw: 
+    exists: true
+    link: /prog/2022/hw/hw7
+  staff:
+    group2: |
+      [конспект](https://www.notion.so/python-555b6f51cd3e45f9bf0de5d87d2a9a9e){:target="_blank"}
