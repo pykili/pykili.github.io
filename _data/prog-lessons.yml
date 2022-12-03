@@ -114,10 +114,10 @@
 
 - name: "Работа с файлами"
   when:
-    group1: 25 ноя 2022
-    group2: 25 ноя 2022
-    group3: 25 ноя 2022
-    group4: 25 ноя 2022
+    group1: 2 дек 2022
+    group2: 2 дек 2022
+    group3: 2 дек 2022
+    group4: 2 дек 2022
   show: true
   hw: 
     exists: true
