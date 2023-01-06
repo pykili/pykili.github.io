@@ -1,8 +1,0 @@
-I"�<h1 id="план-этого-занятия">План этого занятия</h1>
-<ul>
-  <li>вложенные словари</li>
-  <li><code class="language-plaintext highlighter-rouge">dict.setdefault</code></li>
-  <li><code class="language-plaintext highlighter-rouge">defaultdict</code> и lists comprehension</li>
-  <li><code class="language-plaintext highlighter-rouge">DictReader</code></li>
-</ul>
-:ET
