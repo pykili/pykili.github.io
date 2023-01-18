@@ -1,5 +1,4 @@
 teachers:
-
   - name: Анна Аксёнова
     email: aksanna_a@mail.ru
     photo: /img/staff/aksenysh.jpg
@@ -10,10 +9,10 @@ teachers:
     telegram: vantral
     photo: /img/staff/vantral.jpg
 
-  - name: Богдан Евстратенко
-    email: bevstratenko@hse.ru
-    photo: /img/staff/evstrat.jpg
-    telegram: evstrat
+  - name: Тёма Стрельцов
+    email: in_chainz@mail.ru
+    photo: /img/staff/in_chainz.jpg
+    telegram: in_chainz
 
   - name: Елизавета Ершова
     email: elizaveta.ershova@jetbrains.com
@@ -25,13 +24,13 @@ assistants:
     telegram: marthynovann
     photo: /img/staff/marthynovann.jpg
 
-  - name: Элина Камаева
-    telegram: elinkamaeva
-    photo: /img/staff/elinkamaeva.jpg
-
   - name: Алёна Сергеева
     telegram: s_alyona_a
     photo: /img/staff/s_alyona_a.jpg
+
+  - name: Саша Безуглый
+    telegram: bzgly
+    photo: /img/staff/bzgly.jpg
 
   - name: Валерия Быкова
     telegram: valer1abyk0va
