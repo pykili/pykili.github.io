@@ -128,23 +128,23 @@
 
 - name: "Разбор кр"
   when:
-    group1: 13 янв 2022
-    group2: 9 янв 2022
-    group3: 13 янв 2022
-    group4: 13 янв 2022
+    group1: 13 янв 2023
+    group2: 9 янв 2023
+    group3: 13 янв 2023
+    group4: 13 янв 2023
   show: true
   hw:
     exists: false
 
-- name: "Работа с файлами"
+- name: "Функции"
   when:
-    group1: 2 дек 2022
-    group2: 2 дек 2022
-    group3: 2 дек 2022
-    group4: 2 дек 2022
+    group1: 20 янв 2023
+    group2: 20 янв 2023
+    group3: 20 янв 2023
+    group4: 20 янв 2023
   show: true
   hw:
-    exists: true
+    exists: true 
     link: /prog/2022/hw/hw8
   staff:
     group2: |
