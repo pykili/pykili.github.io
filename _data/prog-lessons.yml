@@ -6,7 +6,7 @@
     group3: 9 сен 2022
     group4: 9 сен 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw1
 
@@ -17,7 +17,7 @@
     group3: 16 сен 2022
     group4: 16 сен 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw2
   staff:
@@ -33,14 +33,14 @@
     group3: 24 сен 2022
     group4: 24 сен 2022
   show: true
-  hw: 
+  hw:
     exists: false
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem3){:target="_blank"}
-      
+
       [запись](https://disk.yandex.ru/d/CiZ-CoGyeeRGXA/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/%D0%A1%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D1%80/%D0%91%D1%83%D0%B7%D0%B0%D0%BD%D0%BE%D0%B2%202022-09-23T07-51-25Z.mp4){:target="_blank"}
- 
+
 - name: "Python: Арифметические операции и знакомство с языком"
   when:
     group1: 30 сен 2022
@@ -48,13 +48,13 @@
     group3: 30 сен 2022
     group4: 30 сен 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw3
   staff:
     group2: |
       [конспект](/prog/2022/anton/sem4){:target="_blank"}
- 
+
 - name: "Списки и кортежи"
   when:
     group1: 7 окт 2022
@@ -62,7 +62,7 @@
     group3: 7 окт 2022
     group4: 7 окт 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw4_1
   staff:
@@ -76,7 +76,7 @@
     group3: 11 ноя 2022
     group4: 11 ноя 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw4_2
   staff:
@@ -91,7 +91,7 @@
     group3: 18 ноя 2022
     group4: 18 ноя 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw5
   staff:
@@ -105,7 +105,7 @@
     group3: 25 ноя 2022
     group4: 25 ноя 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw6
   staff:
@@ -119,9 +119,33 @@
     group3: 2 дек 2022
     group4: 2 дек 2022
   show: true
-  hw: 
+  hw:
     exists: true
     link: /prog/2022/hw/hw7
   staff:
     group2: |
       [конспект](https://www.notion.so/python-555b6f51cd3e45f9bf0de5d87d2a9a9e){:target="_blank"}
+
+- name: "Разбор кр"
+  when:
+    group1: 13 янв 2022
+    group2: 9 янв 2022
+    group3: 13 янв 2022
+    group4: 13 янв 2022
+  show: true
+  hw:
+    exists: false
+
+- name: "Работа с файлами"
+  when:
+    group1: 2 дек 2022
+    group2: 2 дек 2022
+    group3: 2 дек 2022
+    group4: 2 дек 2022
+  show: true
+  hw:
+    exists: true
+    link: /prog/2022/hw/hw8
+  staff:
+    group2: |
+      [конспект](/prog/2022/tema/sem_functions.md){:target="_blank"}
