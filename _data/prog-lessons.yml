@@ -149,3 +149,17 @@
   staff:
     group2: |
       [конспект](/prog/2022/tema/sem_functions){:target="_blank"}
+  
+- name: "Классы (домашка)"
+  when:
+    group1: 17 фев 2023
+    group2: 17 фев 2023
+    group3: 17 фев 2023
+    group4: 17 фев 2023
+  show: true
+  hw:
+    exists: true 
+    link: https://gist.github.com/vantral/c1df22d7b7cfbc569fe46b65bb56edac
+  staff:
+    group2: |
+      [конспект](https://colab.research.google.com/drive/1R-dZPMgOLR46ARip53shMa0N5k3xGrjQ){:target="_blank"}
