@@ -285,7 +285,7 @@ ALLOWED_CURRENCIES = ['🇺🇸 USD', '🇪🇺 EUR']
 
 
 def fetch_currency(currency_name):
-    url = 'https://api.ratesapi.io/api/latest'
+    url = 'https://allratestoday.com/api/compat/exchangeratesapi/latest'
     params = {'base': currency_name, 'symbols': 'RUB'}
     req = requests.get(url, params=params)
     data = req.json()
@@ -338,7 +338,7 @@ if __name__ == '__main__':
 
 Здесь мы не только пишем пользователю странные сообщения, но и ходит в сторонний сервис за данными. Такое часто встречается.
 
-Для того, чтобы получить актуальный курс валют мы используем сервис [ratesapi.io](https://ratesapi.io) и прекрасную библиотеку [requests](https://requests.readthedocs.io/en/master/).
+Для того, чтобы получить актуальный курс валют мы используем бесплатный сервис [AllRatesToday](https://allratestoday.com/api/open/central-bank/ecb) (курсы ЕЦБ, без ключа; ratesapi.io больше не работает) и прекрасную библиотеку [requests](https://requests.readthedocs.io/en/master/).
 
 Также тут есть интересность про создание клавиатуры
 
